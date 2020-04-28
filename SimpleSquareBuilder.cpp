@@ -1,8 +1,8 @@
 #include "GameBuilder.h"
-#include "SimpleSquareRules.cpp"
+#include "SimpleSquareRules.h"
 #include "SimpleBoard.cpp"
-#include "SquareTile.cpp"
-#include "RandomGeneration.cpp"
+#include "SquareTile.h"
+#include "RandomGeneration.h"
 
 // A  concrete builder class that assembles the parts of a specific type of game - in this case, Simple Square.
 // There will be many more of these classes that define different types of games.
