@@ -7,7 +7,7 @@ int main() {
     if (usera == 1){
         SquareGame = new SimpleSquareBuilder();
     }
-    if(usera ==2){
+    else if(usera ==2){
         SquareGame = new MediumSquareBuilder;
     }
     else{
