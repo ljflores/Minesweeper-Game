@@ -1,5 +1,10 @@
-#include "GamePlan.h"
-
+#include <iostream>
+#include "Rules.h"
+#include "Board.h"
+#include "Tile.h"
+#include "Generate.h"
+#include "Rules.h"
+using namespace std;
 // The concrete class that is based on the GamePlan interface. Defines getters and setters for classes Rules,
 // Board, Tile, and Generation.
 class Game : public GamePlan {
