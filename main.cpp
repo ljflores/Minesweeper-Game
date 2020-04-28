@@ -3,11 +3,12 @@ int userhandler();
 int main() {
     // Get a GameBuilder of type SimpleSquareBuilder
     int usera = userhandler();
+    GameBuilder* SquareGame;
     if (usera == 1){
-        GameBuilder* SquareGame = new SimpleSquareBuilder();
+        SquareGame = new SimpleSquareBuilder();
     }
     else{
-        GameBuilder* SquareGame = new AdvSquareBuilder();
+       SquareGame = new AdvSquareBuilder();
     }
     // Pass the SimpleSquareBuilder specification to the engineer
     GameEngineer* gameEngineer = new GameEngineer(SquareGame);

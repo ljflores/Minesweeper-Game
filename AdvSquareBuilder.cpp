@@ -27,8 +27,8 @@ public:
     }
 
     void buildBoard() {
-        Board* AdvBoard = new AdvBoard();
-        game->setBoard(AdvBoard);
+        Board* advBoard = new AdvBoard();
+        game->setBoard(advBoard);
     }
 
     void buildTile() {
@@ -45,4 +45,5 @@ public:
         return this->game;
     }
 };
+
 
