@@ -7,6 +7,9 @@ int main() {
     if (usera == 1){
         SquareGame = new SimpleSquareBuilder();
     }
+    if(usera ==2){
+        SquareGame = new MediumSquareBuilder;
+    }
     else{
        SquareGame = new AdvSquareBuilder();
     }
@@ -32,7 +35,8 @@ int userhandler(){
     cout<<"Welcome to Minesweeper"<<endl;
     cout<<"select from the following choices"<<endl;
     cout<<"1: Simple Square Game"<<endl;
-    cout<<"2: Avanced Square Game"<<endl;
+    cout<<"2: Medium Square Game"<<endl;
+    cout<<"3: Advanced Square Game"<<endl;
     int usera = 0;
     cin >> usera;
     cout<<endl;
