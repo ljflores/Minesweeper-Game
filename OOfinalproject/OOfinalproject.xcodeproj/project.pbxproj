@@ -15,6 +15,7 @@
 		CED40EF82457A082004C6BCF /* SimpleSquareRules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED40EEE2457A082004C6BCF /* SimpleSquareRules.cpp */; };
 		CED40EF92457A082004C6BCF /* RandomGeneration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED40EF02457A082004C6BCF /* RandomGeneration.cpp */; };
 		CED40EFA2457A082004C6BCF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED40EF12457A082004C6BCF /* Game.cpp */; };
+		CED40EFC2457B3FD004C6BCF /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED40EFB2457B3FD004C6BCF /* Board.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		CED40EF02457A082004C6BCF /* RandomGeneration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomGeneration.cpp; sourceTree = "<group>"; };
 		CED40EF12457A082004C6BCF /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		CED40EF22457A082004C6BCF /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		CED40EFB2457B3FD004C6BCF /* Board.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				CED40EEB2457A082004C6BCF /* Board.h */,
 				CED40EF12457A082004C6BCF /* Game.cpp */,
+				CED40EFB2457B3FD004C6BCF /* Board.cpp */,
 				CED40EEC2457A082004C6BCF /* GameBuilder.h */,
 				CED40EEA2457A082004C6BCF /* GameEngineer.cpp */,
 				CED40EE82457A082004C6BCF /* GamePlan.h */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED40EFC2457B3FD004C6BCF /* Board.cpp in Sources */,
 				CED40EFA2457A082004C6BCF /* Game.cpp in Sources */,
 				CED40EF32457A082004C6BCF /* main.cpp in Sources */,
 				CED40EF62457A082004C6BCF /* GameEngineer.cpp in Sources */,
