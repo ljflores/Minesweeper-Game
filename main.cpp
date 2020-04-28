@@ -1,10 +1,16 @@
 #include "GameEngineer.cpp"
+int userhandler();
 int main() {
     // Get a GameBuilder of type SimpleSquareBuilder
-    GameBuilder* simpleSquareGame = new SimpleSquareBuilder();
-
+    int usera = userhandler();
+    if (usera == 1){
+        GameBuilder* SquareGame = new SimpleSquareBuilder();
+    }
+    else{
+        GameBuilder* SquareGame = new AdvSquareBuilder();
+    }
     // Pass the SimpleSquareBuilder specification to the engineer
-    GameEngineer* gameEngineer = new GameEngineer(simpleSquareGame);
+    GameEngineer* gameEngineer = new GameEngineer(SquareGame);
 
     // Tell the engineer to make the Game using the specifications of the
     // SimpleSquareBuilder class
@@ -21,4 +27,15 @@ int main() {
 
     return 0;
 }
-
+int userhandler(){
+    cout<<"Welcome to Minesweeper"<<endl;
+    cout<<"select from the following choices"<<endl;
+    cout<<"1: Simple Square Game"<<endl;
+    cout<<"2: Avanced Square Game"<<endl;
+    int usera = 0;
+    cin >> usera;
+    cout<<endl;
+    return usera;
+        
+    
+}

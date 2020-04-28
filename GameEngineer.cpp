@@ -1,5 +1,5 @@
 #include "SimpleSquareBuilder.cpp"
-
+#include "AdvSquareBuilder.cpp"
 // This class creates a game using the builder interface that is defined.
 class GameEngineer {
     GameBuilder* gameBuilder;
