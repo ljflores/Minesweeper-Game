@@ -8,7 +8,7 @@
 
 
 #include "GameBuilder.h"
-#include "SimpleSquareRules.cpp"
+#include "MediumSquareRules.h"
 
 #include "MediumBoard.cpp"
 #include "SquareTile.h"
@@ -23,8 +23,8 @@ public:
     }
 
     void buildRules() {
-        Rules* simpleSquareRules = new SimpleSquareRules();
-        game->setRules(simpleSquareRules);
+        Rules* mediumsquarerules = new MediumSquareRules();
+        game->setRules(mediumsquarerules);
     }
 
     void buildBoard() {

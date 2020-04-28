@@ -12,7 +12,7 @@
 class SimpleSquareRules : public Rules {
 public:
     SimpleSquareRules() {}
-
+    
     void printRules() {
        // cout<<"Simple square rules"<<endl;
     }
