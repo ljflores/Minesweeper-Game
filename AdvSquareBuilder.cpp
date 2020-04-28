@@ -7,7 +7,7 @@
 //
 
 #include "GameBuilder.h"
-#include "SimpleSquareRules.cpp"
+#include "AdvSquareRules.h"
 
 #include "AdvBoard.cpp"
 #include "SquareTile.h"
@@ -22,8 +22,8 @@ public:
     }
 
     void buildRules() {
-        Rules* simpleSquareRules = new SimpleSquareRules();
-        game->setRules(simpleSquareRules);
+        Rules* advsqrules = new AdvSquareRules();
+        game->setRules(advsqrules);
     }
 
     void buildBoard() {
