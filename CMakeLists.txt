@@ -8,6 +8,7 @@ include_directories(.)
 add_executable(Object_Oriented_software_design_final_project
     AdvBoard.cpp
     AdvSquareBuilder.cpp
+        AdvSqaureRules.cpp
     Board.cpp
     Board.h
     Game.cpp
