@@ -11,7 +11,7 @@ class Board {
 public:
     virtual void printBoard()=0;
     Board(int xsize,int ysize,int mines);
-    ~Board();
+    ~Board(); // might consider making the destructors in base classes virtual to avoid memory leaks in derived classes.
     int getxsize();
     int getysize();
     int getnummines();
