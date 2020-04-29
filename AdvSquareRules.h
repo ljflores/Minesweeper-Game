@@ -14,5 +14,5 @@ public:
     
     void printRules();
 };
-
+//test commit 
 #endif /* AdvSquareRules_h */
