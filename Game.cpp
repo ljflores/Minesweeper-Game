@@ -1,7 +1,7 @@
 #include "Game.h"
 //using namespace std;
 
-/*
+
 void Game::setRules(Rules *rules) {
     gameRules = rules;
 }
@@ -34,4 +34,4 @@ void Game::getGeneration() {
     gameGeneration->printGenerate();
 }
 
-*/
+

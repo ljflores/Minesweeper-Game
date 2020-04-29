@@ -1,4 +1,4 @@
-#include "Game.cpp"
+#include "Game.h"
 #ifndef MINESWEEPERBUILDER_GAMEBUILDER_H
 #define MINESWEEPERBUILDER_GAMEBUILDER_H
 
