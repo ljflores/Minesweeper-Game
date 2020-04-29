@@ -11,8 +11,8 @@ add_executable(Object_Oriented_software_design_final_project
         AdvSqaureRules.cpp
     Board.cpp
     Board.h
-    Game.cpp
     Game.h
+        Game.cpp
     GameBuilder.h
     GameEngineer.cpp
     Generate.h
@@ -30,4 +30,4 @@ add_executable(Object_Oriented_software_design_final_project
     SimpleSquareRules.h
     SquareTile.cpp
     SquareTile.h
-        Tile.h)
+        Tile.h Game.cpp)
