@@ -24,17 +24,17 @@ private:
     Tile* gameTile;
     Generate* gameGeneration;
 public:
-    void setRules(Rules* rules) {gameRules = rules;}
-    void getRules() {gameRules->printRules();}
+    void setRules(Rules* rules);
+    void getRules();
 
-    void setBoard(Board* board) {gameBoard = board;}
-    void getBoard() {gameBoard->printBoard();}
+    void setBoard(Board* board);
+    void getBoard();
 
-    void setTile(Tile* tile) {gameTile = tile;}
-    void getTile() {gameTile->printTile();}
+    void setTile(Tile* tile);
+    void getTile();
 
-    void setGeneration(Generate* generation) {gameGeneration = generation;}
-    void getGeneration() {gameGeneration->printGenerate();}
+    void setGeneration(Generate* generation);
+    void getGeneration();
 };
 
 
