@@ -25,16 +25,16 @@ private:
     Generate* gameGeneration;
 public:
     void setRules(Rules* rules);
-    void getRules();
+    Rules* getRules();
 
     void setBoard(Board* board);
-    void getBoard();
+    Board* getBoard();
 
     void setTile(Tile* tile);
-    void getTile();
+    Tile* getTile();
 
     void setGeneration(Generate* generation);
-    void getGeneration();
+    Generate* getGeneration();
 };
 
 
