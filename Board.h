@@ -1,4 +1,4 @@
-#include "tile.h"
+#include "Tile.h"
 #ifndef MINESWEEPERBUILDER_BOARD_H
 #define MINESWEEPERBUILDER_BOARD_H
 
