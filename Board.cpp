@@ -25,3 +25,15 @@ int Board::getysize(){
 int Board::getnummines(){
     return this->mines;
 }
+
+void Board::fillboardwithsquares() {
+    c = new Tile**[getxsize()]; //creating space for nows
+    for (int i = 0;i<getxsize();i++){
+        c[i] = new Tile*[getysize()];//creating space for colums
+        for (int j = 0; j<getysize();j++){
+            c[i][j] = new SquareTile();//fulling up the 2d array with square tiles;
+        }
+
+    }
+
+}

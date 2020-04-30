@@ -5,13 +5,13 @@ int main() {
     int usera = userhandler();
     GameBuilder* SquareGame;
     if (usera == 1){
-        SquareGame = new SimpleSquareBuilder();
+        SquareGame = new SimpleSquareBuilder;
     }
     else if(usera ==2){
         SquareGame = new MediumSquareBuilder;
     }
     else{
-       SquareGame = new AdvSquareBuilder();
+       SquareGame = new AdvSquareBuilder;
     }
     // Pass the SimpleSquareBuilder specification to the engineer
     GameEngineer* gameEngineer = new GameEngineer(SquareGame);

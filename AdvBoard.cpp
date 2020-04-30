@@ -11,14 +11,22 @@ public:
     }
 
     void printBoard() {
-        cout<<"X value: " << this->getxsize()<<endl;
-        cout<<"Y value: " << this->getysize()<<endl;
-        cout<<" # of mines" << this->getnummines()<<endl;
-        cout<<"AdvancedBoard: 13X13 "<<endl;
+
+        cout<<"  ";
+        for (int k = 1;k<14;k++){ // printing column numbers
+            cout<<k<<" ";
+        }
+        cout<<endl;
+        for(int i = 0; i < 13;i++){ // printing row numbers
+            cout<<i+1<<" ";
+            for (int j = 0;j<13;j++){
+                c[i][j]->printTile(); // printing the tile shape, which is, for now, 2 brackets.
+            }
+            cout<<endl;
+        }
     }
     Tile* GetTileAtPoint(int x, int y){
-        return NULL;
-        //still need to fill in
+        return c[y-1][x-1];
     }
 
 };
