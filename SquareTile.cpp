@@ -3,8 +3,9 @@
 SquareTile::SquareTile() {
     shape = "[]";
 }
-//this method is just a temp method
-void SquareTile::setshape(string s){
+//method that changes the display of the tile
+//to what ever you want it to be. 
+void SquareTile::ChangeDisplay(string s) {
     shape = s;
 }
 

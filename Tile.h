@@ -11,7 +11,7 @@ public:
     virtual void ChangeDisplay(string s)=0;//change the way the tile works
     bool IsMine();//checks if tile is a mine
     string GetStatus();//gets status of Tiles
-    void SetStatus(string);//sets status of string
+    void SetStatus(string s);//sets status of string
 };
 
 #endif //MINESWEEPERBUILDER_TILE_H
