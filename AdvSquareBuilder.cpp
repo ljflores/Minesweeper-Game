@@ -32,6 +32,7 @@ public:
     }
     void buildBoard() {
         Board* advBoard = new AdvBoard();
+        advBoard->fillboardwithsquares();//fills board with square tiles
         game->setBoard(advBoard);
     }
 

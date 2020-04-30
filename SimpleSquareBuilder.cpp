@@ -20,6 +20,7 @@ public:
 
     void buildBoard() {
         Board* simpleBoard = new SimpleBoard();
+        simpleBoard->fillboardwithsquares();//fills board with square tiles
         game->setBoard(simpleBoard);
     }
 
