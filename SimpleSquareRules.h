@@ -11,11 +11,9 @@
 #define SimpleSquareRules_h
 class SimpleSquareRules : public Rules {
 public:
-    SimpleSquareRules() {}
+    SimpleSquareRules();
     
-    void printRules() {
-       // cout<<"Simple square rules"<<endl;
-    }
+    void printRules();
 };
 
 
