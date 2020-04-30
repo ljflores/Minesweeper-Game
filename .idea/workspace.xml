@@ -42,10 +42,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MediumBoard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareTile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SquareTile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareTile.h" beforeDir="false" afterPath="$PROJECT_DIR$/SquareTile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rules.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../disc9" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -157,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588267299326</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added comments in the MediumBoard.cpp file.">
+      <created>1588270206528</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588270206528</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,22 +189,23 @@
     <MESSAGE value="Deleted my scripts to clean everything up&#10;&#10;Signed-off-by: jtchristensen &lt;james-t-christensen@uiowa.edu&gt;" />
     <MESSAGE value="Ignore this commit too. GitHub was giving me issues with pushing and pulling, so I'm seeing if it works now." />
     <MESSAGE value="Corrected SimpleSquareRules.cpp and SimpleSquareRules.h" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected SimpleSquareRules.cpp and SimpleSquareRules.h" />
+    <MESSAGE value="Added comments in the MediumBoard.cpp file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments in the MediumBoard.cpp file." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="133" y="14" key="CommitChangelistDialog2" timestamp="1588270133981">
+    <state x="133" y="14" key="CommitChangelistDialog2" timestamp="1588270205045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="133" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588270133981" />
+    <state x="133" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588270205045" />
     <state x="-1429" y="-148" key="CommitChangelistDialog2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588202879643" />
     <state x="-1645" y="-50" key="DiffContextDialog" timestamp="1588203073013">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1645" y="-50" key="DiffContextDialog/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203073013" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588184459152">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588272759655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588184459152" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588272759655" />
     <state width="1493" height="132" key="GridCell.Tab.0.bottom" timestamp="1588270177191">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -238,10 +243,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588205594186" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588270064944">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588273173277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588270064944" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588273173277" />
     <state x="-1197" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210304093" />
   </component>
 </project>
