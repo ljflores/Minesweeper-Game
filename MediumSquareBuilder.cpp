@@ -29,7 +29,16 @@ public:
 
     void buildBoard() {
         Board* advBoard = new MediumBoard();
+        /*
+         *  MediumBoard* advBoard = new MediumBoard();
         game->setBoard(advBoard);
+        SquareTile* t = advBoard->GetTileAtPoint(1,2);
+        t->setshape("x");
+        advBoard->printBoard();
+         */
+        //way change tiles
+        //
+
     }
 
     void buildTile() {

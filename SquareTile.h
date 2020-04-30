@@ -18,7 +18,8 @@ private:
     string shape;
 public:
     SquareTile();
-
+    //temp method
+    void setshape(string s);
     void printTile();
 };
 
