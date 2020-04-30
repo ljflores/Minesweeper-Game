@@ -23,7 +23,7 @@ void Game::setTile(Tile *tile) {
 }
 
 void Game::getTile() {
-    gameTile->printTile();
+    //gameTile->printTile();
 }
 
 void Game::setGeneration(Generate *generation) {

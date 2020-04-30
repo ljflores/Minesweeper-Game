@@ -25,16 +25,17 @@ public:
         Rules* advsqrules = new AdvSquareRules();
         game->setRules(advsqrules);
     }
-
+    
+    void buildTile() {
+        Tile* squareTile = new SquareTile();
+        game->setTile(squareTile);
+    }
     void buildBoard() {
         Board* advBoard = new AdvBoard();
         game->setBoard(advBoard);
     }
 
-    void buildTile() {
-        Tile* squareTile = new SquareTile();
-        game->setTile(squareTile);
-    }
+    
 
     void buildGeneration() {
         Generate* randomGeneration = new RandomGeneration();

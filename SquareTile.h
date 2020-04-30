@@ -14,11 +14,15 @@ using namespace std;
 
 // Defines what makes a square tile.
 class SquareTile : public Tile {
+private:
+    string shape;
 public:
-    SquareTile() {}
+    SquareTile() {
+        shape = "[]";
+    }
 
     void printTile() {
-        cout<<"Square tile"<<endl;
+        cout<<shape;
     }
 };
 
