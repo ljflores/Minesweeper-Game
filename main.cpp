@@ -28,8 +28,14 @@ int main() {
     firstGame->getBoard();
     firstGame->getTile();
     firstGame->getGeneration();
-
+    /*
+    Tile* t = firstGame->rboard()->GetTileAtPoint(1,2);
+    t->ChangeDisplay("x ");
+    firstGame->getBoard();
+    cout<<"X: "<<t->getxcord()<<endl;
+    cout<<"Y: "<<t->getycord()<<endl;
     return 0;
+     */
 }
 int userhandler(){
     cout<<"Welcome to Minesweeper"<<endl;

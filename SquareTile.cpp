@@ -1,7 +1,7 @@
 #include "SquareTile.h"
 
 SquareTile::SquareTile() {
-    shape = "[]";
+    shape = "▣ ";
 }
 //method that changes the display of the tile
 //to what ever you want it to be. 

@@ -16,3 +16,13 @@ string Tile::GetStatus() {
 void Tile::SetStatus(string s) {
     this->status = s;
 }
+void Tile::SetCord(int x,int y){
+    this->xcord = x;
+    this->ycord = y;
+}
+int Tile::getxcord() {
+    return this->xcord;
+}
+int Tile::getycord() {
+    return this->ycord;
+}

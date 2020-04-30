@@ -5,6 +5,8 @@ using namespace std;
 // An interface that defines what all tiles must do.
 class Tile {
     string status;
+    int xcord;
+    int ycord;
 public:
     Tile();
     virtual void printTile()=0;
@@ -12,6 +14,10 @@ public:
     bool IsMine();//checks if tile is a mine
     string GetStatus();//gets status of Tiles
     void SetStatus(string s);//sets status of string
+    void SetCord(int x,int y);//set the cordinates just in case
+    int getxcord();
+    int getycord();
+
 };
 
 #endif //MINESWEEPERBUILDER_TILE_H

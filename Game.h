@@ -32,6 +32,7 @@ public:
     void getTile();
     void setGeneration(Generate*);
     void getGeneration();
+    Board* rboard();//returns the board
 };
 
 #endif /* Game_h */
