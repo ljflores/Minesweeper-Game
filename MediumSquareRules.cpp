@@ -5,7 +5,7 @@
 //  Created by James Christensen on 4/28/20.
 //  Copyright © 2020 James Christensen. All rights reserved.
 //
-/*
+
 #include <stdio.h>
 #include "MediumSquareRules.h"
 #include <iostream>
@@ -19,4 +19,4 @@ void MediumSquareRules::printRules(){
     cout<<"MediumSquareRules constructed"<<endl;
      
 }
-*/
+

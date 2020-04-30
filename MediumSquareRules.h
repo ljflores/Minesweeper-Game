@@ -10,8 +10,8 @@
 #define MediumSquareRules_h
 class MediumSquareRules : public Rules {
 public:
-    MediumSquareRules(){};
-    void printRules(){};
+    MediumSquareRules();
+    void printRules();
 };
 
 
