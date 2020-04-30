@@ -17,14 +17,9 @@ class SquareTile : public Tile {
 private:
     string shape;
 public:
-    SquareTile() {
-        shape = "[]";
-    }
+    SquareTile();
 
-    void printTile() {
-        cout<<shape;
-    }
+    void printTile();
 };
-
 
 #endif /* SquareTile_h */
