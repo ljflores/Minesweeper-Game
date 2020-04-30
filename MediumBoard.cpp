@@ -36,7 +36,7 @@ public:
     }
     //funtion to get a tile at a point.
     Tile* GetTileAtPoint(int x,int y){
-        return c[x][y];
+        return c[y-1][x-1];
     }
     
 };
