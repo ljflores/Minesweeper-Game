@@ -16,5 +16,10 @@ public:
         cout<<" # of mines" << this->getnummines()<<endl;
         cout<<"AdvancedBoard: 13X13 "<<endl;
     }
+    Tile* GetTileAtPoint(int x, int y){
+        return NULL;
+        //still need to fill in
+    }
+
 };
 

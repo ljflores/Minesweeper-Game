@@ -1,4 +1,4 @@
-
+#include "tile.h"
 #ifndef MINESWEEPERBUILDER_BOARD_H
 #define MINESWEEPERBUILDER_BOARD_H
 
@@ -16,7 +16,8 @@ public:
     int getxsize();
     int getysize();
     int getnummines();
-    
+    virtual Tile* GetTileAtPoint(int x,int y)=0;
+    //make a pure virtual to make sure all derived classes implement it.
 };
 
 #endif //MINESWEEPERBUILDER_BOARD_H
