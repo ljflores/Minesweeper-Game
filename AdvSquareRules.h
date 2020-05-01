@@ -10,7 +10,7 @@
 #define AdvSquareRules_h
 class AdvSquareRules : public Rules {
 public:
-    AdvSquareRules();
+    AdvSquareRules(Board* g);
     
     void printRules();
 };

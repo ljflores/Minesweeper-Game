@@ -10,10 +10,9 @@
 #include "MediumSquareRules.h"
 #include <iostream>
 using namespace std;
-MediumSquareRules::MediumSquareRules(){
-    
-    
-}
+MediumSquareRules::MediumSquareRules(Board* b)
+:Rules(b) {}
+
 void MediumSquareRules::printRules(){
     
     cout<<"MediumSquareRules constructed"<<endl;

@@ -7,11 +7,12 @@
 //
 #include "Rules.h"
 
+
 #ifndef SimpleSquareRules_h
 #define SimpleSquareRules_h
 class SimpleSquareRules : public Rules {
 public:
-    SimpleSquareRules();
+    SimpleSquareRules(Board* b);
     
     void printRules();
 };

@@ -20,7 +20,7 @@ int main() {
     // SimpleSquareBuilder class
     gameEngineer->makeGame();
 
-    // The engineer returns the right robot based off of the spec sent to it.
+    // The engineer returns the right game based off of the spec sent to it.
     Game* firstGame = gameEngineer->getGame();
 
     cout<<"Game built."<<endl;
@@ -28,6 +28,9 @@ int main() {
     firstGame->getBoard();
     firstGame->getTile();
     firstGame->getGeneration();
+    firstGame->flipTile();
+    firstGame->flagTile();
+    firstGame->unflagTile();
     /*
     Tile* t = firstGame->rboard()->GetTileAtPoint(1,2);
     t->ChangeDisplay("x ");

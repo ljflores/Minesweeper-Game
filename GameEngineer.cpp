@@ -12,7 +12,7 @@ public:
 
     // Return the Game made from the SimpleSquareBuilder spec
     Game* getGame() {
-        return this->gameBuilder->getGame();
+        return this->gameBuilder->getGame();;
     }
 
     // Execute the methods specific to the GameBuilder that implements

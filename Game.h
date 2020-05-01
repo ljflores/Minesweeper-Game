@@ -23,7 +23,7 @@ private:
     Tile* gameTile;
     Generate* gameGeneration;
 public:
- 
+// Setters and getters //
     void setRules(Rules*);
     void getRules();
     void setBoard(Board*);
@@ -32,6 +32,12 @@ public:
     void getTile();
     void setGeneration(Generate*);
     void getGeneration();
+
+// Access to Rules methods
+    void flipTile(); // Added these methods to flip, flag, and unflag a tile in the game. See "Game.cpp" for their
+    void flagTile(); // implementation.
+    void unflagTile();
+
     Board* rboard();//returns the board
 };
 

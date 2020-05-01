@@ -9,9 +9,10 @@
 #include "AdvSquareRules.h"
 #include "iostream"
 using namespace std;
-AdvSquareRules::AdvSquareRules(){
-    
-}
+
+AdvSquareRules::AdvSquareRules(Board* b)
+:Rules(b) {}
+
 void AdvSquareRules::printRules(){
     cout<<"advance square rules constructed"<<endl;
 }

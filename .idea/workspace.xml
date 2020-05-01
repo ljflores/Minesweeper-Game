@@ -41,8 +41,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Rules.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdvSqaureRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSqaureRules.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdvSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSquareBuilder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdvSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSquareRules.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngineer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngineer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediumSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MediumSquareBuilder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediumSquareRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MediumSquareRules.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediumSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/MediumSquareRules.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rules.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareBuilder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleSquareRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareRules.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareRules.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +112,8 @@
       <workItem from="1588184428937" duration="3608000" />
       <workItem from="1588189567603" duration="235000" />
       <workItem from="1588205590582" duration="124000" />
+      <workItem from="1588300012688" duration="1816000" />
+      <workItem from="1588301854290" duration="6703000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;AdvSqaureRules.cpp&quot; to the CMake file.">
       <created>1588184764505</created>
@@ -161,11 +178,18 @@
       <option name="project" value="LOCAL" />
       <updated>1588270206528</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added some comments in Rules.h, ideas for how we can move forward with implementation.">
+      <created>1588273230668</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588273230668</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -190,13 +214,14 @@
     <MESSAGE value="Ignore this commit too. GitHub was giving me issues with pushing and pulling, so I'm seeing if it works now." />
     <MESSAGE value="Corrected SimpleSquareRules.cpp and SimpleSquareRules.h" />
     <MESSAGE value="Added comments in the MediumBoard.cpp file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added comments in the MediumBoard.cpp file." />
+    <MESSAGE value="Added some comments in Rules.h, ideas for how we can move forward with implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some comments in Rules.h, ideas for how we can move forward with implementation." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="133" y="14" key="CommitChangelistDialog2" timestamp="1588270205045">
+    <state x="491" y="14" key="CommitChangelistDialog2" timestamp="1588308686289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="133" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588270205045" />
+    <state x="491" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588308686289" />
     <state x="-1429" y="-148" key="CommitChangelistDialog2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588202879643" />
     <state x="-1645" y="-50" key="DiffContextDialog" timestamp="1588203073013">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -206,25 +231,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588272759655" />
-    <state width="1493" height="132" key="GridCell.Tab.0.bottom" timestamp="1588270177191">
+    <state width="1493" height="246" key="GridCell.Tab.0.bottom" timestamp="1588308686409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="132" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588270177191" />
+    <state width="1493" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588308686409" />
     <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
-    <state width="1493" height="132" key="GridCell.Tab.0.center" timestamp="1588270177191">
+    <state width="1493" height="246" key="GridCell.Tab.0.center" timestamp="1588308686409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="132" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588270177191" />
+    <state width="1493" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588308686409" />
     <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="132" key="GridCell.Tab.0.left" timestamp="1588270177191">
+    <state width="1493" height="246" key="GridCell.Tab.0.left" timestamp="1588308686409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="132" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588270177191" />
+    <state width="1493" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588308686409" />
     <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="132" key="GridCell.Tab.0.right" timestamp="1588270177191">
+    <state width="1493" height="246" key="GridCell.Tab.0.right" timestamp="1588308686409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="132" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588270177191" />
+    <state width="1493" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588308686409" />
     <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
     <state x="-1370" y="80" key="RollbackChangesDialog" timestamp="1588202979800">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -239,14 +264,14 @@
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588188294198" />
     <state x="-1469" y="29" key="Vcs.Push.Dialog.v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203081759" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588205594186">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588301862564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588205594186" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588273173277">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588301862564" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588301824374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588273173277" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588301824374" />
     <state x="-1197" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210304093" />
   </component>
 </project>

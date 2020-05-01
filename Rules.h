@@ -1,19 +1,24 @@
-
+#include "Board.h"
 #ifndef MINESWEEPERBUILDER_RULES_H
 #define MINESWEEPERBUILDER_RULES_H
-
 // An interface that define what all Rules should have. Can be inherited by SimpleSquareRules
 //and other derived Rules classes.
 class Rules {
-    // instance variable to access the game that the player is currently playing
+    Board* board;
 public:
+    Rules(Board* b) {
+        board = b;
+    }
+    Board* getBoard() {
+        return board;
+    }
     virtual void printRules()=0; // prints the rules out for the Player if they type in a key word, such as "rules".
                                  //     Should definitely be a pure virtual since the Rules description will be different
                                  //     for each type of game.
-    // flipTile();               // No "virtual" because flipTile() will likely be the same implementation
+    void flipTile();               // No "virtual" because flipTile() will likely be the same implementation
                                 // across the board for all types of games. We can provide implementation in the Rules class.
-    // flagTile(); // same as above
-    // unflagTile(); // same as above
+    void flagTile(); // same as above
+    void unflagTile(); // same as above
 //-----------------------HINTS---------------------------//
     // revealTile();
     // revealBomb(); // Not sure yet if these should be pure virtual or not. Depends on whether we want to require

@@ -23,7 +23,7 @@ public:
     }
 
     void buildRules() {
-        Rules* mediumsquarerules = new MediumSquareRules();
+        Rules* mediumsquarerules = new MediumSquareRules(game->rboard()); // Sends the board to the Rules class
         game->setRules(mediumsquarerules);
     }
 

@@ -7,7 +7,7 @@ void Game::setRules(Rules *rules) {
 }
 
 void Game::getRules() {
-    gameRules->printRules();
+    return gameRules->printRules();
 }
 
 void Game::setBoard(Board *board) {
@@ -35,6 +35,18 @@ void Game::getGeneration() {
 }
 Board* Game::rboard() {
     return this->gameBoard;
+}
+//---------------------------------------------------------//
+void Game::flipTile() {
+    gameRules->flipTile();
+}
+
+void Game::flagTile() {
+    gameRules->flagTile();
+}
+
+void Game::unflagTile() {
+    gameRules->unflagTile();
 }
 
 
