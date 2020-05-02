@@ -12,19 +12,30 @@ void Rules::flipTile() {
     this->getBoard()->printBoard();
     cout<<"X: "<<t->getxcord()<<endl;
     cout<<"Y: "<<t->getycord()<<endl;
-
 }
 
 void Rules::flagTile() {
     cout<<"Tile flagged."<<endl;
+
+    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    t->ChangeDisplay("f ");
+    this->getBoard()->printBoard();
+    cout<<"X: "<<t->getxcord()<<endl;
+    cout<<"Y: "<<t->getycord()<<endl;
 }
 
 void Rules::unflagTile() {
     cout<<"Tile unflagged."<<endl;
+
+    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    t->ChangeDisplay("[]");
+    this->getBoard()->printBoard();
+    cout<<"X: "<<t->getxcord()<<endl;
+    cout<<"Y: "<<t->getycord()<<endl;
 }
 
 void Rules::printRules() {
-    cout<<"(1) flip row col -- flips a tile at the row, then column, of your choosing"<<endl;
+    cout<<"(1) flip -- flips a tile of your choosing"<<endl;
     cout<<"(2) flag -- flags a tile of your choosing"<<endl;
     cout<<"(3) unflag -- unflags a tile of your choosing"<<endl;
     cout<<"(4) rules -- prints the rules"<<endl;

@@ -56,8 +56,20 @@ int AdvSquareRules::playGame() {
 
 void AdvSquareRules::revealTile() {
     cout<<"Tile revealed."<<endl;
+
+    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    t->ChangeDisplay("r ");
+    this->getBoard()->printBoard();
+    cout<<"X: "<<t->getxcord()<<endl;
+    cout<<"Y: "<<t->getycord()<<endl;
 }
 
 void AdvSquareRules::revealBomb() {
     cout<<"Bomb revealed"<<endl;
+
+    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    t->ChangeDisplay("B ");
+    this->getBoard()->printBoard();
+    cout<<"X: "<<t->getxcord()<<endl;
+    cout<<"Y: "<<t->getycord()<<endl;
 }
