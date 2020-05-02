@@ -12,13 +12,13 @@ public:
 
     void printBoard() {
 
-        cout<<"  ";
+        cout<<"    ";
         for (int k = 1;k<14;k++){ // printing column numbers
-            cout<<k<<" ";
+            cout<<k<<"  ";
         }
         cout<<endl;
         for(int i = 0; i < 13;i++){ // printing row numbers
-            cout<<i+1<<" ";
+            cout<<i+1<<"  ";
             for (int j = 0;j<13;j++){
                 c[i][j]->printTile(); // printing the tile shape, which is, for now, 2 brackets.
             }

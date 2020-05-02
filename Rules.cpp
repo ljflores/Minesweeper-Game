@@ -8,7 +8,7 @@ void Rules::flipTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("x ");
+    t->ChangeDisplay("[x]");
     this->getBoard()->printBoard();
     cout<<"Row: "<<t->getycord()<<endl;
     cout<<"Column: "<<t->getxcord()<<endl;
@@ -20,7 +20,7 @@ void Rules::flagTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("f ");
+    t->ChangeDisplay("[f]");
     this->getBoard()->printBoard();
     cout<<"Row: "<<t->getycord()<<endl;
     cout<<"Column: "<<t->getxcord()<<endl;
@@ -32,7 +32,7 @@ void Rules::unflagTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("u ");
+    t->ChangeDisplay("[u]");
     this->getBoard()->printBoard();
     cout<<"Row: "<<t->getycord()<<endl;
     cout<<"Column: "<<t->getxcord()<<endl;
