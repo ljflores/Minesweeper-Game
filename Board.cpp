@@ -27,11 +27,11 @@ int Board::getnummines(){
 }
 
 void Board::fillboardwithsquares() {
-    c = new Tile**[getxsize()]; //creating space for nows
+    c = new Tile**[getxsize()]; //creating space for rows
     for (int i = 0;i<getxsize();i++){
-        c[i] = new Tile*[getysize()];//creating space for colums
+        c[i] = new Tile*[getysize()];//creating space for columns
         for (int j = 0; j<getysize();j++){
-            c[i][j] = new SquareTile();//fulling up the 2d array with square tiles;
+            c[i][j] = new SquareTile();//filling up the 2d array with square tiles;
             c[i][j]->SetCord(j+1,i+1);//just helping us remember the cords
         }
 

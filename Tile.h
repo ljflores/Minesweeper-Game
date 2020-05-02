@@ -22,8 +22,6 @@ public:
     int getycord();
     void SetDisplayVar(int n);
     int GetDisplayVar();
-
-
 };
 
 #endif //MINESWEEPERBUILDER_TILE_H

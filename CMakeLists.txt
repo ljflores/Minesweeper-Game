@@ -30,4 +30,4 @@ add_executable(Object_Oriented_software_design_final_project
     SimpleSquareRules.h
     SquareTile.cpp
     SquareTile.h
-        Tile.h Game.cpp Tile.cpp Rules.cpp)
+        Tile.h Game.cpp Tile.cpp Rules.cpp phase1_officlal.h)
