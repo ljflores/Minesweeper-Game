@@ -10,8 +10,7 @@
 #include "iostream"
 using namespace std;
 
-AdvSquareRules::AdvSquareRules(Board* b)
-:Rules(b) {}
+AdvSquareRules::AdvSquareRules(){}
 
 void AdvSquareRules::printRules(){
     cout<<"Valid commands for a Advanced Square game include: "<<endl;

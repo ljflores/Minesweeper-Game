@@ -22,7 +22,7 @@ public:
     }
 
     void buildRules() {
-        Rules* advsqrules = new AdvSquareRules(game->rboard()); // sends the board to the Rules class
+        Rules* advsqrules = new AdvSquareRules();
         game->setRules(advsqrules);
     }
     

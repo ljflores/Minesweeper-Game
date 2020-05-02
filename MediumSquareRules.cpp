@@ -10,8 +10,7 @@
 #include "MediumSquareRules.h"
 #include <iostream>
 using namespace std;
-MediumSquareRules::MediumSquareRules(Board* b)
-:Rules(b) {}
+MediumSquareRules::MediumSquareRules(){}
 
 void MediumSquareRules::printRules(){
     cout<<"Valid commands for a Medium Square game include: "<<endl;

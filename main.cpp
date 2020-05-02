@@ -39,7 +39,7 @@ int main() {
     cout<<"X: "<<t->getxcord()<<endl;
     cout<<"Y: "<<t->getycord()<<endl;
     return 0;
-     */
+    */
 }
 int userhandler(){
     cout<<"Welcome to Minesweeper"<<endl;

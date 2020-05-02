@@ -14,8 +14,8 @@ public:
     }
 
     void buildRules() {
-        Rules* simpleSquareRules = new SimpleSquareRules(game->rboard()); // Changed the builder slightly so it
-        game->setRules(simpleSquareRules);                                   // sends the board to the Rules
+        Rules* simpleSquareRules = new SimpleSquareRules();
+        game->setRules(simpleSquareRules);
     }
 
     void buildBoard() {

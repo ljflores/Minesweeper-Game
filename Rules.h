@@ -4,14 +4,11 @@
 // An interface that define what all Rules should have. Can be inherited by SimpleSquareRules
 //and other derived Rules classes.
 class Rules {
-    Board* board;
+    Board* gameBoard; // actually use
 public:
-    Rules(Board* b) {
-        board = b;
-    }
-    Board* getBoard() {
-        return board;
-    }
+    void setBoard(Board* b);
+    Board* getBoard();
+
     virtual void printRules(); // prints the rules out for the Player if they type in a key word, such as "rules".
                                  //     Should definitely be a pure virtual since the Rules description will be different
                                  //     for each type of game.

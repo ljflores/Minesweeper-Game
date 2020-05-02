@@ -12,7 +12,7 @@
 #define SimpleSquareRules_h
 class SimpleSquareRules : public Rules {
 public:
-    SimpleSquareRules(Board* b);
+    SimpleSquareRules();
     
     void printRules();
     int playGame();

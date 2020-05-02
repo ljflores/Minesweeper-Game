@@ -5,8 +5,7 @@
 using namespace std;
 
 
-SimpleSquareRules::SimpleSquareRules(Board* b)
-: Rules(b){}
+SimpleSquareRules::SimpleSquareRules(){}
 
 void SimpleSquareRules::printRules() {
     cout<<"Valid commands for a Simple Square game include: "<<endl;
