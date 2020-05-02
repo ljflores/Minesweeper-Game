@@ -12,16 +12,16 @@ public:
     Board* getBoard() {
         return board;
     }
-    virtual void printRules()=0; // prints the rules out for the Player if they type in a key word, such as "rules".
+    virtual void printRules(); // prints the rules out for the Player if they type in a key word, such as "rules".
                                  //     Should definitely be a pure virtual since the Rules description will be different
                                  //     for each type of game.
+    virtual int playGame()=0;
     void flipTile();               // No "virtual" because flipTile() will likely be the same implementation
                                 // across the board for all types of games. We can provide implementation in the Rules class.
     void flagTile(); // same as above
     void unflagTile(); // same as above
 //-----------------------HINTS---------------------------//
-    // revealTile();
-    // revealBomb(); // Not sure yet if these should be pure virtual or not. Depends on whether we want to require
+                    // Not sure yet if these should be pure virtual or not. Depends on whether we want to require
                      // all derived Rules classes to implement them, or if we would rather decide on a case-by-case
                      // basis.
 };

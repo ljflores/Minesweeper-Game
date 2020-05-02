@@ -15,6 +15,7 @@ public:
     SimpleSquareRules(Board* b);
     
     void printRules();
+    int playGame();
 };
 
 

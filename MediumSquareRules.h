@@ -12,6 +12,7 @@ class MediumSquareRules : public Rules {
 public:
     MediumSquareRules(Board* b);
     void printRules();
+    int playGame();
 };
 
 

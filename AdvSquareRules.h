@@ -13,6 +13,9 @@ public:
     AdvSquareRules(Board* g);
     
     void printRules();
+    int playGame();
+    void revealTile();
+    void revealBomb();
 };
 //test commit another test commit
 #endif /* AdvSquareRules_h */

@@ -1,5 +1,6 @@
 #include "GameEngineer.cpp"
 int userhandler();
+
 int main() {
     // Get a GameBuilder of type SimpleSquareBuilder
     int usera = userhandler();
@@ -24,13 +25,13 @@ int main() {
     Game* firstGame = gameEngineer->getGame();
 
     cout<<"Game built."<<endl;
+
     firstGame->getRules();
     firstGame->getBoard();
     firstGame->getTile();
     firstGame->getGeneration();
-    firstGame->flipTile();
-    firstGame->flagTile();
-    firstGame->unflagTile();
+
+    firstGame->playGame();
     /*
     Tile* t = firstGame->rboard()->GetTileAtPoint(1,2);
     t->ChangeDisplay("x ");

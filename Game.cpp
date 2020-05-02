@@ -37,16 +37,10 @@ Board* Game::rboard() {
     return this->gameBoard;
 }
 //---------------------------------------------------------//
-void Game::flipTile() {
-    gameRules->flipTile();
-}
 
-void Game::flagTile() {
-    gameRules->flagTile();
-}
-
-void Game::unflagTile() {
-    gameRules->unflagTile();
+int Game::playGame() {
+    gameRules->playGame(); // see Rules.cpp for implementation
+    return 0;
 }
 
 
