@@ -7,6 +7,9 @@ class Tile {
     string status;
     int xcord;
     int ycord;
+    bool mine;//tells if tile is a mine
+    int displayvar;//displays number away from closet mine
+
 public:
     Tile();
     virtual void printTile()=0;
@@ -17,6 +20,9 @@ public:
     void SetCord(int x,int y);//set the cordinates just in case
     int getxcord();
     int getycord();
+    void SetDisplayVar(int n);
+    int GetDisplayVar();
+
 
 };
 

@@ -4,11 +4,11 @@
 
 #include "Tile.h"
 Tile::Tile(){
-
+    this->mine = false;
 }
 bool Tile::IsMine() {
     //just making it work, need to change later
-    return false;
+    return mine;
 }
 string Tile::GetStatus() {
     return this->status;
@@ -25,4 +25,12 @@ int Tile::getxcord() {
 }
 int Tile::getycord() {
     return this->ycord;
+}
+
+void Tile::SetDisplayVar(int n) {
+    this->displayvar = n;
+}
+
+int Tile::GetDisplayVar() {
+    return this->displayvar;
 }
