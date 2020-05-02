@@ -46,3 +46,32 @@ int MediumSquareRules::playGame() {
     return 0;
 }
 
+void MediumSquareRules::rows_and_columns() {
+    int gameRow = 0;
+    int gameCol = 0;
+
+    bool keepGoing = true;
+    while (keepGoing) {
+        cout << "What row would you like? Enter a number between 1 and 10: " << endl;
+        cin >> gameRow;
+        if ((gameRow < 1) || (gameRow > 10)) {
+            cout << "Please enter a number in the correct range." << endl;
+        } else {
+            break;
+        }
+    }
+    while (keepGoing) {
+        cout<<"What column would you like? enter a number between 1 and 10: "<<endl;
+        cin >> gameCol;
+        if ((gameCol < 1) || (gameCol > 10)) {
+            cout << "Please enter a number in the correct range." << endl;
+        }
+        else {
+            break;
+        }
+    }
+
+    this->setRow(gameRow);
+    this->setCol(gameCol);
+}
+

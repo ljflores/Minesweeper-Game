@@ -13,6 +13,7 @@ public:
     MediumSquareRules();
     void printRules();
     int playGame();
+    void rows_and_columns();
 };
 
 

@@ -55,21 +55,54 @@ int AdvSquareRules::playGame() {
 }
 
 void AdvSquareRules::revealTile() {
-    cout<<"Tile revealed."<<endl;
+    this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
     t->ChangeDisplay("r ");
     this->getBoard()->printBoard();
-    cout<<"X: "<<t->getxcord()<<endl;
-    cout<<"Y: "<<t->getycord()<<endl;
+    cout<<"Row: "<<t->getycord()<<endl;
+    cout<<"Column: "<<t->getxcord()<<endl;
+
+    cout<<"Tile revealed."<<endl;
 }
 
 void AdvSquareRules::revealBomb() {
-    cout<<"Bomb revealed"<<endl;
+    this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
     t->ChangeDisplay("B ");
     this->getBoard()->printBoard();
-    cout<<"X: "<<t->getxcord()<<endl;
-    cout<<"Y: "<<t->getycord()<<endl;
+    cout<<"Row: "<<t->getycord()<<endl;
+    cout<<"Column: "<<t->getxcord()<<endl;
+
+    cout<<"Bomb revealed."<<endl;
+}
+
+void AdvSquareRules::rows_and_columns() {
+    int gameRow = 0;
+    int gameCol = 0;
+
+    bool keepGoing = true;
+    while (keepGoing) {
+        cout << "What row would you like? Enter a number between 1 and 13: " << endl;
+        cin >> gameRow;
+        if ((gameRow < 1) || (gameRow > 13)) {
+            cout << "Please enter a number in the correct range." << endl;
+        } else {
+            break;
+        }
+    }
+    while (keepGoing) {
+        cout<<"What column would you like? enter a number between 1 and 13: "<<endl;
+        cin >> gameCol;
+        if ((gameCol < 1) || (gameCol > 13)) {
+            cout << "Please enter a number in the correct range." << endl;
+        }
+        else {
+            break;
+        }
+    }
+
+    this->setRow(gameRow);
+    this->setCol(gameCol);
 }

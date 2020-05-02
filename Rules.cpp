@@ -5,33 +5,39 @@
 #include "Rules.h"
 
 void Rules::flipTile() {
-    cout<<"Tile flipped."<<endl; // Print statements for now. Will need implementation later.
+    this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
     t->ChangeDisplay("x ");
     this->getBoard()->printBoard();
-    cout<<"X: "<<t->getxcord()<<endl;
-    cout<<"Y: "<<t->getycord()<<endl;
+    cout<<"Row: "<<t->getycord()<<endl;
+    cout<<"Column: "<<t->getxcord()<<endl;
+
+    cout<<"Tile flipped."<<endl;
 }
 
 void Rules::flagTile() {
-    cout<<"Tile flagged."<<endl;
+    this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
     t->ChangeDisplay("f ");
     this->getBoard()->printBoard();
-    cout<<"X: "<<t->getxcord()<<endl;
-    cout<<"Y: "<<t->getycord()<<endl;
+    cout<<"Row: "<<t->getycord()<<endl;
+    cout<<"Column: "<<t->getxcord()<<endl;
+
+    cout<<"Tile flagged."<<endl;
 }
 
 void Rules::unflagTile() {
-    cout<<"Tile unflagged."<<endl;
+    this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(1,2);
-    t->ChangeDisplay("[]");
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
+    t->ChangeDisplay("u ");
     this->getBoard()->printBoard();
-    cout<<"X: "<<t->getxcord()<<endl;
-    cout<<"Y: "<<t->getycord()<<endl;
+    cout<<"Row: "<<t->getycord()<<endl;
+    cout<<"Column: "<<t->getxcord()<<endl;
+
+    cout<<"Tile unflagged."<<endl;
 }
 
 void Rules::printRules() {
@@ -48,4 +54,20 @@ void Rules::setBoard(Board *b) {
 
 Board *Rules::getBoard() {
     return gameBoard;
+}
+
+void Rules::setRow(int r) {
+    row = r;
+}
+
+void Rules::setCol(int c) {
+    col = c;
+}
+
+int Rules::getRow() {
+    return row;
+}
+
+int Rules::getCol() {
+    return col;
 }
