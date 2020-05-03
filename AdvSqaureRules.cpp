@@ -15,8 +15,6 @@ AdvSquareRules::AdvSquareRules(){}
 void AdvSquareRules::printRules(){
     cout<<"Valid commands for a Advanced Square game include: "<<endl;
     Rules::printRules();
-    cout<<"(6) revealT -- reveals one tile of your choosing"<<endl;
-    cout<<"(7) revealB -- reveals 1 bomb of your choosing"<<endl;
     cout<<"\n";
 }
 
@@ -38,12 +36,6 @@ int AdvSquareRules::playGame() {
         else if (command == "rules") {
             this->printRules();
         }
-        else if (command == "revealT") {
-            this->revealTile();
-        }
-        else if (command == "revealB") {
-            this->revealBomb();
-        }
         else if (command == "stop") {
             break;
         }
@@ -52,30 +44,6 @@ int AdvSquareRules::playGame() {
         }
     }
     return 0;
-}
-
-void AdvSquareRules::revealTile() {
-    this->rows_and_columns();
-
-    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->changeDisplay("r");
-    this->getBoard()->printBoard();
-    cout<<"Row: "<<this->getRow()<<endl;
-    cout<<"Column: "<<this->getCol()<<endl;
-
-    cout<<"Tile revealed."<<endl;
-}
-
-void AdvSquareRules::revealBomb() {
-    this->rows_and_columns();
-
-    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->changeDisplay("B");
-    this->getBoard()->printBoard();
-    cout<<"Row: "<<this->getRow()<<endl;
-    cout<<"Column: "<<this->getCol()<<endl;
-
-    cout<<"Bomb revealed."<<endl;
 }
 
 void AdvSquareRules::rows_and_columns() {

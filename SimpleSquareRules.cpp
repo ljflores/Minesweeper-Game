@@ -7,6 +7,30 @@ using namespace std;
 
 SimpleSquareRules::SimpleSquareRules(){}
 
+void SimpleSquareRules::revealTile() {
+    this->rows_and_columns();
+
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
+    t->changeDisplay("r");
+    this->getBoard()->printBoard();
+    cout<<"Row: "<<this->getRow()<<endl;
+    cout<<"Column: "<<this->getCol()<<endl;
+
+    cout<<"Tile revealed."<<endl;
+}
+
+void SimpleSquareRules::revealBomb() {
+    this->rows_and_columns();
+
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
+    t->changeDisplay("B");
+    this->getBoard()->printBoard();
+    cout<<"Row: "<<this->getRow()<<endl;
+    cout<<"Column: "<<this->getCol()<<endl;
+
+    cout<<"Bomb revealed."<<endl;
+}
+
 void SimpleSquareRules::rows_and_columns() {
     int gameRow = 0;
     int gameCol = 0;
@@ -39,6 +63,8 @@ void SimpleSquareRules::rows_and_columns() {
 void SimpleSquareRules::printRules() {
     cout<<"Valid commands for a Simple Square game include: "<<endl;
     Rules::printRules();
+    cout<<"(6) revealT -- reveals one tile of your choosing"<<endl;
+    cout<<"(7) revealB -- reveals 1 bomb of your choosing"<<endl;
     cout<<"\n";
 }
 
@@ -59,6 +85,12 @@ int SimpleSquareRules::playGame() {
         }
         else if (command == "rules") {
             this->printRules();
+        }
+        else if (command == "revealT") {
+            this->revealTile();
+        }
+        else if (command == "revealB") {
+            this->revealBomb();
         }
         else if (command == "stop") {
             break;
