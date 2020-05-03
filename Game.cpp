@@ -31,7 +31,7 @@ void Game::setGeneration(Generate *generation) {
 }
 
 void Game::getGeneration() {
-    gameGeneration->printGenerate();
+    gameGeneration->printBoard();
 }
 Board* Game::rboard() {
     return this->gameBoard;

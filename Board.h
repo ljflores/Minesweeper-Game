@@ -10,7 +10,7 @@ class Board {
     int mines;
 
 public:
-    Tile ***c;//pointer to our 2D array
+    Tile ***c; //pointer to our 2D array
     virtual void printBoard()=0;
     Board(int xsize,int ysize,int mines);
     // might consider making the destructors in base classes virtual to avoid memory leaks in derived classes.
