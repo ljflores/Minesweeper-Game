@@ -8,36 +8,62 @@ void Rules::flipTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("[x]");
-    this->getBoard()->printBoard();
-    cout<<"Row: "<<t->getycord()<<endl;
-    cout<<"Column: "<<t->getxcord()<<endl;
 
-    cout<<"Tile flipped."<<endl;
+    if (t->getStatus() == "unflipped") {
+        t->changeDisplay(t->getNumber()); // change the display to show the underlying number / bomb
+        t->setStatus("flipped"); // update the status
+        this->getBoard()->printBoard();
+
+        cout<<"Row: "<<this->getRow()<<endl;
+        cout<<"Column: "<<this->getCol()<<endl;
+        cout<<"Tile flipped."<<endl;
+    }
+    else {
+        cout<<"Tile cannot be flipped."<<endl;
+    }
+
 }
 
 void Rules::flagTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("[f]");
-    this->getBoard()->printBoard();
-    cout<<"Row: "<<t->getycord()<<endl;
-    cout<<"Column: "<<t->getxcord()<<endl;
 
-    cout<<"Tile flagged."<<endl;
+    if (t->getStatus() == "unflipped") {
+        t->changeDisplay("f"); // change the tile display to indicate that it's flagged
+        t->setStatus("flagged"); // update the status
+        this->getBoard()->printBoard();
+
+        cout<<"Row: "<<this->getRow()<<endl;
+        cout<<"Column: "<<this->getCol()<<endl;
+        cout<<"Tile flagged."<<endl;
+    }
+
+    else {
+        cout<<"Tile cannot be flagged."<<endl;
+    }
+
 }
 
 void Rules::unflagTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("[u]");
-    this->getBoard()->printBoard();
-    cout<<"Row: "<<t->getycord()<<endl;
-    cout<<"Column: "<<t->getxcord()<<endl;
 
-    cout<<"Tile unflagged."<<endl;
+    if (t->getStatus() == "flagged") {
+        t->changeDisplay(" "); // changes the display back to a blank tile
+        t->setStatus("unflipped"); // updates the status back to unflipped
+        this->getBoard()->printBoard();
+
+        cout<<"Row: "<<this->getRow()<<endl;
+        cout<<"Column: "<<this->getCol()<<endl;
+        cout<<"Tile unflagged."<<endl;
+    }
+
+    else {
+        cout<<"Tile cannot be unflagged."<<endl;
+    }
+
 }
 
 void Rules::printRules() {

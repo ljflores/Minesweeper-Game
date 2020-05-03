@@ -19,7 +19,7 @@ private:
 public:
     SquareTile();
     //temp method
-    void ChangeDisplay(string s);
+    void changeDisplay(string s);
     void printTile();
 };
 

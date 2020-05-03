@@ -6,11 +6,9 @@ using namespace std;
 // Defines what a Simple board must do.
 class SimpleBoard : public Board {
 private:
-
 public:
-    SimpleBoard():Board(7,7,1) {
-        
-    }
+    SimpleBoard()
+    :Board(7,7,1) {}
 
     void printBoard() {
         cout<<"    ";

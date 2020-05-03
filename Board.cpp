@@ -27,14 +27,19 @@ int Board::getnummines(){
 }
 
 void Board::fillboardwithsquares() {
-    c = new Tile**[getxsize()]; //creating space for rows
+    int t = 1; // will update the track number
+
+    c = new Tile**[getxsize()]; //creating space for columns
+
     for (int i = 0;i<getxsize();i++){
-        c[i] = new Tile*[getysize()];//creating space for columns
+        c[i] = new Tile*[getysize()];//creating space for rows
+
         for (int j = 0; j<getysize();j++){
             c[i][j] = new SquareTile();//filling up the 2d array with square tiles;
-            c[i][j]->SetCord(j+1,i+1);//just helping us remember the cords
+            // c[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
+            c[i][j]->setTrack(t); // sets the track number for the tile
+            t++; // increments the track number
         }
-
     }
 
 }

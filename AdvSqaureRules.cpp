@@ -58,10 +58,10 @@ void AdvSquareRules::revealTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("[r]");
+    t->changeDisplay("r");
     this->getBoard()->printBoard();
-    cout<<"Row: "<<t->getycord()<<endl;
-    cout<<"Column: "<<t->getxcord()<<endl;
+    cout<<"Row: "<<this->getRow()<<endl;
+    cout<<"Column: "<<this->getCol()<<endl;
 
     cout<<"Tile revealed."<<endl;
 }
@@ -70,10 +70,10 @@ void AdvSquareRules::revealBomb() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-    t->ChangeDisplay("[B]");
+    t->changeDisplay("B");
     this->getBoard()->printBoard();
-    cout<<"Row: "<<t->getycord()<<endl;
-    cout<<"Column: "<<t->getxcord()<<endl;
+    cout<<"Row: "<<this->getRow()<<endl;
+    cout<<"Column: "<<this->getCol()<<endl;
 
     cout<<"Bomb revealed."<<endl;
 }

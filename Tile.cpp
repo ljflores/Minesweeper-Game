@@ -4,33 +4,55 @@
 
 #include "Tile.h"
 Tile::Tile(){
-    this->mine = false;
+    status = "unflipped"; // when the board is initalized, all the tiles are unflipped.
+    isMine = false; // at first, all the mines are safe.
+    number = "0"; // all tiles are marked with a 0 since all of the tiles are currently safe.
+    display = " "; // since the tiles are all initially unflipped, there should be no number or letter displayed on the tile.
 }
+
 bool Tile::IsMine() {
-    //just making it work, need to change later
-    return mine;
+    return isMine;
 }
-string Tile::GetStatus() {
+string Tile::getStatus() {
     return this->status;
 }
-void Tile::SetStatus(string s) {
+void Tile::setStatus(string s) {
     this->status = s;
 }
-void Tile::SetCord(int x,int y){
+/*
+void Tile::setCoord(int x,int y){
     this->xcord = x;
     this->ycord = y;
 }
-int Tile::getxcord() {
+int Tile::getXCoord() {
     return this->xcord;
 }
-int Tile::getycord() {
+int Tile::getYCoord() {
     return this->ycord;
 }
+*/
 
-void Tile::SetDisplayVar(int n) {
-    this->displayvar = n;
+void Tile::setDisplay(string n) {
+    this->display = n;
 }
 
-int Tile::GetDisplayVar() {
-    return this->displayvar;
+string Tile::getDisplay() {
+    return this->display;
 }
+
+void Tile::setNumber(string n) {
+    number = n;
+}
+
+string Tile::getNumber() {
+    return number;
+}
+
+void Tile::setTrack(int t) {
+    track = t;
+}
+
+int Tile::getTrack() {
+    return track;
+}
+
