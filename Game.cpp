@@ -39,10 +39,10 @@ Board* Game::rboard() {
 //---------------------------------------------------------//
 
 int Game::playGame() {
-    gameRules->setBoard(this->rboard());
     gameGeneration->setBoard(this->rboard());
-    gameRules->playGame(); // see Rules.cpp for implementation
     gameGeneration->setBombs();
+    gameRules->setBoard(gameGeneration->getBoard());
+    gameRules->playGame(); // see Rules.cpp for implementation
     return 0;
 }
 
