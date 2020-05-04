@@ -41,10 +41,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AdvSqaureRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSqaureRules.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdvSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSquareRules.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimpleSquareRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareRules.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareRules.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +110,8 @@
       <workItem from="1588458983746" duration="74000" />
       <workItem from="1588469401413" duration="4711000" />
       <workItem from="1588474575156" duration="598000" />
-      <workItem from="1588531895533" duration="8461000" />
+      <workItem from="1588531895533" duration="9497000" />
+      <workItem from="1588553475584" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;AdvSqaureRules.cpp&quot; to the CMake file.">
       <created>1588184764505</created>
@@ -255,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588548150609</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Moved the two hints from AdvSquareRules to SimpleSquareRules">
+      <created>1588548538035</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588548538035</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,13 +308,14 @@
     <MESSAGE value="Deleted the phase1.h file" />
     <MESSAGE value="Added comments to phase1.h and reorganized things a bit." />
     <MESSAGE value="Made it so Board initializes a Tile matrix so all the tiles are safe and marked as &quot;unflipped.&quot; Also made edits to Rules so it updates the status of the tiles once a command is performed. Lastly, made it so the tiles are marked with individual numbers instead of coordinates. This will make it easier to implement a generation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made it so Board initializes a Tile matrix so all the tiles are safe and marked as &quot;unflipped.&quot; Also made edits to Rules so it updates the status of the tiles once a command is performed. Lastly, made it so the tiles are marked with individual numbers instead of coordinates. This will make it easier to implement a generation." />
+    <MESSAGE value="Moved the two hints from AdvSquareRules to SimpleSquareRules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved the two hints from AdvSquareRules to SimpleSquareRules" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="32" y="14" key="CommitChangelistDialog2" timestamp="1588548148347">
+    <state x="0" y="14" key="CommitChangelistDialog2" timestamp="1588553856986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="32" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588548148347" />
+    <state x="0" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588553856986" />
     <state x="-1429" y="-148" key="CommitChangelistDialog2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588202879643" />
     <state x="-1645" y="-50" key="DiffContextDialog" timestamp="1588203073013">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -312,25 +325,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588436439175" />
-    <state width="1493" height="153" key="GridCell.Tab.0.bottom" timestamp="1588548456263">
+    <state width="1493" height="246" key="GridCell.Tab.0.bottom" timestamp="1588549489031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="153" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588548456263" />
+    <state width="1493" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588549489031" />
     <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
-    <state width="1493" height="153" key="GridCell.Tab.0.center" timestamp="1588548456263">
+    <state width="1493" height="246" key="GridCell.Tab.0.center" timestamp="1588549489030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="153" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588548456263" />
+    <state width="1493" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588549489030" />
     <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="153" key="GridCell.Tab.0.left" timestamp="1588548456263">
+    <state width="1493" height="246" key="GridCell.Tab.0.left" timestamp="1588549489030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="153" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588548456263" />
+    <state width="1493" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588549489030" />
     <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="153" key="GridCell.Tab.0.right" timestamp="1588548456263">
+    <state width="1493" height="246" key="GridCell.Tab.0.right" timestamp="1588549489031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="153" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588548456263" />
+    <state width="1493" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588549489031" />
     <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
     <state x="-1370" y="80" key="RollbackChangesDialog" timestamp="1588202979800">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -340,10 +353,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588104134375" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588548154634">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588553861674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588548154634" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588553861674" />
     <state x="-1469" y="29" key="Vcs.Push.Dialog.v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203081759" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588474591377">
       <screen x="0" y="0" width="1536" height="824" />
