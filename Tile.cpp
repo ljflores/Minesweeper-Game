@@ -47,3 +47,8 @@ void Tile::setNumber(string n) {
 string Tile::getNumber() {
     return number;
 }
+
+void Tile::setMine() { // needs to be fixed
+    isMine = true;
+    number = "B";
+}

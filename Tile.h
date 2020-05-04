@@ -29,6 +29,7 @@ public:
     virtual void changeDisplay(string s)=0; // changes what the tile displays
 
     bool IsMine(); //checks if tile is a mine
+    void setMine();
 
     void setCoord(int x,int y);//set the cordinates just in case
     int getXCoord();

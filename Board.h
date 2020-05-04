@@ -11,9 +11,9 @@ private:
     Tile ***c; //pointer to our 2D array
 
 public:
+    Board(int xsize,int ysize,int mines);
 
     virtual void printBoard()=0;
-    Board(int xsize,int ysize,int mines);
     // might consider making the destructors in base classes virtual to avoid memory leaks in derived classes.
     int getxsize();
     int getysize();

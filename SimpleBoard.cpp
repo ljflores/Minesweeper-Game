@@ -8,7 +8,7 @@ class SimpleBoard : public Board {
 private:
 public:
     SimpleBoard()
-    :Board(7,7,1) {}
+    :Board(7,7,5) {}
 
     void printBoard() {
         cout<<"    ";

@@ -9,6 +9,7 @@ public:
     void setBoard(Board* b);
     Board* getBoard();
     virtual void printBoard()=0;
+    virtual void setBombs()=0;
 };
 
 #endif //MINESWEEPERBUILDER_GENERATE_H

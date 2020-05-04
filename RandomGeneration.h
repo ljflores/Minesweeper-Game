@@ -17,8 +17,9 @@ class RandomGeneration : public Generate {
 public:
     RandomGeneration();
 
- //   int * shuffle(int upperBound);
+    int * shuffle(int upperBound);
     void printBoard();
+    void setBombs();
 };
 
 
