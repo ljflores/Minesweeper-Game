@@ -14,8 +14,8 @@ void Rules::flipTile() {
         t->setStatus("flipped"); // update the status
         this->getBoard()->printBoard();
 
-        cout<<"Row: "<<this->getRow()<<endl;
-        cout<<"Column: "<<this->getCol()<<endl;
+        cout<<"Row: "<<t->getYCoord()<<endl;
+        cout<<"Column: "<<t->getXCoord()<<endl;
         cout<<"Tile flipped."<<endl;
     }
     else {
@@ -34,8 +34,8 @@ void Rules::flagTile() {
         t->setStatus("flagged"); // update the status
         this->getBoard()->printBoard();
 
-        cout<<"Row: "<<this->getRow()<<endl;
-        cout<<"Column: "<<this->getCol()<<endl;
+        cout<<"Row: "<<t->getYCoord()<<endl;
+        cout<<"Column: "<<t->getXCoord()<<endl;
         cout<<"Tile flagged."<<endl;
     }
 
@@ -55,8 +55,8 @@ void Rules::unflagTile() {
         t->setStatus("unflipped"); // updates the status back to unflipped
         this->getBoard()->printBoard();
 
-        cout<<"Row: "<<this->getRow()<<endl;
-        cout<<"Column: "<<this->getCol()<<endl;
+        cout<<"Row: "<<t->getYCoord()<<endl;
+        cout<<"Column: "<<t->getXCoord()<<endl;
         cout<<"Tile unflagged."<<endl;
     }
 

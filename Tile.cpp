@@ -19,7 +19,7 @@ string Tile::getStatus() {
 void Tile::setStatus(string s) {
     this->status = s;
 }
-/*
+
 void Tile::setCoord(int x,int y){
     this->xcord = x;
     this->ycord = y;
@@ -30,7 +30,7 @@ int Tile::getXCoord() {
 int Tile::getYCoord() {
     return this->ycord;
 }
-*/
+
 
 void Tile::setDisplay(string n) {
     this->display = n;
@@ -47,12 +47,3 @@ void Tile::setNumber(string n) {
 string Tile::getNumber() {
     return number;
 }
-
-void Tile::setTrack(int t) {
-    track = t;
-}
-
-int Tile::getTrack() {
-    return track;
-}
-

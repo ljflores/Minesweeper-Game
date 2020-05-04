@@ -13,8 +13,8 @@ void SimpleSquareRules::revealTile() {
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
     t->changeDisplay("r");
     this->getBoard()->printBoard();
-    cout<<"Row: "<<this->getRow()<<endl;
-    cout<<"Column: "<<this->getCol()<<endl;
+    cout<<"Row: "<<t->getYCoord()<<endl;
+    cout<<"Column: "<<t->getXCoord()<<endl;
 
     cout<<"Tile revealed."<<endl;
 }
@@ -25,8 +25,8 @@ void SimpleSquareRules::revealBomb() {
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
     t->changeDisplay("B");
     this->getBoard()->printBoard();
-    cout<<"Row: "<<this->getRow()<<endl;
-    cout<<"Column: "<<this->getCol()<<endl;
+    cout<<"Row: "<<t->getYCoord()<<endl;
+    cout<<"Column: "<<t->getXCoord()<<endl;
 
     cout<<"Bomb revealed."<<endl;
 }

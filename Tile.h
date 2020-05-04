@@ -5,9 +5,8 @@ using namespace std;
 // An interface that defines what all tiles must do.
 class Tile {
     string status;
- //   int xcord;
- //   int ycord;
-    int track; // keeps track of which tile to reference
+    int xcord;
+    int ycord;
     bool isMine;//tells if tile is a mine
     string number; // underlying number (1, 2, 3) or letter (B) that indicates the bombs in the vicinity
                             // or a Bomb.
@@ -31,14 +30,11 @@ public:
 
     bool IsMine(); //checks if tile is a mine
 
-    void setTrack(int t); // assigns a number to the tile to keep track of it
-    int getTrack();
 
-    /*
     void setCoord(int x,int y);//set the cordinates just in case
     int getXCoord();
     int getYCoord();
-    */
+
 };
 
 #endif //MINESWEEPERBUILDER_TILE_H

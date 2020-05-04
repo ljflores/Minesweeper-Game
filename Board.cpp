@@ -27,8 +27,6 @@ int Board::getnummines(){
 }
 
 void Board::fillboardwithsquares() {
-    int t = 1; // will update the track number
-
     c = new Tile**[getxsize()]; //creating space for columns
 
     for (int i = 0;i<getxsize();i++){
@@ -36,9 +34,7 @@ void Board::fillboardwithsquares() {
 
         for (int j = 0; j<getysize();j++){
             c[i][j] = new SquareTile();//filling up the 2d array with square tiles;
-            // c[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
-            c[i][j]->setTrack(t); // sets the track number for the tile
-            t++; // increments the track number
+            c[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
         }
     }
 
