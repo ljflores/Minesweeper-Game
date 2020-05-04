@@ -48,7 +48,7 @@ string Tile::getNumber() {
     return number;
 }
 
-void Tile::setMine() { // needs to be fixed
-    isMine = true;
-    number = "B";
+void Tile::setMine() {
+    this->isMine = true;
+    this->number = "B";
 }

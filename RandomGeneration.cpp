@@ -24,15 +24,17 @@ int * RandomGeneration::shuffle(int upperBound) {
 }
 
 void RandomGeneration::setBombs() {
-    cout<<"set bombs"<<endl;
+    int counter = 0;
     cout<<this->getBoard()->getnummines()<<endl;
     int *shuffledRows = this->shuffle(this->getBoard()->getysize());
     int *shuffledCols = this->shuffle(this->getBoard()->getxsize());
-
+    Tile *t;
     for (int i=0; i<this->getBoard()->getnummines(); i++) {
-        Tile *t = this->getBoard()->GetTileAtPoint(shuffledRows[i], shuffledCols[i]);
-        cout<<"Row: "<<shuffledRows[i]<<endl;
-        cout<<"Column: "<<shuffledCols[i]<<endl;
+        t = this->getBoard()->GetTileAtPoint(shuffledRows[i]+1, shuffledCols[i]+1);
+        cout<<"Row: "<<shuffledRows[i]+1<<endl;
+        cout<<"Column: "<<shuffledCols[i]+1<<endl;
         t->setMine();
+        counter++;
     }
+    cout<<counter<<endl;
 }
