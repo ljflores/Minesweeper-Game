@@ -27,15 +27,26 @@ int Board::getnummines(){
 }
 
 void Board::fillboardwithsquares() {
-    c = new Tile**[getxsize()]; //creating space for columns
+
+    //c = new Tile**[getxsize()]; //creating space for columns
+    set2dArray(getxsize());
 
     for (int i = 0;i<getxsize();i++){
-        c[i] = new Tile*[getysize()];//creating space for rows
+        get2dArray()[i] = new Tile*[getysize()];//creating space for rows
 
         for (int j = 0; j<getysize();j++){
-            c[i][j] = new SquareTile();//filling up the 2d array with square tiles;
-            c[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
+            get2dArray()[i][j] = new SquareTile();//filling up the 2d array with square tiles;
+            get2dArray()[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
         }
     }
 
 }
+
+Tile ***Board::get2dArray() {
+    return c;
+}
+
+void Board::set2dArray(int size) {
+    c = new Tile**[size];
+}
+

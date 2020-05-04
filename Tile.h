@@ -30,7 +30,6 @@ public:
 
     bool IsMine(); //checks if tile is a mine
 
-
     void setCoord(int x,int y);//set the cordinates just in case
     int getXCoord();
     int getYCoord();

@@ -20,13 +20,13 @@ public:
         for(int i = 0; i < 13;i++){ // printing row numbers
             cout<<i+1<<"  ";
             for (int j = 0;j<13;j++){
-                c[i][j]->printTile(); // printing the tile shape, which is, for now, 2 brackets.
+                get2dArray()[i][j]->printTile(); // printing the tile shape, which is, for now, 2 brackets.
             }
             cout<<endl;
         }
     }
     Tile* GetTileAtPoint(int x, int y){
-        return c[y-1][x-1];
+        return get2dArray()[y-1][x-1];
     }
 
 };
