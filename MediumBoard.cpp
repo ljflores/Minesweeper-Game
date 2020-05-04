@@ -8,7 +8,7 @@ class MediumBoard : public Board {
 private:
 
 public:
-    MediumBoard():Board(10,10,1) {
+    MediumBoard():Board(10,10,10) {
 
     }
     void printBoard() {

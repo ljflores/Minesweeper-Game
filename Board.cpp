@@ -49,4 +49,14 @@ Tile ***Board::get2dArray() {
 void Board::set2dArray(int size) {
     c = new Tile**[size];
 }
-
+/*
+void Board::displayalltiles() {
+    Tile* t;
+    for (int i = 0;i<getxsize();i++){
+        for (int j = 0; j<getysize();j++){
+           t = this->GetTileAtPoint(i,j);
+           t->changeDisplay(t->getNumber());
+        }
+    }
+}
+*/

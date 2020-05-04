@@ -25,6 +25,7 @@ int * RandomGeneration::shuffle(int upperBound) {
 
 void RandomGeneration::setBombs() {
     cout<<"set bombs"<<endl;
+    cout<<this->getBoard()->getnummines()<<endl;
     int *shuffledRows = this->shuffle(this->getBoard()->getysize());
     int *shuffledCols = this->shuffle(this->getBoard()->getxsize());
 
