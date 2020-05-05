@@ -41,6 +41,7 @@ Board* Game::rboard() {
 int Game::playGame() {
     gameGeneration->setBoard(this->rboard());
     gameGeneration->setBombs();
+    cout<<"--------------------------------------------------------------------------------PLAY GAME TEST"<<endl;
     gameRules->setBoard(gameGeneration->getBoard());
     gameRules->playGame(); // see Rules.cpp for implementation
     return 0;

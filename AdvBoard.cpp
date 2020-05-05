@@ -6,7 +6,7 @@ using namespace std;
 class AdvBoard : public Board {
     
 public:
-    AdvBoard():Board(13,13,17) {
+    AdvBoard():Board(13,13,13) {
         
     }
 
