@@ -6,15 +6,18 @@ using namespace std;
 class AdvBoard : public Board {
     
 public:
-    AdvBoard():Board(13,13,13) {
+    AdvBoard():Board(13,13,12) {
         
     }
 
     void printBoard() {
 
         cout<<"    ";
-        for (int k = 1;k<14;k++){ // printing column numbers
+        for (int k = 1;k<9;k++){ // printing column numbers
             cout<<k<<"  ";
+        }
+        for (int k=9; k<14; k++) {
+            cout<<k<<" ";
         }
         cout<<endl;
         for(int i = 0; i < 13;i++){ // printing row numbers
