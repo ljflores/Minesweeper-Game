@@ -27,7 +27,19 @@ void RandomGeneration::setBombs() {
     int counter = 0;
     cout<<this->getBoard()->getnummines()<<endl;
     int *shuffledRows = this->shuffle(this->getBoard()->getysize());
+    // testing which numbers are in the shuffled row array
+    cout<<"Shuffled Rows:"<<endl;
+    for(int i=0; i<10; i++)
+        cout<<shuffledRows[i]<<" ";
+    cout<<"\n";
+    //--------------------------------------------------------//
     int *shuffledCols = this->shuffle(this->getBoard()->getxsize());
+    // testing which numbers are in the shuffled col array
+    cout<<"Shuffled Cols:"<<endl;
+    for(int i=0; i<10; i++)
+        cout<<shuffledCols[i]<<" ";
+    cout<<"\n";
+    //--------------------------------------------------------------------//
     Tile *t;
     for (int i=0; i<this->getBoard()->getnummines(); i++) {
         t = this->getBoard()->GetTileAtPoint(shuffledRows[i]+1, shuffledCols[i]+1);
