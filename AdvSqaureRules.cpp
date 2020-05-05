@@ -37,6 +37,8 @@ int AdvSquareRules::playGame() {
             this->printRules();
         }
         else if (command == "stop") {
+            this->getBoard()->displayalltiles();
+            this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
             break;
         }
         else {

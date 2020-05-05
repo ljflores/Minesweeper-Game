@@ -24,6 +24,7 @@ public:
 
     Tile*** get2dArray();
     void set2dArray(int size);
+    void displayalltiles();
 };
 
 #endif //MINESWEEPERBUILDER_BOARD_H

@@ -6,10 +6,10 @@
 //  Copyright © 2020 James Christensen. All rights reserved.
 //
 
-#include <stdio.h>
 #include "MediumSquareRules.h"
-#include <iostream>
+#include "iostream"
 using namespace std;
+
 MediumSquareRules::MediumSquareRules(){}
 
 void MediumSquareRules::printRules(){
@@ -37,6 +37,8 @@ int MediumSquareRules::playGame() {
             this->printRules();
         }
         else if (command == "stop") {
+            this->getBoard()->displayalltiles();
+            this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
             break;
         }
         else {

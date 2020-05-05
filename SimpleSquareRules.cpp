@@ -93,6 +93,10 @@ int SimpleSquareRules::playGame() {
             this->revealBomb();
         }
         else if (command == "stop") {
+            cout<<endl<<endl;
+            cout<<"Thank You For Playing our Simple Square Game"<<endl<<"Here is the Board with all the tiles flipped"<<endl;
+            this->getBoard()->displayalltiles();
+            this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
             break;
         }
         else {
