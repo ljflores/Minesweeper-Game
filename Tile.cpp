@@ -63,10 +63,9 @@ void Tile::setNeighbors() {
     int CurrCol = this->getXCoord();
     for (int i = CurrRow-1; i<= CurrRow+1; i++) {
         for (int j = CurrCol-1; j<= CurrCol+1; j++) {
-            rowNeighbors[counter] = i;
-            colNeighbors[counter] = j;
-            counter++;
+            if (!((i == CurrRow) && (j == CurrCol))) {
+                counter++;
+            }
         }
     }
-
 }

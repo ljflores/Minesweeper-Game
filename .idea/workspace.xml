@@ -42,10 +42,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdvBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AdvBoard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MediumBoard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
