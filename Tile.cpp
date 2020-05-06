@@ -52,3 +52,21 @@ void Tile::setMine() {
     this->isMine = true;
     this->number = "B";
 }
+
+Tile **Tile::getNeighbors() {
+    return neighbors;
+}
+
+void Tile::setNeighbors() {
+    int counter = 0;
+    int CurrRow = this->getYCoord();
+    int CurrCol = this->getXCoord();
+    for (int i = CurrRow-1; i<= CurrRow+1; i++) {
+        for (int j = CurrCol-1; j<= CurrCol+1; j++) {
+            rowNeighbors[counter] = i;
+            colNeighbors[counter] = j;
+            counter++;
+        }
+    }
+
+}

@@ -11,13 +11,16 @@ class Tile {
     string number; // underlying number (1, 2, 3) or letter (B) that indicates the bombs in the vicinity
                             // or a Bomb.
     string display; // what is actually displayed on the tile
+    Tile** neighbors = new Tile*[8];
+
+    int* rowNeighbors = new int[8];
+    int* colNeighbors = new int[8];
 
 public:
     Tile();
 
     void setDisplay(string n);
     string getDisplay();
-
     void setNumber(string n);
     string getNumber();
 
@@ -34,6 +37,8 @@ public:
     void setCoord(int x,int y);//set the cordinates just in case
     int getXCoord();
     int getYCoord();
+    Tile** getNeighbors();
+    void setNeighbors();
 
 };
 
