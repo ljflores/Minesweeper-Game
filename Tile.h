@@ -16,6 +16,8 @@ class Tile {
     int rowNeighbors[8];
     int colNeighbors[8];
 
+    int bombTracker;
+
 public:
     Tile();
 
@@ -41,6 +43,9 @@ public:
     void setNeighbors();
     int getrowNeighbors(int i);//returns the number at a given index
     int getcolNeighbors(int i);//returns the number of col at given index
+
+    void setBombTracker(int i);
+    int getBombTracker();
 };
 
 #endif //MINESWEEPERBUILDER_TILE_H

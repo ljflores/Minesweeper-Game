@@ -31,7 +31,7 @@ int main() {
     firstGame->getTile();
     firstGame->getGeneration();
 
-
+/*
     //This is where I am testing to make sure the neighbors work;
     cout<<"which tile would you like to see neighbors"<<endl;
     int a;
@@ -67,10 +67,10 @@ int main() {
         if(changedisplaytest != NULL){
             changedisplaytest->changeDisplay("1");
         }
-        
     }
-    firstGame->getBoard();
 
+    firstGame->getBoard();
+*/
     firstGame->playGame();
     /*
     Tile* t = firstGame->rboard()->GetTileAtPoint(1,2);

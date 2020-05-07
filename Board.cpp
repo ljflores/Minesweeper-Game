@@ -67,7 +67,7 @@ void Board::GenerateAllNeighbors() {
             for(int k = 0;k<8;k++){//fills in the Neighbors array with all neighboring tiles.
                 //makes sure the Neighbor is even within the bounds of the board
                 if(WithenBounds(t->getrowNeighbors(k))==true && WithenBounds(t->getcolNeighbors(k))== true){
-                    t->getNeighbors()[k]=this->GetTileAtPoint(t->getrowNeighbors(k),t->getcolNeighbors(k));
+                    t->getNeighbors()[k]=this->GetTileAtPoint(t->getcolNeighbors(k),t->getrowNeighbors(k));
                 }
                 else{
                     t->getNeighbors()[k] = NULL;
