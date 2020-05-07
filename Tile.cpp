@@ -54,9 +54,11 @@ void Tile::setMine() {
     this->isMine = true;
     this->number = "B";
     Tile* t;
+    cout<<"("<<this->getYCoord()<<", "<<this->getXCoord()<<")"<<endl;
     for (int i=0; i<8; i++) {
         t = this->getNeighbors()[i];
-        if (t != NULL) {
+        if ((t != NULL) && !t->IsMine()) { // checks if the neighbor is valid AND is not a bomb itself
+     //       cout<<"("<<t->getYCoord()<<", "<<t->getXCoord()<<")"<<endl;
             t->setBombTracker(t->getBombTracker()+1);
             int num = t->getBombTracker();
             // change num to string
