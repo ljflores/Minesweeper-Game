@@ -42,9 +42,9 @@ void RandomGeneration::setBombs() {
     cout<<"----------Num mines: "<<this->getBoard()->getnummines()<<endl;
     int j = getBoard()->getxsize()-1;
     for (int i=0; i<this->getBoard()->getnummines(); i++) {
-        t = this->getBoard()->GetTileAtPoint(shuffledCols[j]+1,shuffledRows[i]+1);
-        cout<<"Row: "<<shuffledRows[i]+1<<endl;
-        cout<<"Column: "<<shuffledCols[j]+1<<endl;
+        t = this->getBoard()->GetTileAtPoint(shuffledRows[i]+1,shuffledCols[j]+1);
+        cout<<"Row: "<<shuffledCols[j]+1<<endl;
+        cout<<"Column: "<<shuffledRows[i]+1<<endl;
         t->setMine();
         j--;
     }
