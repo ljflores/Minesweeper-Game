@@ -13,8 +13,8 @@ class Tile {
     string display; // what is actually displayed on the tile
     Tile** neighbors = new Tile*[8];
 
-    int* rowNeighbors = new int[8];
-    int* colNeighbors = new int[8];
+    int rowNeighbors[8];
+    int colNeighbors[8];
 
 public:
     Tile();
@@ -39,7 +39,8 @@ public:
     int getYCoord();
     Tile** getNeighbors();
     void setNeighbors();
-
+    int getrowNeighbors(int i);//returns the number at a given index
+    int getcolNeighbors(int i);//returns the number of col at given index
 };
 
 #endif //MINESWEEPERBUILDER_TILE_H

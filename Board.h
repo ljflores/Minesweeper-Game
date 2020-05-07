@@ -25,6 +25,8 @@ public:
     Tile*** get2dArray();
     void set2dArray(int size);
     void displayalltiles();
+    void GenerateAllNeighbors();
+    bool WithenBounds(int p);
 };
 
 #endif //MINESWEEPERBUILDER_BOARD_H

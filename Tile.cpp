@@ -30,7 +30,8 @@ int Tile::getXCoord() {
 int Tile::getYCoord() {
     return this->ycord;
 }
-
+//int e = 7;
+//string iii = string(reinterpret_cast<const char *>(e));
 
 void Tile::setDisplay(string n) {
     this->display = n;
@@ -64,8 +65,18 @@ void Tile::setNeighbors() {
     for (int i = CurrRow-1; i<= CurrRow+1; i++) {
         for (int j = CurrCol-1; j<= CurrCol+1; j++) {
             if (!((i == CurrRow) && (j == CurrCol))) {
+                rowNeighbors[counter]=i;
+                colNeighbors[counter]=j;
                 counter++;
             }
         }
     }
+}
+
+int Tile::getrowNeighbors(int i) {
+    return rowNeighbors[i];
+}
+
+int Tile::getcolNeighbors(int i) {
+    return colNeighbors[i];
 }

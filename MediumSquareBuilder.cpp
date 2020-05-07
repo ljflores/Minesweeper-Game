@@ -28,9 +28,10 @@ public:
     }
 
     void buildBoard() {
-        Board* advBoard = new MediumBoard();
-        advBoard->fillboardwithsquares();//builds the board with square tiles
-        game->setBoard(advBoard);
+        Board* mediumB = new MediumBoard();
+        mediumB->fillboardwithsquares();//builds the board with square tiles
+        mediumB->GenerateAllNeighbors();
+        game->setBoard(mediumB);
     }
 
     void buildTile() {

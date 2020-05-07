@@ -27,8 +27,6 @@ int Board::getnummines(){
 }
 
 void Board::fillboardwithsquares() {
-
-    //c = new Tile**[getxsize()]; //creating space for columns
     set2dArray(getxsize());
 
     for (int i = 0;i<getxsize();i++){
@@ -37,6 +35,7 @@ void Board::fillboardwithsquares() {
         for (int j = 0; j<getysize();j++){
             get2dArray()[i][j] = new SquareTile();//filling up the 2d array with square tiles;
             get2dArray()[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
+            get2dArray()[i][j]->setNeighbors();
         }
     }
 
@@ -60,3 +59,29 @@ void Board::displayalltiles() {
     }
 }
 
+void Board::GenerateAllNeighbors() {
+    Tile* t;
+    for (int i = 0; i<getxsize();i++){//goes through each file in array
+        for (int j = 0;j<getysize();j++){
+            t = this->GetTileAtPoint(i+1,j+1);//gets the current tile
+            for(int k = 0;k<8;k++){//fills in the Neighbors array with all neighboring tiles.
+                //makes sure the Neighbor is even within the bounds of the board
+                if(WithenBounds(t->getrowNeighbors(k))==true && WithenBounds(t->getcolNeighbors(k))== true){
+                    t->getNeighbors()[k]=this->GetTileAtPoint(t->getrowNeighbors(k),t->getcolNeighbors(k));
+                }
+                else{
+                    t->getNeighbors()[k] = NULL;
+                }
+            }
+        }
+    }
+}
+//checks if the given int is whithin the boards bounds
+bool Board::WithenBounds(int p){
+    if (p >= 1 && p<=this->getysize()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}

@@ -33,6 +33,7 @@ public:
     void buildBoard() {
         Board* advBoard = new AdvBoard();
         advBoard->fillboardwithsquares();//fills board with square tiles
+        advBoard->GenerateAllNeighbors();//generates neighbors for each tile
         game->setBoard(advBoard);
     }
 
