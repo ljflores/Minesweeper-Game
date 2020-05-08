@@ -40,13 +40,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
+    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="**DON'T PULL YET** Implemented the recursive part so all the tiles with 0 bombs get their neighbors flipped.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +109,10 @@
       <workItem from="1588629194102" duration="5856000" />
       <workItem from="1588642118123" duration="2224000" />
       <workItem from="1588821573217" duration="5510000" />
+      <workItem from="1588869519024" duration="8616000" />
+      <workItem from="1588880502136" duration="2592000" />
+      <workItem from="1588912071544" duration="4277000" />
+      <workItem from="1588957981831" duration="6284000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;AdvSqaureRules.cpp&quot; to the CMake file.">
       <created>1588184764505</created>
@@ -296,7 +296,42 @@
       <option name="project" value="LOCAL" />
       <updated>1588807555613</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Same as last commit, but I fixed a small error.">
+      <created>1588829370781</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1588829370781</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fixed another small error. The setMines() method was accidentally changing the display of the bomb tiles when it shouldn't. Now, it checks for if a tile is a valid neighbor AND if the tile is not a bomb before updating the display of the tile.">
+      <created>1588871654408</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1588871654408</updated>
+    </task>
+    <task id="LOCAL-00029" summary="**DON'T PULL YET** Implemented the recursive part so all the tiles with 0 bombs get their neighbors flipped.">
+      <created>1588915880865</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1588915880865</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Made it so the game ends if you hit a bomb.">
+      <created>1588968590715</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1588968590716</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Took out some unnecessary methods I added while trying to stop the game.">
+      <created>1588969544620</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1588969544620</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,11 +351,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Just added a comment. We should consider using virtual destructors in base classes." />
-    <MESSAGE value="Separated Game.h and Game.cpp correctly." />
-    <MESSAGE value="Changed the getter methods in Game.h and Game.cpp so they return pointers to objects instead of printing print statements." />
-    <MESSAGE value="Revert &quot;Deleted my scripts to clean everything up&quot;&#10;&#10;This reverts commit 8703be88" />
-    <MESSAGE value="Deleted my scripts to clean everything up&#10;&#10;Signed-off-by: jtchristensen &lt;james-t-christensen@uiowa.edu&gt;" />
     <MESSAGE value="Ignore this commit too. GitHub was giving me issues with pushing and pulling, so I'm seeing if it works now." />
     <MESSAGE value="Corrected SimpleSquareRules.cpp and SimpleSquareRules.h" />
     <MESSAGE value="Added comments in the MediumBoard.cpp file." />
@@ -341,13 +371,18 @@
     <MESSAGE value="*STILL HAS ERRORS* Made changes to Generate.h" />
     <MESSAGE value="works now" />
     <MESSAGE value="setNeighbors for Tile implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="setNeighbors for Tile implemented" />
+    <MESSAGE value="Same as last commit, but I fixed a small error." />
+    <MESSAGE value="Fixed another small error. The setMines() method was accidentally changing the display of the bomb tiles when it shouldn't. Now, it checks for if a tile is a valid neighbor AND if the tile is not a bomb before updating the display of the tile." />
+    <MESSAGE value="**DON'T PULL YET** Implemented the recursive part so all the tiles with 0 bombs get their neighbors flipped." />
+    <MESSAGE value="Made it so the game ends if you hit a bomb." />
+    <MESSAGE value="Took out some unnecessary methods I added while trying to stop the game." />
+    <option name="LAST_COMMIT_MESSAGE" value="Took out some unnecessary methods I added while trying to stop the game." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="14" key="CommitChangelistDialog2" timestamp="1588807551043">
+    <state x="0" y="14" key="CommitChangelistDialog2" timestamp="1588969538466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588807551043" />
+    <state x="0" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588969538466" />
     <state x="-1429" y="-148" key="CommitChangelistDialog2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588202879643" />
     <state x="-1645" y="-50" key="DiffContextDialog" timestamp="1588203073013">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -357,25 +392,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588436439175" />
-    <state width="1493" height="244" key="GridCell.Tab.0.bottom" timestamp="1588827120229">
+    <state width="1493" height="523" key="GridCell.Tab.0.bottom" timestamp="1588970274902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="244" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588827120229" />
+    <state width="1493" height="523" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588970274902" />
     <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
-    <state width="1493" height="244" key="GridCell.Tab.0.center" timestamp="1588827120229">
+    <state width="1493" height="523" key="GridCell.Tab.0.center" timestamp="1588970274901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="244" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588827120229" />
+    <state width="1493" height="523" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588970274901" />
     <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="244" key="GridCell.Tab.0.left" timestamp="1588827120228">
+    <state width="1493" height="523" key="GridCell.Tab.0.left" timestamp="1588970274901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="244" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588827120228" />
+    <state width="1493" height="523" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588970274901" />
     <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="244" key="GridCell.Tab.0.right" timestamp="1588827120229">
+    <state width="1493" height="523" key="GridCell.Tab.0.right" timestamp="1588970274902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="244" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588827120229" />
+    <state width="1493" height="523" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588970274902" />
     <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
     <state x="-1370" y="80" key="RollbackChangesDialog" timestamp="1588202979800">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -385,19 +420,23 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588104134375" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588817571911">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588969627386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588817571911" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588969627386" />
     <state x="-1469" y="29" key="Vcs.Push.Dialog.v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203081759" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588821678621">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588957981824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588821678621" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588827197834">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588957981824" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588828931335">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588827197834" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588828931335" />
     <state x="-1197" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210304093" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1588913159439">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588913159439" />
   </component>
 </project>
