@@ -55,7 +55,7 @@ void Tile::setMine() {
     this->number = "B";
     this->bombTracker = 1;
     Tile* t;
-    cout<<"("<<this->getYCoord()<<", "<<this->getXCoord()<<")"<<endl;
+   // cout<<"("<<this->getYCoord()<<", "<<this->getXCoord()<<")"<<endl; UNCOMMENT IF YOU WANT TO SEE THE BOMBS
     for (int i=0; i<8; i++) {
         t = this->getNeighbors()[i];
         if ((t != NULL) && !t->IsMine()) { // checks if the neighbor is valid AND is not a bomb itself

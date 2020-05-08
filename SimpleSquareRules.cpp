@@ -5,8 +5,7 @@
 using namespace std;
 
 
-SimpleSquareRules::SimpleSquareRules()
-:Rules() {}
+SimpleSquareRules::SimpleSquareRules(){}
 
 void SimpleSquareRules::revealTile() {
     this->rows_and_columns();

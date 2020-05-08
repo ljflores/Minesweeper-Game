@@ -4,10 +4,6 @@
 
 #include "Rules.h"
 
-Rules::Rules() {
-    stopGame = false;
-}
-
 int Rules::flipTileNoInput(Tile *t) {
 
     if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:
@@ -45,10 +41,6 @@ void Rules::flipTile() {
         exit(0);
     }
 
-    if (t->IsMine()) {  // If the tile is a mine, stop the game.
-        setStopGame(true);
-    }
-
     if (t->getStatus() == "unflipped") {
         if (t->getBombTracker() != 0) { // Tile is safe, has a number other than 0.
             t->changeDisplay(t->getNumber()); // flip the tile and change the status.
@@ -58,9 +50,6 @@ void Rules::flipTile() {
             flipTileNoInput(t); // see above
         }
         this->getBoard()->printBoard();
-        cout<<"Row: "<<t->getYCoord()<<endl;
-        cout<<"Column: "<<t->getXCoord()<<endl;
-        cout<<"Tile flipped."<<endl;
     }
     else {
         cout<<"Tile cannot be flipped."<<endl;
@@ -77,10 +66,6 @@ void Rules::flagTile() {
         t->changeDisplay("f"); // change the tile display to indicate that it's flagged
         t->setStatus("flagged"); // update the status
         this->getBoard()->printBoard();
-
-        cout<<"Row: "<<t->getYCoord()<<endl;
-        cout<<"Column: "<<t->getXCoord()<<endl;
-        cout<<"Tile flagged."<<endl;
     }
 
     else {
@@ -98,10 +83,6 @@ void Rules::unflagTile() {
         t->changeDisplay(" "); // changes the display back to a blank tile
         t->setStatus("unflipped"); // updates the status back to unflipped
         this->getBoard()->printBoard();
-
-        cout<<"Row: "<<t->getYCoord()<<endl;
-        cout<<"Column: "<<t->getXCoord()<<endl;
-        cout<<"Tile unflagged."<<endl;
     }
 
     else {
@@ -140,12 +121,4 @@ int Rules::getRow() {
 
 int Rules::getCol() {
     return col;
-}
-
-void Rules::setStopGame(bool b) {
-    stopGame = b;
-}
-
-bool Rules::getStopGame() {
-    return getStopGame();
 }
