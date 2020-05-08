@@ -4,16 +4,44 @@
 
 #include "Rules.h"
 
-void Rules::flipTile() {
-    this->rows_and_columns();
+int Rules::flipTileNoInput(Tile *t) {
 
-    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
+    if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:
+        t->changeDisplay(t->getNumber()); // flip the tile, that's all.
+        t->setStatus("flipped");
+        return 0;
+    }
+    else { // if the bombTracker is 0, flip the tile and the tile's neighbors.
+        t->changeDisplay(t->getNumber()); // flip the tile
+        t->setStatus("flipped");
+
+        Tile* n;
+        for (int j=0; j<8; j++) { // looking at each of the tile's 8 neighbors
+            n = t->getNeighbors()[j];
+            if ((n != NULL) && !n->IsMine() && (n->getStatus() == "unflipped")) { // if the neighbor is a valid tile, is not a mine, and is unflipped
+                n->changeDisplay(n->getNumber()); // flip the neighbor tile // flip the tile
+                n->setStatus("flipped");
+                flipTileNoInput(n); // send this tile in to get its neighbors checked as well.
+            }
+        }
+        return 0;
+    }
+}
+
+void Rules::flipTile() {
+    this->rows_and_columns(); // asks for user input
+
+    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow()); // gets the tile based on user input
 
     if (t->getStatus() == "unflipped") {
-        t->changeDisplay(t->getNumber()); // change the display to show the underlying number / bomb
-        t->setStatus("flipped"); // update the status
+        if (t->getBombTracker() != 0) { // Tile is safe, has a number other than 0.
+            t->changeDisplay(t->getNumber()); // flip the tile and change the status.
+            t->setStatus("flipped");
+        }
+        else { // If the tile is safe and has 0 bombs in its neighborhood:
+            flipTileNoInput(t); // see above
+        }
         this->getBoard()->printBoard();
-
         cout<<"Row: "<<t->getYCoord()<<endl;
         cout<<"Column: "<<t->getXCoord()<<endl;
         cout<<"Tile flipped."<<endl;

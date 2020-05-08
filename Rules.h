@@ -23,6 +23,8 @@ public:
     void flipTile();
     void flagTile();
     void unflagTile();
+
+    int flipTileNoInput(Tile* t);
 };
 
 #endif //MINESWEEPERBUILDER_RULES_H

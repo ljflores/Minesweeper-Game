@@ -41,7 +41,8 @@ void SimpleSquareRules::rows_and_columns() {
         cin >> gameRow;
         if ((gameRow < 1) || (gameRow > 7)) {
             cout << "Please enter a number in the correct range." << endl;
-        } else {
+        }
+        else {
             break;
         }
     }
