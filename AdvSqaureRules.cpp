@@ -10,7 +10,8 @@
 #include "iostream"
 using namespace std;
 
-AdvSquareRules::AdvSquareRules(){}
+AdvSquareRules::AdvSquareRules()
+:Rules() {}
 
 void AdvSquareRules::printRules(){
     cout<<"Valid commands for a Advanced Square game include: "<<endl;
@@ -37,6 +38,7 @@ int AdvSquareRules::playGame() {
             this->printRules();
         }
         else if (command == "stop") {
+            cout<<"Thank You For Playing our Advanced Square Game"<<endl<<"Here is the Board with all the tiles flipped"<<endl;
             this->getBoard()->displayalltiles();
             this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
             break;

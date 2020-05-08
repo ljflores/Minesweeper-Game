@@ -7,8 +7,10 @@ class Rules {
     Board* gameBoard;
     int row;
     int col;
+    bool stopGame;
 
 public:
+    Rules();
     virtual void rows_and_columns()=0;
     void setBoard(Board* b);
     void setRow(int r);
@@ -25,6 +27,9 @@ public:
     void unflagTile();
 
     int flipTileNoInput(Tile* t);
+
+    void setStopGame(bool b);
+    bool getStopGame();
 };
 
 #endif //MINESWEEPERBUILDER_RULES_H

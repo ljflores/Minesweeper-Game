@@ -10,7 +10,8 @@
 #include "iostream"
 using namespace std;
 
-MediumSquareRules::MediumSquareRules(){}
+MediumSquareRules::MediumSquareRules()
+:Rules() {}
 
 void MediumSquareRules::printRules(){
     cout<<"Valid commands for a Medium Square game include: "<<endl;
@@ -37,6 +38,8 @@ int MediumSquareRules::playGame() {
             this->printRules();
         }
         else if (command == "stop") {
+            cout<<endl<<endl;
+            cout<<"Thank You For Playing our Medium Square Game"<<endl<<"Here is the Board with all the tiles flipped"<<endl;
             this->getBoard()->displayalltiles();
             this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
             break;

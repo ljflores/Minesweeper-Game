@@ -4,6 +4,10 @@
 
 #include "Rules.h"
 
+Rules::Rules() {
+    stopGame = false;
+}
+
 int Rules::flipTileNoInput(Tile *t) {
 
     if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:
@@ -32,6 +36,18 @@ void Rules::flipTile() {
     this->rows_and_columns(); // asks for user input
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow()); // gets the tile based on user input
+
+    if (t->IsMine()) { // If you hit a mine, it exits the program and prints out the board.
+        cout<<endl<<endl;
+        cout<<"Game over. You hit a mine."<<endl;
+        t->changeDisplay(t->getNumber()); // flip the tile
+        this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
+        exit(0);
+    }
+
+    if (t->IsMine()) {  // If the tile is a mine, stop the game.
+        setStopGame(true);
+    }
 
     if (t->getStatus() == "unflipped") {
         if (t->getBombTracker() != 0) { // Tile is safe, has a number other than 0.
@@ -124,4 +140,12 @@ int Rules::getRow() {
 
 int Rules::getCol() {
     return col;
+}
+
+void Rules::setStopGame(bool b) {
+    stopGame = b;
+}
+
+bool Rules::getStopGame() {
+    return getStopGame();
 }
