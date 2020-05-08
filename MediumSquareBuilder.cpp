@@ -13,6 +13,7 @@
 #include "MediumBoard.cpp"
 #include "SquareTile.h"
 #include "RandomGeneration.h"
+#include "PlannedGeneration.h"
 // A  concrete builder class that assembles the parts of a specific type of game - in this case, Medium Square.
 // There will be many more of these classes that define different types of games.
 class MediumSquareBuilder : public GameBuilder {
@@ -40,8 +41,24 @@ public:
     }
 
     void buildGeneration() {
-        Generate* randomGeneration = new RandomGeneration();
-        game->setGeneration(randomGeneration);
+        cout<<"Do you want the generation to be Random or Planned"<<endl;
+        cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
+        int useri = 0;
+        cin>>useri;
+        while(useri < 1 || useri > 2){
+            cout<<"You Entered in a incompatible number please try again"<<endl;
+            cout<<"Do you want the generation to be Random or Planned"<<endl;
+            cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
+            cin>>useri;
+        }
+        if(useri == 1) {
+            Generate *randomGeneration = new RandomGeneration();
+            game->setGeneration(randomGeneration);
+        }
+        if(useri == 2){
+            Generate *plannedGeneration = new PlannedGeneration();
+            game->setGeneration(plannedGeneration);
+        }
     }
 
     Game* getGame() {
