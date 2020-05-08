@@ -82,13 +82,18 @@ int main() {
     */
 }
 int userhandler(){
-    cout<<"Welcome to Minesweeper"<<endl;
-    cout<<"select from the following choices"<<endl;
-    cout<<"1: Simple Square Game"<<endl;
-    cout<<"2: Medium Square Game"<<endl;
-    cout<<"3: Advanced Square Game"<<endl;
-    int usera = 0;
-    cin >> usera;
-    cout<<endl;
+    int usera = NULL;
+    cout << "Welcome to Minesweeper" << endl;
+    cout << "select from the following choices" << endl;
+    while(usera < 1 || usera > 3) {
+        if (usera != NULL){
+            cout<<"You entered in an incompatable option please select from these options"<<endl;
+        }
+        cout << "1: Simple Square Game" << endl;
+        cout << "2: Medium Square Game" << endl;
+        cout << "3: Advanced Square Game" << endl;
+        cin>>usera;
+        cout<<endl;
+    }
     return usera;
 }
