@@ -1,14 +1,14 @@
 #include "SquareTile.h"
-#include "Board.h"
+#include "SquareBoard.h"
 #include <iostream>
 using namespace std;
 
 // Defines what a MediumBoard board must do.
-class MediumBoard : public Board {
+class MediumBoard : public SquareBoard {
 private:
 
 public:
-    MediumBoard():Board(10,10,9) {
+    MediumBoard(): SquareBoard(10, 10, 9) {
 
     }
     void printBoard() {
@@ -19,7 +19,7 @@ public:
         }
         cout<<endl;
         for(int i = 0; i < 10 ;i++){ // printing row numbers
-            //this if else statement just fixes the Board
+            //this if else statement just fixes the SquareBoard
             if(i+1 >= 10){
                 cout<<i+1<<" ";
             }

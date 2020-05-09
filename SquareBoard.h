@@ -3,7 +3,7 @@
 #define MINESWEEPERBUILDER_BOARD_H
 
 // An interface that defines what all kinds of Boards need.
-class Board {
+class SquareBoard {
 private:
     int xsize;
     int ysize;
@@ -12,7 +12,7 @@ private:
     Tile ***c; //pointer to our 2D array
 
 public:
-    Board(int xsize,int ysize,int mines);
+    SquareBoard(int xsize, int ysize, int mines);
 
     virtual void printBoard()=0;
     // might consider making the destructors in base classes virtual to avoid memory leaks in derived classes.

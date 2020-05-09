@@ -102,11 +102,11 @@ void Rules::printRules() {
     cout<<"(5) stop -- stops the game"<<endl;
 }
 
-void Rules::setBoard(Board *b) {
+void Rules::setBoard(SquareBoard *b) {
     gameBoard = b;
 }
 
-Board *Rules::getBoard() {
+SquareBoard *Rules::getBoard() {
     return gameBoard;
 }
 

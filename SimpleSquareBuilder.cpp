@@ -19,7 +19,7 @@ public:
     }
 
     void buildBoard() {
-        Board* simpleBoard = new SimpleBoard();
+        SquareBoard* simpleBoard = new SimpleBoard();
         simpleBoard->fillboardwithsquares();//fills board with square tiles
         simpleBoard->GenerateAllNeighbors();//generates the neighbors for each tile
         game->setBoard(simpleBoard);

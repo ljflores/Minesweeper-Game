@@ -10,7 +10,7 @@ void Game::getRules() {
     return gameRules->printRules();
 }
 
-void Game::setBoard(Board *board) {
+void Game::setBoard(SquareBoard *board) {
     gameBoard = board;
 }
 
@@ -33,7 +33,7 @@ void Game::setGeneration(Generate *generation) {
 void Game::getGeneration() {
     gameGeneration->printBoard();
 }
-Board* Game::rboard() {
+SquareBoard* Game::rboard() {
     return this->gameBoard;
 }
 //---------------------------------------------------------//

@@ -1,12 +1,12 @@
-#include "Board.h"
+#include "SquareBoard.h"
 #include <iostream>
 using namespace std;
 
 // Defines what a Advanced board must do.
-class AdvBoard : public Board {
+class AdvBoard : public SquareBoard {
     
 public:
-    AdvBoard():Board(13,13,12) {
+    AdvBoard(): SquareBoard(13, 13, 12) {
         
     }
 
@@ -21,7 +21,7 @@ public:
         }
         cout<<endl;
         for(int i = 0; i < 13;i++){ // printing row numbers
-            //this if else statement just fixes the Board
+            //this if else statement just fixes the SquareBoard
             if(i+1 >= 10){
                 cout<<i+1<<" ";
             }

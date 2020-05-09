@@ -32,7 +32,7 @@ public:
         game->setTile(squareTile);
     }
     void buildBoard() {
-        Board* advBoard = new AdvBoard();
+        SquareBoard* advBoard = new AdvBoard();
         advBoard->fillboardwithsquares();//fills board with square tiles
         advBoard->GenerateAllNeighbors();//generates neighbors for each tile
         game->setBoard(advBoard);

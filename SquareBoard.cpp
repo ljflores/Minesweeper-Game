@@ -1,5 +1,5 @@
 //
-//  Board.cpp
+//  SquareBoard.cpp
 //  OOfinalproject
 //
 //  Created by James Christensen on 4/27/20.
@@ -7,27 +7,27 @@
 //
 
 #include <stdio.h>
-#include "Board.h"
+#include "SquareBoard.h"
 
 using namespace std;
 
-Board::Board(int xsize, int ysize,int mines){
+SquareBoard::SquareBoard(int xsize, int ysize, int mines){
     this->xsize = xsize;
     this->ysize = ysize;
     this->mines = mines;
     this->unflippedTracker = ((xsize * ysize) - mines); // initialized to the number of tiles in the board minus the number of mines
 }
-int Board::getxsize(){
+int SquareBoard::getxsize(){
     return this->xsize;
 }
-int Board::getysize(){
+int SquareBoard::getysize(){
     return this->ysize;
 }
-int Board::getnummines(){
+int SquareBoard::getnummines(){
     return this->mines;
 }
 
-void Board::fillboardwithsquares() {
+void SquareBoard::fillboardwithsquares() {
     set2dArray(getxsize());
 
     for (int i = 0;i<getxsize();i++){
@@ -42,15 +42,15 @@ void Board::fillboardwithsquares() {
 
 }
 
-Tile ***Board::get2dArray() {
+Tile ***SquareBoard::get2dArray() {
     return c;
 }
 
-void Board::set2dArray(int size) {
+void SquareBoard::set2dArray(int size) {
     c = new Tile**[size];
 }
 //this changes the display of all of the tiles to thier number 
-void Board::displayalltiles() {
+void SquareBoard::displayalltiles() {
     Tile* t;
     for (int i = 0;i<getxsize();i++){
         for (int j = 0; j<getysize();j++){
@@ -60,7 +60,7 @@ void Board::displayalltiles() {
     }
 }
 
-void Board::GenerateAllNeighbors() {
+void SquareBoard::GenerateAllNeighbors() {
     Tile* t;
     for (int i = 0; i<getxsize();i++){//goes through each file in array
         for (int j = 0;j<getysize();j++){
@@ -78,7 +78,7 @@ void Board::GenerateAllNeighbors() {
     }
 }
 //checks if the given int is whithin the boards bounds
-bool Board::WithenBounds(int p){
+bool SquareBoard::WithenBounds(int p){
     if (p >= 1 && p<=this->getysize()){
         return true;
     }
@@ -87,14 +87,14 @@ bool Board::WithenBounds(int p){
     }
 }
 
-void Board::setUnflippedTracker(int u) {
+void SquareBoard::setUnflippedTracker(int u) {
     unflippedTracker = u;
 }
 
-int Board::getUnflippedTracker() {
+int SquareBoard::getUnflippedTracker() {
     return unflippedTracker;
 }
 
-void Board::decrementUnflippedTracker() {
+void SquareBoard::decrementUnflippedTracker() {
     unflippedTracker--;
 }

@@ -1,13 +1,13 @@
 
 #ifndef MINESWEEPERBUILDER_GENERATE_H
 #define MINESWEEPERBUILDER_GENERATE_H
-#include "Board.h"
+#include "SquareBoard.h"
 // This interface defines what all Generations must do (Can be a Random generation, Planned generation, etc.)
 class Generate {
-    Board* gameBoard;
+    SquareBoard* gameBoard;
 public:
-    void setBoard(Board* b);
-    Board* getBoard();
+    void setBoard(SquareBoard* b);
+    SquareBoard* getBoard();
     virtual void printBoard()=0;
     virtual void setBombs()=0;
 };

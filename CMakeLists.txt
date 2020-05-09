@@ -9,8 +9,8 @@ add_executable(Object_Oriented_software_design_final_project
     AdvBoard.cpp
     AdvSquareBuilder.cpp
         AdvSqaureRules.cpp
-    Board.cpp
-    Board.h
+        SquareBoard.cpp
+        SquareBoard.h
     Game.h
         Game.cpp
     GameBuilder.h

@@ -45,7 +45,7 @@ int MediumSquareRules::playGame() {
         }
         else if (command == "stop") {
             cout<<endl<<endl;
-            cout<<"Thank You For Playing our Medium Square Game"<<endl<<"Here is the Board with all the tiles flipped"<<endl;
+            cout<<"Thank You For Playing our Medium Square Game"<<endl<<"Here is the SquareBoard with all the tiles flipped"<<endl;
             this->getBoard()->displayalltiles();
             this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
             break;

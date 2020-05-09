@@ -1,14 +1,14 @@
 #include "SquareTile.h"
-#include "Board.h"
+#include "SquareBoard.h"
 #include <iostream>
 using namespace std;
 
 // Defines what a Simple board must do.
-class SimpleBoard : public Board {
+class SimpleBoard : public SquareBoard {
 private:
 public:
     SimpleBoard()
-    :Board(7,7,5) {}
+    : SquareBoard(7, 7, 5) {}
 
     void printBoard() {
         cout<<"    ";
