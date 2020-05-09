@@ -23,11 +23,11 @@ add_executable(Object_Oriented_software_design_final_project
     MediumSquareRules.h
     RandomGeneration.cpp
     RandomGeneration.h
-    Rules.h
+        SquareRules.h
     SimpleBoard.cpp
     SimpleSquareBuilder.cpp
     SimpleSquareRules.cpp
     SimpleSquareRules.h
     SquareTile.cpp
     SquareTile.h
-        Tile.h Game.cpp Tile.cpp Rules.cpp PlannedGeneration.h PlannedGeneration.cpp Generate.cpp Board.cpp Board.h)
+        Tile.h Game.cpp Tile.cpp SquareRules.cpp PlannedGeneration.h PlannedGeneration.cpp Generate.cpp Board.cpp Board.h)

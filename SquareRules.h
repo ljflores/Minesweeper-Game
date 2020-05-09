@@ -1,9 +1,9 @@
 #include "SquareBoard.h"
 #ifndef MINESWEEPERBUILDER_RULES_H
 #define MINESWEEPERBUILDER_RULES_H
-// An interface that define what all Rules should have. Can be inherited by SimpleSquareRules
-//and other derived Rules classes.
-class Rules {
+// An interface that define what all SquareRules should have. Can be inherited by SimpleSquareRules
+//and other derived SquareRules classes.
+class SquareRules {
     SquareBoard* gameBoard;
     int row;
     int col;
@@ -30,7 +30,7 @@ public:
 #endif //MINESWEEPERBUILDER_RULES_H
 
 
-// The Rules class needs to have methods in it that allow the user to use hints, such as revealing a tile to see
+// The SquareRules class needs to have methods in it that allow the user to use hints, such as revealing a tile to see
 // what's under it, or revealing one bomb with no penalties.
 
 // It also might involve methods like flipTile(), flagTile(), unflagTile(), etc. Basically, just methods that are

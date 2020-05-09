@@ -1,4 +1,4 @@
-//#include "Rules.h"
+//#include "SquareRules.h"
 #include <iostream>
 #include "SimpleSquareRules.h"
 
@@ -63,7 +63,7 @@ void SimpleSquareRules::rows_and_columns() {
 
 void SimpleSquareRules::printRules() {
     cout<<"Valid commands for a Simple Square game include: "<<endl;
-    Rules::printRules();
+    SquareRules::printRules();
     cout<<"(6) revealT -- reveals one tile of your choosing"<<endl;
     cout<<"(7) revealB -- reveals 1 bomb of your choosing"<<endl;
     cout<<"\n";

@@ -2,9 +2,9 @@
 // Created by lajef on 4/30/2020.
 //
 
-#include "Rules.h"
+#include "SquareRules.h"
 
-int Rules::flipTileNoInput(Tile *t) {
+int SquareRules::flipTileNoInput(Tile *t) {
 
     if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:
         t->changeDisplay(t->getNumber()); // flip the tile, that's all.
@@ -30,7 +30,7 @@ int Rules::flipTileNoInput(Tile *t) {
     }
 }
 
-void Rules::flipTile() {
+void SquareRules::flipTile() {
     this->rows_and_columns(); // asks for user input
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow()); // gets the tile based on user input
@@ -60,7 +60,7 @@ void Rules::flipTile() {
 
 }
 
-void Rules::flagTile() {
+void SquareRules::flagTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
@@ -77,7 +77,7 @@ void Rules::flagTile() {
 
 }
 
-void Rules::unflagTile() {
+void SquareRules::unflagTile() {
     this->rows_and_columns();
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
@@ -94,7 +94,7 @@ void Rules::unflagTile() {
 
 }
 
-void Rules::printRules() {
+void SquareRules::printRules() {
     cout<<"(1) flip -- flips a tile of your choosing"<<endl;
     cout<<"(2) flag -- flags a tile of your choosing"<<endl;
     cout<<"(3) unflag -- unflags a tile of your choosing"<<endl;
@@ -102,26 +102,26 @@ void Rules::printRules() {
     cout<<"(5) stop -- stops the game"<<endl;
 }
 
-void Rules::setBoard(SquareBoard *b) {
+void SquareRules::setBoard(SquareBoard *b) {
     gameBoard = b;
 }
 
-SquareBoard *Rules::getBoard() {
+SquareBoard *SquareRules::getBoard() {
     return gameBoard;
 }
 
-void Rules::setRow(int r) {
+void SquareRules::setRow(int r) {
     row = r;
 }
 
-void Rules::setCol(int c) {
+void SquareRules::setCol(int c) {
     col = c;
 }
 
-int Rules::getRow() {
+int SquareRules::getRow() {
     return row;
 }
 
-int Rules::getCol() {
+int SquareRules::getCol() {
     return col;
 }
