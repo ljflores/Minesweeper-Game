@@ -11,10 +11,10 @@
 
 using namespace std;
 
-SquareBoard::SquareBoard(int xsize, int ysize, int mines){
+SquareBoard::SquareBoard(int xsize, int ysize, int mines)
+: Board(mines){
     this->xsize = xsize;
     this->ysize = ysize;
-    this->mines = mines;
     this->unflippedTracker = ((xsize * ysize) - mines); // initialized to the number of tiles in the board minus the number of mines
 }
 int SquareBoard::getxsize(){
@@ -22,9 +22,6 @@ int SquareBoard::getxsize(){
 }
 int SquareBoard::getysize(){
     return this->ysize;
-}
-int SquareBoard::getnummines(){
-    return this->mines;
 }
 
 void SquareBoard::fillboardwithsquares() {

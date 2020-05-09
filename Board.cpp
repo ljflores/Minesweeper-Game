@@ -3,3 +3,11 @@
 //
 
 #include "Board.h"
+
+Board::Board(int mines) {
+    this->mines = mines;
+}
+
+int Board::getNumMines() {
+    return mines;
+}
