@@ -1,25 +1,23 @@
-#include "SquareBoard.h"
+#include "Rules.h"
+
 #ifndef MINESWEEPERBUILDER_RULES_H
 #define MINESWEEPERBUILDER_RULES_H
 // An interface that define what all SquareRules should have. Can be inherited by SimpleSquareRules
 //and other derived SquareRules classes.
-class SquareRules {
-    SquareBoard* gameBoard;
+class SquareRules : public Rules {
     int row;
     int col;
 
 public:
     virtual void rows_and_columns()=0;
-    void setBoard(SquareBoard* b);
+
     void setRow(int r);
     int getRow();
     int getCol();
     void setCol(int c);
 
-    SquareBoard* getBoard();
+    void printRules();
 
-    virtual void printRules();
-    virtual int playGame()=0;
     void flipTile();
     void flagTile();
     void unflagTile();

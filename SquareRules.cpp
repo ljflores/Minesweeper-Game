@@ -102,14 +102,6 @@ void SquareRules::printRules() {
     cout<<"(5) stop -- stops the game"<<endl;
 }
 
-void SquareRules::setBoard(SquareBoard *b) {
-    gameBoard = b;
-}
-
-SquareBoard *SquareRules::getBoard() {
-    return gameBoard;
-}
-
 void SquareRules::setRow(int r) {
     row = r;
 }
