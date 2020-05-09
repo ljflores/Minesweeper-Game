@@ -39,6 +39,13 @@ Board* Game::rboard() {
 //---------------------------------------------------------//
 
 int Game::playGame() {
+    cout<<"Game built."<<endl;
+
+    this->getRules();
+    this->getBoard();
+    this->getTile();
+    this->getGeneration();
+
     gameGeneration->setBoard(this->rboard());
     gameGeneration->setBombs();
     cout<<"--------------------------------------------------------------------------------"<<endl;
