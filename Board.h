@@ -9,9 +9,14 @@
 class Board {
 private:
     int mines;
+    int unflippedTracker; // Checks to see how many tiles are currently unflipped; will be referenced to know if the user won the game
 public:
     Board(int mines);
     int getnummines();
+    void setUnflippedTracker(int u);
+    int getUnflippedTracker();
+    void decrementUnflippedTracker();
+
     virtual void printBoard()=0;
     virtual Tile* GetTileAtPoint(int x,int y)=0;
     virtual void FillBoardWithTiles()=0;//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"

@@ -9,7 +9,6 @@ class SquareBoard : public Board {
 private:
     int xsize;
     int ysize;
-    int unflippedTracker; // Checks to see how many tiles are currently unflipped; will be referenced to know if the user won the game
     Tile ***c; //pointer to our 2D array
 
 public:
@@ -24,10 +23,6 @@ public:
     void set2dArray(int size);
 
     bool WithenBounds(int p);
-
-    void setUnflippedTracker(int u);
-    int getUnflippedTracker();
-    void decrementUnflippedTracker();
     void printBoard();
     Tile* GetTileAtPoint(int x,int y);
     void FillBoardWithTiles();//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"

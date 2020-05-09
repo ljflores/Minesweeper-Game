@@ -35,7 +35,7 @@ void Rules::flipTile() {
 
     Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow()); // gets the tile based on user input
 
-    if (t->IsMine()) { // If you hit a mine, it exits the program and prints out the board.
+    if (t->IsMine() && (t->getStatus() == "unflipped")) { // If you hit a mine, it exits the program and prints out the board.
         cout<<endl<<endl;
         cout<<"Game over. You hit a mine."<<endl;
         t->changeDisplay(t->getNumber()); // flip the tile

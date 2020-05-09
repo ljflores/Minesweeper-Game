@@ -11,3 +11,15 @@ Board::Board(int mines) {
 int Board::getnummines()  {
     return mines;
 }
+
+void Board::setUnflippedTracker(int u) {
+    unflippedTracker = u;
+}
+
+int Board::getUnflippedTracker() {
+    return unflippedTracker;
+}
+
+void Board::decrementUnflippedTracker() {
+    unflippedTracker--;
+}

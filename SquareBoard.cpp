@@ -15,7 +15,7 @@ SquareBoard::SquareBoard(int xsize, int ysize, int mines)
 : Board(mines){
     this->xsize = xsize;
     this->ysize = ysize;
-    this->unflippedTracker = ((xsize * ysize) - mines); // initialized to the number of tiles in the board minus the number of mines
+    this->setUnflippedTracker(((xsize * ysize) - mines)); // initialized to the number of tiles in the board minus the number of mines
 }
 int SquareBoard::getxsize(){
     return this->xsize;
@@ -82,18 +82,6 @@ bool SquareBoard::WithenBounds(int p){
     else{
         return false;
     }
-}
-
-void SquareBoard::setUnflippedTracker(int u) {
-    unflippedTracker = u;
-}
-
-int SquareBoard::getUnflippedTracker() {
-    return unflippedTracker;
-}
-
-void SquareBoard::decrementUnflippedTracker() {
-    unflippedTracker--;
 }
 
 void SquareBoard::printBoard() {
