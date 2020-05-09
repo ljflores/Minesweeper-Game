@@ -15,6 +15,7 @@ Board::Board(int xsize, int ysize,int mines){
     this->xsize = xsize;
     this->ysize = ysize;
     this->mines = mines;
+    this->unflippedTracker = ((xsize * ysize) - mines); // initialized to the number of tiles in the board minus the number of mines
 }
 int Board::getxsize(){
     return this->xsize;
@@ -84,4 +85,16 @@ bool Board::WithenBounds(int p){
     else{
         return false;
     }
+}
+
+void Board::setUnflippedTracker(int u) {
+    unflippedTracker = u;
+}
+
+int Board::getUnflippedTracker() {
+    return unflippedTracker;
+}
+
+void Board::decrementUnflippedTracker() {
+    unflippedTracker--;
 }

@@ -73,6 +73,13 @@ int SimpleSquareRules::playGame() {
     string command = "placeholder";
     bool keepGoing = true;
     while (keepGoing) {
+        if(getBoard()->getUnflippedTracker() == 0) { // Checks to see if the user won the game
+            cout<<endl<<endl;
+            cout<<"Congratulations! You win."<<endl;
+            this->getBoard()->displayalltiles();
+            this->getBoard()->printBoard();//prints the board with all of the tiles flipped to revel bombs
+            exit(0);
+        }
         cout<<"Enter a command: ";
         cin >> command;
         if (command == "flip") {

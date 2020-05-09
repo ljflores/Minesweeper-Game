@@ -9,11 +9,13 @@ int Rules::flipTileNoInput(Tile *t) {
     if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:
         t->changeDisplay(t->getNumber()); // flip the tile, that's all.
         t->setStatus("flipped");
+        getBoard()->decrementUnflippedTracker(); // unflippedTracker--
         return 0;
     }
     else { // if the bombTracker is 0, flip the tile and the tile's neighbors.
         t->changeDisplay(t->getNumber()); // flip the tile
         t->setStatus("flipped");
+        getBoard()->decrementUnflippedTracker(); // unflippedTracker--
 
         Tile* n;
         for (int j=0; j<8; j++) { // looking at each of the tile's 8 neighbors
@@ -45,6 +47,7 @@ void Rules::flipTile() {
         if (t->getBombTracker() != 0) { // Tile is safe, has a number other than 0.
             t->changeDisplay(t->getNumber()); // flip the tile and change the status.
             t->setStatus("flipped");
+            getBoard()->decrementUnflippedTracker(); // unflippedTracker--
         }
         else { // If the tile is safe and has 0 bombs in its neighborhood:
             flipTileNoInput(t); // see above

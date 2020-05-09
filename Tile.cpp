@@ -6,7 +6,7 @@
 #include <sstream>
 
 Tile::Tile(){
-    status = "unflipped"; // when the board is initalized, all the tiles are unflipped.
+    status = "unflipped"; // when the board is initialized, all the tiles are unflipped.
     isMine = false; // at first, all the mines are safe.
     number = "0"; // all tiles are marked with a 0 since all of the tiles are currently safe.
     display = " "; // since the tiles are all initially unflipped, there should be no number or letter displayed on the tile.

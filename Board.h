@@ -8,6 +8,7 @@ private:
     int xsize;
     int ysize;
     int mines;
+    int unflippedTracker; // Checks to see how many tiles are currently unflipped; will be referenced to know if the user won the game
     Tile ***c; //pointer to our 2D array
 
 public:
@@ -27,6 +28,10 @@ public:
     void displayalltiles();
     void GenerateAllNeighbors();
     bool WithenBounds(int p);
+
+    void setUnflippedTracker(int u);
+    int getUnflippedTracker();
+    void decrementUnflippedTracker();
 };
 
 #endif //MINESWEEPERBUILDER_BOARD_H
