@@ -85,7 +85,7 @@ public:
     int getysize(); // returns the number of rows
     int getnummines(); // returns the number of minds
     virtual Tile* GetTileAtPoint(int x,int y)=0; // Accesses a Tile at a specific coordinate
-    void fillboardwithsquares(); // Creates the board, filling it with square objects
+    void FillBoardWithTiles(); // Creates the board, filling it with square objects
 };
 
 // SimpleBoard.cpp

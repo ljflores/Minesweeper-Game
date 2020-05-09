@@ -30,7 +30,7 @@ public:
     void decrementUnflippedTracker();
     void printBoard();
     Tile* GetTileAtPoint(int x,int y);
-    void fillboardwithsquares();//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"
+    void FillBoardWithTiles();//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"
     //make a pure virtual to make sure all derived classes implement it.
     void displayalltiles();
     void GenerateAllNeighbors();

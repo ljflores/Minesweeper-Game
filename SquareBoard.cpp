@@ -24,7 +24,7 @@ int SquareBoard::getysize(){
     return this->ysize;
 }
 
-void SquareBoard::fillboardwithsquares() {
+void SquareBoard::FillBoardWithTiles() {
     set2dArray(getxsize());
 
     for (int i = 0;i<getxsize();i++){
@@ -94,4 +94,30 @@ int SquareBoard::getUnflippedTracker() {
 
 void SquareBoard::decrementUnflippedTracker() {
     unflippedTracker--;
+}
+
+void SquareBoard::printBoard() {
+
+    cout<<"    ";
+    for (int k = 1;k<this->getysize()+1;k++){ // printing column numbers
+        cout<<k<<"  ";
+    }
+    cout<<endl;
+    for(int i = 0; i < this->getysize() ;i++){ // printing row numbers
+        //this if else statement just fixes the SquareBoard
+        if(i+1 >= this->getysize()){
+            cout<<i+1<<" ";
+        }
+        else{
+            cout << i + 1 << "  ";
+        }
+        for (int j = 0;j<this->getysize();j++){
+            get2dArray()[i][j]->printTile(); // printing the tile shape, which is, for now, 2 brackets.
+        }
+        cout<<endl;
+    }
+}
+
+Tile *SquareBoard::GetTileAtPoint(int x, int y) {
+    return get2dArray()[y-1][x-1];
 }

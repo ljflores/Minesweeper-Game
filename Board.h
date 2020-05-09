@@ -11,10 +11,10 @@ private:
     int mines;
 public:
     Board(int mines);
-    int getNumMines();
+    int getnummines();
     virtual void printBoard()=0;
     virtual Tile* GetTileAtPoint(int x,int y)=0;
-    virtual void fillboardwithsquares()=0;//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"
+    virtual void FillBoardWithTiles()=0;//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"
     //make a pure virtual to make sure all derived classes implement it.
     virtual void displayalltiles()=0;
     virtual void GenerateAllNeighbors()=0;

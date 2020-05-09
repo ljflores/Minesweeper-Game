@@ -30,7 +30,7 @@ public:
 
     void buildBoard() {
         SquareBoard* mediumB = new MediumBoard();
-        mediumB->fillboardwithsquares();//builds the board with square tiles
+        mediumB->FillBoardWithTiles();//builds the board with square tiles
         mediumB->GenerateAllNeighbors();
         game->setBoard(mediumB);
     }
