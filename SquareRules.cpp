@@ -4,6 +4,9 @@
 
 #include "SquareRules.h"
 
+SquareRules::SquareRules()
+:Rules(){}
+
 int SquareRules::flipTileNoInput(Tile *t) {
 
     if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:

@@ -9,6 +9,7 @@ class SquareRules : public Rules {
     int col;
 
 public:
+    SquareRules();
     virtual void rows_and_columns()=0;
 
     void setRow(int r);
