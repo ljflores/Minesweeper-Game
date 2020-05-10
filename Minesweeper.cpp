@@ -746,14 +746,13 @@ public:
     void buildGeneration() {
         cout<<"Do you want the generation to be Random or Planned"<<endl;
         cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
-        int useri = 0;
-        cin>>useri;
-        while(useri < 1 || useri > 2){
-            cout<<"You Entered in a incompatible number please try again"<<endl;
-            cout<<"Do you want the generation to be Random or Planned"<<endl;
-            cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
-            cin>>useri;
+        string usera;
+        cin>> usera;
+        while(usera != "1" && usera != "2"){
+            cout<<"The value that you entered was incompatable try again "<<endl;
+            cin >> usera;
         }
+        int useri = stoi(usera);
         if(useri == 1) {
             Generate *randomGeneration = new RandomGeneration();
             game->setGeneration(randomGeneration);
@@ -799,14 +798,13 @@ public:
     void buildGeneration() {
         cout<<"Do you want the generation to be Random or Planned"<<endl;
         cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
-        int useri = 0;
-        cin>>useri;
-        while(useri < 1 || useri > 2){
-            cout<<"You Entered in a incompatible number please try again"<<endl;
-            cout<<"Do you want the generation to be Random or Planned"<<endl;
-            cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
-            cin>>useri;
+        string usera;
+        cin>> usera;
+        while(usera != "1" && usera != "2"){
+            cout<<"The value that you entered was incompatable try again "<<endl;
+            cin >> usera;
         }
+        int useri = stoi(usera);
         if(useri == 1) {
             Generate *randomGeneration = new RandomGeneration();
             game->setGeneration(randomGeneration);
@@ -851,14 +849,13 @@ public:
     void buildGeneration() {
         cout<<"Do you want the generation to be Random or Planned"<<endl;
         cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
-        int useri = 0;
-        cin>>useri;
-        while(useri < 1 || useri > 2){
-            cout<<"You Entered in a incompatible number please try again"<<endl;
-            cout<<"Do you want the generation to be Random or Planned"<<endl;
-            cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
-            cin>>useri;
+        string usera;
+        cin>> usera;
+        while(usera != "1" && usera != "2"){
+            cout<<"The value that you entered was incompatable try again "<<endl;
+            cin >> usera;
         }
+        int useri = stoi(usera);
         if(useri == 1) {
             Generate *randomGeneration = new RandomGeneration();
             game->setGeneration(randomGeneration);
