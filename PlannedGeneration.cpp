@@ -4,8 +4,8 @@
 
 #include "PlannedGeneration.h"
 
-PlannedGeneration::PlannedGeneration() {
-}
+PlannedGeneration::PlannedGeneration()
+: Generate(){}
 
 void PlannedGeneration::setBombs() {
     int PNumMines = this ->getBoard()->getnummines();

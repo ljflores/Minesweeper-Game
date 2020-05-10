@@ -1,18 +1,18 @@
 #include<iostream>
 #include <sstream>
-#include <algorithm>    // std::random_shuffle
+#include <algorithm>
 #include<time.h>
 using namespace std;
 
-//------------Tile classes-----------------//
+//-------------Tile classes-----------------//
 class Tile {
 public:
-    Tile() {}
+    Tile(){}
+    virtual ~Tile() {}
 
     virtual void printTile()=0; // print out the tile on the terminal
     virtual void changeDisplay(string s)=0; // changes what the tile displays
     virtual void setMine()=0; // Make a tile a mine
-
     virtual bool IsMine()=0; // checks to see if a tile is a mine
 
     virtual int getBombTracker()=0;
@@ -50,6 +50,14 @@ public:
         bombTracker = 0;
         shape = "[ ]";
     }
+
+    ~SquareTile(){
+        for(int i=0; i<9; i++) { // delete the array of tile pointers
+            delete neighbors[i];
+        }
+        delete []neighbors;
+    }
+
     void printTile() {cout<<shape;}
 
     void setStatus(string s) {this->status = s;}
@@ -126,6 +134,8 @@ private:
     int unflippedTracker; // Checks to see how many tiles are currently unflipped; will be referenced to know if the user won the game
 public:
     Board(int mines){this->mines = mines;}
+    virtual ~Board(){}
+
     int getnummines(){return mines;}
 
     void setUnflippedTracker(int u){unflippedTracker = u;}
@@ -148,10 +158,19 @@ private:
 
 public:
     SquareBoard(int xsize, int ysize, int mines)
-    : Board(mines){
+            : Board(mines){
         this->xsize = xsize;
         this->ysize = ysize;
         this->setUnflippedTracker(((xsize * ysize) - mines));
+    }
+
+    ~SquareBoard() {
+        for (int i=0; i<getSize(); i++) { // Deletes 2D array pointer to square tiles
+            for (int j=0; j<getSize(); j++) {
+                delete c[i][j];
+            }
+        }
+        delete []c;
     }
 
     int getxsize(){return this->xsize;}
@@ -240,27 +259,33 @@ class SimpleBoard : public SquareBoard {
 private:
 public:
     SimpleBoard() : SquareBoard(7, 7, 5) {}
+    ~SimpleBoard(){}
 };
 
 class MediumBoard : public SquareBoard {
 private:
 
 public:
-    MediumBoard(): SquareBoard(10, 10, 9) {
-    }
+    MediumBoard(): SquareBoard(10, 10, 9) {}
+    ~MediumBoard(){}
 };
 
 class AdvBoard : public SquareBoard {
 
 public:
-    AdvBoard(): SquareBoard(13, 13, 12) {
-    }
+    AdvBoard(): SquareBoard(13, 13, 12) {}
+    ~AdvBoard(){}
 };
 
 //----------Game_Generate classes-----------------//
 class Generate {
     Board* gameBoard;
 public:
+    Generate() {}
+    virtual ~Generate() {
+        delete gameBoard;
+    }
+
     void setBoard(Board* b) {gameBoard = b;};
     Board* getBoard() {return gameBoard;};
     virtual void setBombs()=0;
@@ -269,7 +294,8 @@ public:
 class RandomGeneration : public Generate {
 public:
     RandomGeneration()
-    :Generate(){}
+            :Generate(){}
+    ~RandomGeneration(){}
 
     int * shuffle(int upperBound) {
         srand(time(0)); //srand(time(o)) will set the seed to current time
@@ -300,7 +326,8 @@ public:
 class PlannedGeneration : public Generate {
 public:
     PlannedGeneration()
-    : Generate(){}
+            : Generate(){}
+    ~PlannedGeneration(){}
 
     void setBombs() {
         int PNumMines = this ->getBoard()->getnummines();
@@ -351,6 +378,10 @@ public:
 class Rules {
     Board* gameBoard;
 public:
+    Rules() {}
+    virtual ~Rules() {
+        delete gameBoard;
+    }
     void setBoard(Board* b){gameBoard = b;}
     Board* getBoard(){return gameBoard;}
 
@@ -392,7 +423,8 @@ class SquareRules : public Rules {
 
 public:
     SquareRules()
-    : Rules() {}
+            : Rules() {}
+    ~SquareRules(){}
 
     void setRow(int r) { row = r; }
     int getRow(){return row;}
@@ -492,7 +524,8 @@ public:
 class SimpleSquareRules : public SquareRules {
 public:
     SimpleSquareRules()
-    :SquareRules(){}
+            :SquareRules(){}
+    ~SimpleSquareRules(){}
 
     void printRules(){
         cout<<"Valid commands for a Simple Square game include: "<<endl;
@@ -567,7 +600,8 @@ public:
 class MediumSquareRules : public SquareRules {
 public:
     MediumSquareRules()
-    :SquareRules(){}
+            :SquareRules(){}
+    ~MediumSquareRules(){}
 
     void printRules(){
         cout<<"Valid commands for a Medium Square game include: "<<endl;
@@ -618,7 +652,8 @@ public:
 class AdvSquareRules : public SquareRules {
 public:
     AdvSquareRules()
-    :SquareRules(){}
+            :SquareRules(){}
+    ~AdvSquareRules(){}
 
     void printRules(){
         cout<<"Valid commands for a Advanced Square game include: "<<endl;
@@ -668,6 +703,14 @@ private:
     Tile* gameTile;
     Generate* gameGeneration;
 public:
+    Game() {}
+    ~Game() {
+        delete gameRules;
+        delete gameBoard;
+        delete gameTile;
+        delete gameGeneration;
+    }
+
 // Setters and getters //
     void setRules(Rules* rules){gameRules = rules;}
     void getRules(){return gameRules->printRules();}
@@ -701,6 +744,9 @@ public:
 //-------------GameBuilder classes------------------------------------//
 class GameBuilder {
 public:
+    GameBuilder(){}
+    virtual ~GameBuilder(){}
+
     virtual void buildRules()=0;
     virtual void buildBoard()=0;
     virtual void buildTile()=0;
@@ -714,6 +760,9 @@ class SimpleSquareBuilder : public GameBuilder {
 public:
     SimpleSquareBuilder() {
         this->game = new Game();
+    }
+    ~SimpleSquareBuilder() {
+        delete game;
     }
 
     void buildRules() {
@@ -766,6 +815,9 @@ public:
     MediumSquareBuilder() {
         this->game = new Game();
     }
+    ~MediumSquareBuilder() {
+        delete game;
+    }
 
     void buildRules() {
         Rules* mediumsquarerules = new MediumSquareRules();
@@ -816,6 +868,9 @@ public:
     AdvSquareBuilder() {
         this->game = new Game();
     }
+    ~AdvSquareBuilder() {
+        delete game;
+    }
 
     void buildRules() {
         Rules* advsqrules = new AdvSquareRules();
@@ -832,8 +887,6 @@ public:
         advBoard->GenerateAllNeighbors();//generates neighbors for each tile
         game->setBoard(advBoard);
     }
-
-
 
     void buildGeneration() {
         cout<<"Do you want the generation to be Random or Planned"<<endl;
@@ -868,6 +921,9 @@ public:
     // SimpleSquareBuilder specification is sent to the engineer
     GameEngineer(GameBuilder *gameBuilder) {
         this->gameBuilder = gameBuilder;
+    }
+    ~GameEngineer() {
+        delete gameBuilder;
     }
 
     // Return the Game made from the SimpleSquareBuilder spec
@@ -928,3 +984,4 @@ int userhandler(){
     }
     return usera;
 }
+
