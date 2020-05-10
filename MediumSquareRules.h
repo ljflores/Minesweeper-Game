@@ -11,7 +11,6 @@
 class MediumSquareRules : public SquareRules {
 public:
     MediumSquareRules();
-    ~MediumSquareRules();
     void printRules();
     int playGame();
 };
