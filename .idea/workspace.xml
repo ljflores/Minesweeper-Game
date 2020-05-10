@@ -40,25 +40,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Rules.cpp" afterDir="false" />
+    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="Changed stuff in board and square board">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdvSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSquareBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MediumSquareBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlannedGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PlannedGeneration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rules.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareRules.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SquareRules.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/SquareRules.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareTile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SquareTile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +76,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
-    <configuration name="Object_Oriented_software_design_final_project" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Object_Oriented_software_design_final_project" TARGET_NAME="Object_Oriented_software_design_final_project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Object_Oriented_software_design_final_project" RUN_TARGET_NAME="Object_Oriented_software_design_final_project">
+    <configuration name="Object_Oriented_software_design_final_project" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Object_Oriented_software_design_final_project" TARGET_NAME="Object_Oriented_software_design_final_project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Object_Oriented_software_design_final_project" RUN_TARGET_NAME="Object_Oriented_software_design_final_project">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -374,13 +357,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added comments in the MediumBoard.cpp file." />
@@ -411,6 +393,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Moved the unflippedTracker to Board and fixed a small problem in Rules" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1497" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589141309157">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="-1497" y="33" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1589141309157" />
     <state x="0" y="14" key="CommitChangelistDialog2" timestamp="1589065163258">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -424,26 +410,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588436439175" />
-    <state width="1493" height="666" key="GridCell.Tab.0.bottom" timestamp="1589120927489">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1878" height="168" key="GridCell.Tab.0.bottom" timestamp="1589141709157">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state width="1493" height="666" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
-    <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
-    <state width="1493" height="666" key="GridCell.Tab.0.center" timestamp="1589120927489">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1878" height="168" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1589141709157" />
+    <state width="1878" height="168" key="GridCell.Tab.0.center" timestamp="1589141709155">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state width="1493" height="666" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
-    <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="666" key="GridCell.Tab.0.left" timestamp="1589120927489">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1878" height="168" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1589141709155" />
+    <state width="1878" height="168" key="GridCell.Tab.0.left" timestamp="1589141709155">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state width="1493" height="666" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
-    <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="666" key="GridCell.Tab.0.right" timestamp="1589120927489">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1878" height="168" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1589141709155" />
+    <state width="1878" height="168" key="GridCell.Tab.0.right" timestamp="1589141709156">
+      <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state width="1493" height="666" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
-    <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
+    <state width="1878" height="168" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1589141709156" />
     <state x="-1370" y="80" key="RollbackChangesDialog" timestamp="1588202979800">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
