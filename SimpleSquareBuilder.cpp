@@ -1,5 +1,6 @@
 #include "GameBuilder.h"
 #include "SimpleSquareRules.h"
+#include "SimpleBoard.cpp"
 #include "SquareTile.h"
 #include "RandomGeneration.h"
 #include "PlannedGeneration.h"
@@ -18,7 +19,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* simpleBoard = new SquareBoard(7, 7, 5);
+        SquareBoard* simpleBoard = new SimpleBoard();
         simpleBoard->FillBoardWithTiles();//fills board with square tiles
         simpleBoard->GenerateAllNeighbors();//generates the neighbors for each tile
         game->setBoard(simpleBoard);

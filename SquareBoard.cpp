@@ -17,16 +17,6 @@ SquareBoard::SquareBoard(int xsize, int ysize, int mines)
     this->ysize = ysize;
     this->setUnflippedTracker(((xsize * ysize) - mines)); // initialized to the number of tiles in the board minus the number of mines
 }
-
-SquareBoard::~SquareBoard() {
-    cout<<"Square board destructor accessed"<<endl;
-    for(int i=0; i<getxsize(); i++) {
-        for(int j=0; j<getysize(); j++) {
-            delete c;
-        }
-    }
-}
-
 int SquareBoard::getxsize(){
     return this->xsize;
 }

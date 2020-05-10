@@ -24,14 +24,14 @@ private:
     // or a Bomb.
     string display; // what is actually displayed on the tile
     SquareTile** neighbors = new SquareTile*[8];
+
     int rowNeighbors[8];
     int colNeighbors[8];
-    int bombTracker;
 
+    int bombTracker;
 public:
     SquareTile();
-    ~SquareTile();
-
+    //temp method
     void setDisplay(string n);
     string getDisplay();
 
