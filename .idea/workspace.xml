@@ -40,9 +40,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="**DON'T PULL YET** Implemented the recursive part so all the tiles with 0 bombs get their neighbors flipped.">
+    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +114,7 @@
       <workItem from="1588880502136" duration="2592000" />
       <workItem from="1588912071544" duration="4277000" />
       <workItem from="1588957981831" duration="6284000" />
+      <workItem from="1589090724010" duration="209000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;AdvSqaureRules.cpp&quot; to the CMake file.">
       <created>1588184764505</created>
@@ -392,26 +394,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588436439175" />
-    <state width="1493" height="523" key="GridCell.Tab.0.bottom" timestamp="1588970274902">
+    <state width="1493" height="375" key="GridCell.Tab.0.bottom" timestamp="1589090615370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="523" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588970274902" />
+    <state width="1493" height="375" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589090615370" />
     <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
-    <state width="1493" height="523" key="GridCell.Tab.0.center" timestamp="1588970274901">
+    <state width="1493" height="375" key="GridCell.Tab.0.center" timestamp="1589090615370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="523" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588970274901" />
+    <state width="1493" height="375" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589090615370" />
     <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="523" key="GridCell.Tab.0.left" timestamp="1588970274901">
+    <state width="1493" height="375" key="GridCell.Tab.0.left" timestamp="1589090615370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="523" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588970274901" />
+    <state width="1493" height="375" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589090615370" />
     <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="523" key="GridCell.Tab.0.right" timestamp="1588970274902">
+    <state width="1493" height="375" key="GridCell.Tab.0.right" timestamp="1589090615370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="523" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588970274902" />
+    <state width="1493" height="375" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589090615370" />
     <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1589090892292">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1589090892292" />
+    <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1589090929614">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1589090929614" />
     <state x="-1370" y="80" key="RollbackChangesDialog" timestamp="1588202979800">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
@@ -425,14 +435,14 @@
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588969627386" />
     <state x="-1469" y="29" key="Vcs.Push.Dialog.v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203081759" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588957981824">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589090724034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588957981824" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588828931335">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589090724034" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589090955506">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588828931335" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1589090955506" />
     <state x="-1197" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210304093" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1588913159439">
       <screen x="0" y="0" width="1536" height="824" />
