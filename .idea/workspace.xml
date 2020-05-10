@@ -40,25 +40,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Rules.cpp" afterDir="false" />
+    <list default="true" id="8b04f238-e279-4b56-8739-52f3ebb5e17f" name="Default Changelist" comment="Got Generate and Rules to work with a Board object now. The only thing is that Board requires an implementation of GetTileAtPoint(x,y), which may not apply to all boards.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdvSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AdvSquareBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MediumSquareBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlannedGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PlannedGeneration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomGeneration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomGeneration.h" beforeDir="false" afterPath="$PROJECT_DIR$/RandomGeneration.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rules.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleSquareBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleSquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleSquareRules.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareRules.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SquareRules.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareRules.h" beforeDir="false" afterPath="$PROJECT_DIR$/SquareRules.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareTile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SquareTile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tile.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../oosd final .cpp file/Minesweeper.cpp" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -131,6 +114,7 @@
       <workItem from="1588957981831" duration="6284000" />
       <workItem from="1589091420087" duration="288000" />
       <workItem from="1589095568699" duration="5127000" />
+      <workItem from="1589120869292" duration="10138000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;AdvSqaureRules.cpp&quot; to the CMake file.">
       <created>1588184764505</created>
@@ -363,7 +347,35 @@
       <option name="project" value="LOCAL" />
       <updated>1589065164846</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Generate and Rules work, but only if I directly pass them a SquareBoard when I need it to  work with just a Board.">
+      <created>1589121056217</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1589121056217</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Generate and Rules work, but only if I directly pass them a SquareBoard when I need it to  work with just a Board.">
+      <created>1589121125313</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1589121125313</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Got Generate and Rules to work with a Board object now. The only thing is that Board requires an implementation of GetTileAtPoint(x,y), which may not apply to all boards.">
+      <created>1589123266210</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1589123266210</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Minesweeper.cpp has destructors  now">
+      <created>1589139148662</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1589139148662</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,9 +395,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added comments in the MediumBoard.cpp file." />
-    <MESSAGE value="Added some comments in Rules.h, ideas for how we can move forward with implementation." />
-    <MESSAGE value="Began implementations of flipTile(), flagTile(), and unflagTile() in the Rules class." />
     <MESSAGE value="You can now play Minesweeper with flip, flag, unflag, etc. commands! The game still uses print statements instead of changing the actual board. More to come." />
     <MESSAGE value="Got it so you can type &quot;flip&quot; and the game flips Tile 1, 2. I need to make changes so it takes coordinates based on user input." />
     <MESSAGE value="Changed the Square Tile shape back to brackets because Clion didn't recognize the box symbol you put in. We can change this back later if you want." />
@@ -408,41 +417,44 @@
     <MESSAGE value="Took out some unnecessary methods I added while trying to stop the game." />
     <MESSAGE value="Filled in some of the Board class" />
     <MESSAGE value="Moved the unflippedTracker to Board and fixed a small problem in Rules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved the unflippedTracker to Board and fixed a small problem in Rules" />
+    <MESSAGE value="Generate and Rules work, but only if I directly pass them a SquareBoard when I need it to  work with just a Board." />
+    <MESSAGE value="Got Generate and Rules to work with a Board object now. The only thing is that Board requires an implementation of GetTileAtPoint(x,y), which may not apply to all boards." />
+    <MESSAGE value="Minesweeper.cpp has destructors  now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minesweeper.cpp has destructors  now" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="14" key="CommitChangelistDialog2" timestamp="1589065163258">
+    <state x="0" y="14" key="CommitChangelistDialog2" timestamp="1589139145270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589065163258" />
+    <state x="0" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589139145270" />
     <state x="-1429" y="-148" key="CommitChangelistDialog2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588202879643" />
     <state x="-1645" y="-50" key="DiffContextDialog" timestamp="1588203073013">
       <screen x="-1920" y="-157" width="1920" height="1057" />
     </state>
     <state x="-1645" y="-50" key="DiffContextDialog/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203073013" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588436439175">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589138638149">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588436439175" />
-    <state width="1493" height="666" key="GridCell.Tab.0.bottom" timestamp="1589120927489">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589138638149" />
+    <state width="1493" height="109" key="GridCell.Tab.0.bottom" timestamp="1589132505655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="666" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
+    <state width="1493" height="109" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589132505655" />
     <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
-    <state width="1493" height="666" key="GridCell.Tab.0.center" timestamp="1589120927489">
+    <state width="1493" height="109" key="GridCell.Tab.0.center" timestamp="1589132505655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="666" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
+    <state width="1493" height="109" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589132505655" />
     <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="666" key="GridCell.Tab.0.left" timestamp="1589120927489">
+    <state width="1493" height="109" key="GridCell.Tab.0.left" timestamp="1589132505655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="666" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
+    <state width="1493" height="109" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589132505655" />
     <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355308" />
-    <state width="1493" height="666" key="GridCell.Tab.0.right" timestamp="1589120927489">
+    <state width="1493" height="109" key="GridCell.Tab.0.right" timestamp="1589132505655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="666" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589120927489" />
+    <state width="1493" height="109" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589132505655" />
     <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210355309" />
     <state x="-1370" y="80" key="RollbackChangesDialog" timestamp="1588202979800">
       <screen x="-1920" y="-157" width="1920" height="1057" />
@@ -452,19 +464,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588104134375" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589065168842">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589123277407">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589065168842" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589123277407" />
     <state x="-1469" y="29" key="Vcs.Push.Dialog.v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588203081759" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589120885272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589120885272" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588828931335">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589138994341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588828931335" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1589138994341" />
     <state x="-1197" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.820/-1920.-157.1920.1057@-1920.-157.1920.1057" timestamp="1588210304093" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1588913159439">
       <screen x="0" y="0" width="1536" height="824" />
