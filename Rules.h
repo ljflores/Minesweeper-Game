@@ -10,6 +10,8 @@
 
 class Rules {
 public:
+    Rules();
+    virtual ~Rules(); // virtual destructor
     virtual void flipTile()=0;
     virtual void flagTile()=0;
     virtual void unflagTile()=0;

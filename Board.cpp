@@ -8,6 +8,8 @@ Board::Board(int mines) {
     this->mines = mines;
 }
 
+Board::~Board() {}
+
 int Board::getnummines()  {
     return mines;
 }

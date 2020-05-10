@@ -13,6 +13,8 @@ class SquareRules : public Rules {
 
 public:
     SquareRules();
+    ~SquareRules();
+
     void rows_and_columns();
 
     SquareBoard* getBoard();

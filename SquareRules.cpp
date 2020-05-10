@@ -7,6 +7,8 @@
 SquareRules::SquareRules()
 :Rules(){}
 
+SquareRules::~SquareRules() {}
+
 void SquareRules::rows_and_columns() {
     int gameRow = 0;
     int gameCol = 0;

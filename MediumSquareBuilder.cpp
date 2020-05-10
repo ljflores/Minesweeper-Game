@@ -10,7 +10,6 @@
 #include "GameBuilder.h"
 #include "MediumSquareRules.h"
 
-#include "MediumBoard.cpp"
 #include "SquareTile.h"
 #include "RandomGeneration.h"
 #include "PlannedGeneration.h"
@@ -29,7 +28,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* mediumB = new MediumBoard();
+        SquareBoard* mediumB = new SquareBoard(10, 10, 9);
         mediumB->FillBoardWithTiles();//builds the board with square tiles
         mediumB->GenerateAllNeighbors();
         game->setBoard(mediumB);
