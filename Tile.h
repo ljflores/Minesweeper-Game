@@ -7,6 +7,7 @@ class Tile {
 
 public:
     Tile();
+    ~Tile();
 
     virtual void printTile()=0; // print out the tile on the terminal
     virtual void changeDisplay(string s)=0; // changes what the tile displays

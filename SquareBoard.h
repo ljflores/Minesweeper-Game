@@ -13,8 +13,8 @@ private:
 
 public:
     SquareBoard(int xsize, int ysize, int mines);
+    ~SquareBoard();
 
-    // might consider making the destructors in base classes virtual to avoid memory leaks in derived classes.
     int getxsize();
     int getysize();
 

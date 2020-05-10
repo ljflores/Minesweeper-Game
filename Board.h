@@ -12,6 +12,8 @@ private:
     int unflippedTracker; // Checks to see how many tiles are currently unflipped; will be referenced to know if the user won the game
 public:
     Board(int mines);
+    virtual ~Board();
+
     int getnummines();
     void setUnflippedTracker(int u);
     int getUnflippedTracker();
@@ -19,7 +21,7 @@ public:
 
     virtual void printBoard()=0;
     virtual Tile* GetTileAtPoint(int x,int y)=0;
-    virtual void FillBoardWithTiles()=0;//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"
+    virtual void FillBoardWithTiles()=0;//fillboard will be the same for all types of boards
     //make a pure virtual to make sure all derived classes implement it.
     virtual void displayalltiles()=0;
     virtual void GenerateAllNeighbors()=0;

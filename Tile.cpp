@@ -8,5 +8,9 @@
 Tile::Tile(){
 }
 
+Tile::~Tile() {
+    cout<<"Tile destructor. Just for testing"<<endl;
+}
+
 
 

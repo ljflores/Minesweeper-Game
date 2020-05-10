@@ -11,6 +11,7 @@
 using namespace std;
 
 MediumSquareRules::MediumSquareRules(){}
+MediumSquareRules::~MediumSquareRules() {}
 
 void MediumSquareRules::printRules(){
     cout<<"Valid commands for a Medium Square game include: "<<endl;
