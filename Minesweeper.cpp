@@ -260,8 +260,6 @@ public:
     }
 };
 
-
-
 //----------Game_Generate classes-----------------//
 class Generate {
     Board* gameBoard;
@@ -515,25 +513,7 @@ public:
     void printRules(){
         cout<<"Valid commands for a Simple Square game include: "<<endl;
         SquareRules::printRules();
-        cout<<"(6) revealT -- reveals one tile of your choosing"<<endl;
-        cout<<"(7) revealB -- reveals 1 bomb of your choosing"<<endl;
         cout<<"\n";
-    }
-
-    void revealTile(){
-        this->rows_and_columns();
-        Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-        t->changeDisplay("r");
-        this->getBoard()->printBoard();
-        cout<<"Tile revealed."<<endl;
-    }
-
-    void revealBomb(){
-        this->rows_and_columns();
-        Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
-        t->changeDisplay("B");
-        this->getBoard()->printBoard();
-        cout<<"Bomb revealed."<<endl;
     }
 
     int playGame(){
@@ -560,12 +540,6 @@ public:
             }
             else if (command == "rules") {
                 this->printRules();
-            }
-            else if (command == "revealT") {
-                this->revealTile();
-            }
-            else if (command == "revealB") {
-                this->revealBomb();
             }
             else if (command == "stop") {
                 cout<<endl<<endl;
