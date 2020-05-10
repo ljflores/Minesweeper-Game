@@ -5,10 +5,6 @@
 
 RandomGeneration::RandomGeneration() {}
 
-void RandomGeneration::printBoard() {
-    cout<<"Randomly generated."<<endl;
-}
-
 int * RandomGeneration::shuffle(int upperBound) {
 
     srand(time(0)); //srand(time(o)) will set the seed to current time

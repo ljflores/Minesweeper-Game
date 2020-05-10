@@ -8,7 +8,6 @@ class Generate {
 public:
     void setBoard(SquareBoard* b);
     SquareBoard* getBoard();
-    virtual void printBoard()=0;
     virtual void setBombs()=0;
 };
 

@@ -31,7 +31,6 @@ public:
     void setTile(Tile*);
     void getTile();
     void setGeneration(Generate*);
-    void getGeneration();
 
 
     SquareBoard* rboard();//returns the board

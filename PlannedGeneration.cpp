@@ -6,10 +6,6 @@
 
 PlannedGeneration::PlannedGeneration() {}
 
-void PlannedGeneration::printBoard() {
-    cout<<"Planned generation"<<endl;
-}
-
 void PlannedGeneration::setBombs() {
     int PNumMines = this ->getBoard()->getnummines();
     switch (PNumMines){

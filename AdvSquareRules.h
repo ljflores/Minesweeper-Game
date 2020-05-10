@@ -14,7 +14,6 @@ public:
     
     void printRules();
     int playGame();
-    void rows_and_columns();
 };
 //test commit another test commit
 #endif /* AdvSquareRules_h */

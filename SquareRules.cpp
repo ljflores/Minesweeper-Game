@@ -7,7 +7,37 @@
 SquareRules::SquareRules()
 :Rules(){}
 
-int SquareRules::flipTileNoInput(Tile *t) {
+void SquareRules::rows_and_columns() {
+    int gameRow = 0;
+    int gameCol = 0;
+
+    bool keepGoing = true;
+    while (keepGoing) {
+        cout << "What row would you like? Enter a number between 1 and "<<getBoard()->getxsize()<<":"<<endl;
+        cin >> gameRow;
+        if ((gameRow < 1) || (gameRow > getBoard()->getxsize())) {
+            cout << "Please enter a number in the correct range." << endl;
+        }
+        else {
+            break;
+        }
+    }
+    while (keepGoing) {
+        cout<<"What column would you like? enter a number between 1 and and "<<getBoard()->getxsize()<<":"<<endl;
+        cin >> gameCol;
+        if ((gameCol < 1) || (gameCol > getBoard()->getxsize())) {
+            cout << "Please enter a number in the correct range." << endl;
+        }
+        else {
+            break;
+        }
+    }
+
+    this->setRow(gameRow);
+    this->setCol(gameCol);
+}
+
+int SquareRules::flipTileNoInput(SquareTile *t) {
 
     if (t->getBombTracker() != 0) { // if the bombTracker is 1, 2, 3, etc:
         t->changeDisplay(t->getNumber()); // flip the tile, that's all.
@@ -20,7 +50,7 @@ int SquareRules::flipTileNoInput(Tile *t) {
         t->setStatus("flipped");
         getBoard()->decrementUnflippedTracker(); // unflippedTracker--
 
-        Tile* n;
+        SquareTile* n;
         for (int j=0; j<8; j++) { // looking at each of the tile's 8 neighbors
             n = t->getNeighbors()[j];
             if ((n != NULL) && !n->IsMine() && (n->getStatus() == "unflipped")) { // if the neighbor is a valid tile, is not a mine, and is unflipped
@@ -36,7 +66,7 @@ int SquareRules::flipTileNoInput(Tile *t) {
 void SquareRules::flipTile() {
     this->rows_and_columns(); // asks for user input
 
-    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow()); // gets the tile based on user input
+    SquareTile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow()); // gets the tile based on user input
 
     if (t->IsMine() && (t->getStatus() == "unflipped")) { // If you hit a mine, it exits the program and prints out the board.
         cout<<endl<<endl;
@@ -66,7 +96,7 @@ void SquareRules::flipTile() {
 void SquareRules::flagTile() {
     this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
+    SquareTile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
 
     if (t->getStatus() == "unflipped") {
         t->changeDisplay("f"); // change the tile display to indicate that it's flagged
@@ -83,7 +113,7 @@ void SquareRules::flagTile() {
 void SquareRules::unflagTile() {
     this->rows_and_columns();
 
-    Tile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
+    SquareTile* t = this->getBoard()->GetTileAtPoint(this->getCol(),this->getRow());
 
     if (t->getStatus() == "flagged") {
         t->changeDisplay(" "); // changes the display back to a blank tile
@@ -119,4 +149,12 @@ int SquareRules::getRow() {
 
 int SquareRules::getCol() {
     return col;
+}
+
+SquareBoard *SquareRules::getBoard() {
+    return gameBoard;
+}
+
+void SquareRules::setBoard(SquareBoard *b) {
+    gameBoard = b;
 }

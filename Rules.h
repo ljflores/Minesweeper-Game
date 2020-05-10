@@ -9,18 +9,13 @@
 #include "Board.h"
 
 class Rules {
-    Board* gameBoard;
 public:
-    Board* getBoard();
-    void setBoard(Board* b);
-
-    virtual void printRules()=0;
-    virtual int playGame()=0;
-
     virtual void flipTile()=0;
     virtual void flagTile()=0;
     virtual void unflagTile()=0;
 
+    virtual void printRules()=0;
+    virtual int playGame()=0;
 };
 
 

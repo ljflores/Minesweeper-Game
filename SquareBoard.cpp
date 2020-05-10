@@ -28,7 +28,7 @@ void SquareBoard::FillBoardWithTiles() {
     set2dArray(getxsize());
 
     for (int i = 0;i<getxsize();i++){
-        get2dArray()[i] = new Tile*[getysize()];//creating space for rows
+        get2dArray()[i] = new SquareTile*[getysize()];//creating space for rows
 
         for (int j = 0; j<getysize();j++){
             get2dArray()[i][j] = new SquareTile();//filling up the 2d array with square tiles;
@@ -39,16 +39,16 @@ void SquareBoard::FillBoardWithTiles() {
 
 }
 
-Tile ***SquareBoard::get2dArray() {
+SquareTile ***SquareBoard::get2dArray() {
     return c;
 }
 
 void SquareBoard::set2dArray(int size) {
-    c = new Tile**[size];
+    c = new SquareTile**[size];
 }
 //this changes the display of all of the tiles to thier number 
 void SquareBoard::displayalltiles() {
-    Tile* t;
+    SquareTile* t;
     for (int i = 0;i<getxsize();i++){
         for (int j = 0; j<getysize();j++){
            t = this->GetTileAtPoint(i+1,j+1);
@@ -58,7 +58,7 @@ void SquareBoard::displayalltiles() {
 }
 
 void SquareBoard::GenerateAllNeighbors() {
-    Tile* t;
+    SquareTile* t;
     for (int i = 0; i<getxsize();i++){//goes through each file in array
         for (int j = 0;j<getysize();j++){
             t = this->GetTileAtPoint(i+1,j+1);//gets the current tile
@@ -106,6 +106,6 @@ void SquareBoard::printBoard() {
     }
 }
 
-Tile *SquareBoard::GetTileAtPoint(int x, int y) {
+SquareTile *SquareBoard::GetTileAtPoint(int x, int y) {
     return get2dArray()[y-1][x-1];
 }

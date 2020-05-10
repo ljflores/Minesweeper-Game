@@ -3,11 +3,3 @@
 //
 
 #include "Rules.h"
-
-Board *Rules::getBoard() {
-    return gameBoard;
-}
-
-void Rules::setBoard(Board *b) {
-    gameBoard = b;
-}

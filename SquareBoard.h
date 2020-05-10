@@ -9,7 +9,7 @@ class SquareBoard : public Board {
 private:
     int xsize;
     int ysize;
-    Tile ***c; //pointer to our 2D array
+    SquareTile ***c; //pointer to our 2D array
 
 public:
     SquareBoard(int xsize, int ysize, int mines);
@@ -19,12 +19,12 @@ public:
     int getysize();
 
 
-    Tile*** get2dArray();
+    SquareTile*** get2dArray();
     void set2dArray(int size);
 
     bool WithenBounds(int p);
     void printBoard();
-    Tile* GetTileAtPoint(int x,int y);
+    SquareTile* GetTileAtPoint(int x,int y);
     void FillBoardWithTiles();//fillboard will be the same for all types of boards //TODO: rename as "fillBoardWithTiles"
     //make a pure virtual to make sure all derived classes implement it.
     void displayalltiles();

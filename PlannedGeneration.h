@@ -8,7 +8,6 @@
 class PlannedGeneration : public Generate {
 public:
     PlannedGeneration();
-    void printBoard() override;
     void setBombs();
     void setBombshelper(int x,int y);
 };

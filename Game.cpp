@@ -30,9 +30,6 @@ void Game::setGeneration(Generate *generation) {
     gameGeneration = generation;
 }
 
-void Game::getGeneration() {
-    gameGeneration->printBoard();
-}
 SquareBoard* Game::rboard() {
     return this->gameBoard;
 }
@@ -44,7 +41,6 @@ int Game::playGame() {
     this->getRules();
     this->getBoard();
     this->getTile();
-    this->getGeneration();
 
     gameGeneration->setBoard(this->rboard());
     gameGeneration->setBombs();
