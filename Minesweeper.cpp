@@ -255,27 +255,7 @@ public:
     }
 };
 
-class SimpleBoard : public SquareBoard {
-private:
-public:
-    SimpleBoard() : SquareBoard(7, 7, 5) {}
-    ~SimpleBoard(){}
-};
 
-class MediumBoard : public SquareBoard {
-private:
-
-public:
-    MediumBoard(): SquareBoard(10, 10, 9) {}
-    ~MediumBoard(){}
-};
-
-class AdvBoard : public SquareBoard {
-
-public:
-    AdvBoard(): SquareBoard(13, 13, 12) {}
-    ~AdvBoard(){}
-};
 
 //----------Game_Generate classes-----------------//
 class Generate {
@@ -692,6 +672,7 @@ public:
                 cout << "Please enter a correct command." << endl;
             }
         }
+        return 0;
     }
 };
 
@@ -772,7 +753,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* simpleBoard = new SimpleBoard(); //TODO: Simple Square Board
+        SquareBoard* simpleBoard = new SquareBoard(7,7,5); //TODO: Simple Square Board
         simpleBoard->FillBoardWithTiles();//fills board with square tiles
         simpleBoard->GenerateAllNeighbors();//generates the neighbors for each tile
         game->setBoard(simpleBoard);
@@ -825,7 +806,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* mediumB = new MediumBoard();
+        SquareBoard* mediumB = new SquareBoard(10,10,7);
         mediumB->FillBoardWithTiles();//builds the board with square tiles
         mediumB->GenerateAllNeighbors();
         game->setBoard(mediumB);
@@ -882,7 +863,7 @@ public:
         game->setTile(squareTile);
     }
     void buildBoard() {
-        SquareBoard* advBoard = new AdvBoard();
+        SquareBoard* advBoard = new SquareBoard(13,13,12);
         advBoard->FillBoardWithTiles();//fills board with square tiles
         advBoard->GenerateAllNeighbors();//generates neighbors for each tile
         game->setBoard(advBoard);
