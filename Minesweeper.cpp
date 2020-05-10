@@ -281,8 +281,7 @@ public:
     ~RandomGeneration(){}
 
     int * shuffle(int upperBound) {
-        srand(time(0)); //srand(time(o)) will set the seed to current time
-        //srand(100);    //srand(100) will set the seed to 100;
+        srand(time(0));
 
         //declare an array with a number of elements, elements, 0 to upperBound-1
         int *a = new int[upperBound];
@@ -744,15 +743,17 @@ public:
     }
 
     void buildGeneration() {
-        cout<<"Do you want the generation to be Random or Planned"<<endl;
-        cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
+        cout<<"Do you want the generation to be Random or Planned?"<<endl;
+        cout<<"1: Random Generation "<<endl<<"2: Planned Generation"<<endl;
         string usera;
         cin>> usera;
         while(usera != "1" && usera != "2"){
-            cout<<"The value that you entered was incompatable try again "<<endl;
+            cout<<"The value that you entered was incompatible try again. "<<endl;
             cin >> usera;
         }
-        int useri = stoi(usera);
+        stringstream degree(usera);
+        int useri = 0;
+        degree >> useri;
         if(useri == 1) {
             Generate *randomGeneration = new RandomGeneration();
             game->setGeneration(randomGeneration);
@@ -796,15 +797,17 @@ public:
     }
 
     void buildGeneration() {
-        cout<<"Do you want the generation to be Random or Planned"<<endl;
-        cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
+        cout<<"Do you want the generation to be Random or Planned?"<<endl;
+        cout<<"1: Random Generation "<<endl<<"2: Planned Generation"<<endl;
         string usera;
         cin>> usera;
         while(usera != "1" && usera != "2"){
-            cout<<"The value that you entered was incompatable try again "<<endl;
+            cout<<"The value that you entered was incompatible try again. "<<endl;
             cin >> usera;
         }
-        int useri = stoi(usera);
+        stringstream degree(usera);
+        int useri = 0;
+        degree >> useri;
         if(useri == 1) {
             Generate *randomGeneration = new RandomGeneration();
             game->setGeneration(randomGeneration);
@@ -847,15 +850,17 @@ public:
     }
 
     void buildGeneration() {
-        cout<<"Do you want the generation to be Random or Planned"<<endl;
-        cout<<"(1): Random Generation "<<endl<<"(2): Planned Generation"<<endl;
+        cout<<"Do you want the generation to be Random or Planned?"<<endl;
+        cout<<"1: Random Generation "<<endl<<"2: Planned Generation"<<endl;
         string usera;
         cin>> usera;
         while(usera != "1" && usera != "2"){
-            cout<<"The value that you entered was incompatable try again "<<endl;
+            cout<<"The value that you entered was incompatible try again. "<<endl;
             cin >> usera;
         }
-        int useri = stoi(usera);
+        stringstream degree(usera);
+        int useri = 0;
+        degree >> useri;
         if(useri == 1) {
             Generate *randomGeneration = new RandomGeneration();
             game->setGeneration(randomGeneration);
@@ -926,22 +931,23 @@ int main() {
 }
 
 int userhandler(){
-    //what I did was the user respone would be a string and if the string was 1 2 or 3 then the int version of that string would be returned
     string usera = "testcode";
-    cout << "Welcome to Minesweeper" << endl;
-    cout << "select from the following choices" << endl;
+    cout << "Welcome to Minesweeper!" << endl <<endl;
+    cout << "Select from the following choices:" << endl <<endl;
     while(usera != "1" && usera != "2" && usera != "3") {
         if (usera != "testcode"){
             cout<<"You entered in an incompatible option please select from these options"<<endl;
         }
-        cout << "1: Simple Square Game" << endl;
-        cout << "2: Medium Square Game" << endl;
-        cout << "3: Advanced Square Game" << endl;
+        cout << "1: Simple Square Game (7 x 7 board with 5 mines)" << endl;
+        cout << "2: Medium Square Game (10 x 10 board with 7 mines)" << endl;
+        cout << "3: Advanced Square Game (13 x 13 board with 12 mines)" << endl;
         cin>>usera;
-        
+
         cout<<endl;
     }
-    int numusera = stoi(usera);
+    stringstream degree(usera);
+    int numusera = 0;
+    degree >> numusera;
     return numusera;
 }
 
