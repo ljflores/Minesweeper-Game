@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(Object_Oriented_software_design_final_project
-    AdvBoard.cpp
     AdvSquareBuilder.cpp
         AdvSqaureRules.cpp
         SquareBoard.cpp
@@ -17,14 +16,12 @@ add_executable(Object_Oriented_software_design_final_project
     GameEngineer.cpp
     Generate.h
     main.cpp
-    MediumBoard.cpp
     MediumSquareBuilder.cpp
     MediumSquareRules.cpp
     MediumSquareRules.h
     RandomGeneration.cpp
     RandomGeneration.h
         SquareRules.h
-    SimpleBoard.cpp
     SimpleSquareBuilder.cpp
     SimpleSquareRules.cpp
     SimpleSquareRules.h

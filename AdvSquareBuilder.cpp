@@ -9,7 +9,6 @@
 #include "GameBuilder.h"
 #include "AdvSquareRules.h"
 
-#include "AdvBoard.cpp"
 #include "SquareTile.h"
 #include "RandomGeneration.h"
 #include "PlannedGeneration.h"
@@ -32,7 +31,7 @@ public:
         game->setTile(squareTile);
     }
     void buildBoard() {
-        SquareBoard* advBoard = new AdvBoard();
+        SquareBoard* advBoard = new SquareBoard(13, 13, 12);
         advBoard->FillBoardWithTiles();//fills board with square tiles
         advBoard->GenerateAllNeighbors();//generates neighbors for each tile
         game->setBoard(advBoard);

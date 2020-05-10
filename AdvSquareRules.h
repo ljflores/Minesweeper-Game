@@ -11,7 +11,8 @@
 class AdvSquareRules : public SquareRules {
 public:
     AdvSquareRules();
-    
+    ~AdvSquareRules();
+
     void printRules();
     int playGame();
 };

@@ -9,6 +9,15 @@ SquareTile::SquareTile(){
     bombTracker = 0;
     shape = "[ ]";
 }
+
+SquareTile::~SquareTile() {
+    cout<<"SquareTile destructor. For testing"<<endl;
+    for (int i=0; i<9; i++) {
+        delete neighbors[i]; // neighbors is a double pointer on the heap,
+                                // so each pointer needs to be deleted.
+    }
+}
+
 //method that changes the display of the tile
 //to what ever you want it to be. 
 void SquareTile::changeDisplay(string s) {
