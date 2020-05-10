@@ -18,13 +18,13 @@ using namespace std;
 // SquareBoard, Tile, and Generation.
 class Game {
 private:
-    SquareRules* gameRules;
+    Rules* gameRules;
     SquareBoard* gameBoard;
     Tile* gameTile;
     Generate* gameGeneration;
 public:
 // Setters and getters //
-    void setRules(SquareRules*);
+    void setRules(Rules*);
     void getRules();
     void setBoard(SquareBoard*);
     void getBoard();

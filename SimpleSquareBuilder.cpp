@@ -14,12 +14,13 @@ public:
     }
 
     void buildRules() {
-        SquareRules* simpleSquareRules = new SimpleSquareRules();
+        Rules* simpleSquareRules = new SimpleSquareRules();
         game->setRules(simpleSquareRules);
+        // send the square board to the Rules class
     }
 
     void buildBoard() {
-        SquareBoard* simpleBoard = new SimpleBoard();
+        SquareBoard* simpleBoard = new SimpleBoard(); //TODO: Simple Square Board
         simpleBoard->FillBoardWithTiles();//fills board with square tiles
         simpleBoard->GenerateAllNeighbors();//generates the neighbors for each tile
         game->setBoard(simpleBoard);

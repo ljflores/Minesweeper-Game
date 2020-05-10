@@ -13,7 +13,6 @@
 class SimpleSquareRules : public SquareRules {
 public:
     SimpleSquareRules();
-    
     void printRules();
     int playGame();
     void revealTile();

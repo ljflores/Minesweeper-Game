@@ -6,17 +6,14 @@
 // An interface that define what all SquareRules should have. Can be inherited by SimpleSquareRules
 //and other derived SquareRules classes.
 class SquareRules : public Rules {
-    SquareBoard* gameBoard;
     int row;
     int col;
     int flipTileNoInput(SquareTile* t); // accessed inside flipTile()
 
 public:
+
     SquareRules();
     void rows_and_columns();
-
-    SquareBoard* getBoard();
-    void setBoard(SquareBoard* b);
 
     void setRow(int r);
     int getRow();

@@ -6,10 +6,14 @@
 #define OBJECT_ORIENTED_SOFTWARE_DESIGN_FINAL_PROJECT_RULES_H
 
 
-#include "Board.h"
+#include "SquareBoard.h"
 
 class Rules {
+    SquareBoard* gameBoard;
 public:
+    void setBoard(SquareBoard* b);
+    SquareBoard* getBoard();
+
     virtual void flipTile()=0;
     virtual void flagTile()=0;
     virtual void unflagTile()=0;

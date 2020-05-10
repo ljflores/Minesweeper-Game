@@ -2,7 +2,7 @@
 //using namespace std;
 
 
-void Game::setRules(SquareRules *rules) {
+void Game::setRules(Rules *rules) {
     gameRules = rules;
 }
 

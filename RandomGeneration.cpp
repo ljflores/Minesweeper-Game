@@ -3,7 +3,9 @@
 #include <algorithm>    // std::random_shuffle
 #include<time.h>
 
-RandomGeneration::RandomGeneration() {}
+RandomGeneration::RandomGeneration()
+:Generate(){
+}
 
 int * RandomGeneration::shuffle(int upperBound) {
 

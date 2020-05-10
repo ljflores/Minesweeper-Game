@@ -16,7 +16,6 @@ using namespace std;
 class RandomGeneration : public Generate {
 public:
     RandomGeneration();
-
     int * shuffle(int upperBound);
     void setBombs();
 };

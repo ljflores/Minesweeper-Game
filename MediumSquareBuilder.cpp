@@ -24,7 +24,7 @@ public:
     }
 
     void buildRules() {
-        SquareRules* mediumsquarerules = new MediumSquareRules();
+        Rules* mediumsquarerules = new MediumSquareRules();
         game->setRules(mediumsquarerules);
     }
 

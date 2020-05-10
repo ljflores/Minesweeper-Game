@@ -5,7 +5,8 @@
 #include "SquareRules.h"
 
 SquareRules::SquareRules()
-:Rules(){}
+:Rules(){
+}
 
 void SquareRules::rows_and_columns() {
     int gameRow = 0;
@@ -151,10 +152,3 @@ int SquareRules::getCol() {
     return col;
 }
 
-SquareBoard *SquareRules::getBoard() {
-    return gameBoard;
-}
-
-void SquareRules::setBoard(SquareBoard *b) {
-    gameBoard = b;
-}
