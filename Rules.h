@@ -9,10 +9,10 @@
 #include "SquareBoard.h"
 
 class Rules {
-    SquareBoard* gameBoard;
+    Board* gameBoard;
 public:
-    void setBoard(SquareBoard* b);
-    SquareBoard* getBoard();
+    void setBoard(Board* b);
+    Board* getBoard();
 
     virtual void flipTile()=0;
     virtual void flagTile()=0;

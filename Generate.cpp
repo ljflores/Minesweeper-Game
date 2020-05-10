@@ -4,11 +4,11 @@
 
 #include "Generate.h"
 
-void Generate::setBoard(SquareBoard *b) {
+void Generate::setBoard(Board *b) {
     gameBoard = b;
 }
 
-SquareBoard *Generate::getBoard() {
+Board *Generate::getBoard() {
     return gameBoard;
 }
 

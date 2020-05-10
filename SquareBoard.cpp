@@ -109,3 +109,7 @@ void SquareBoard::printBoard() {
 SquareTile *SquareBoard::GetTileAtPoint(int x, int y) {
     return get2dArray()[y-1][x-1];
 }
+
+int SquareBoard::getSize() {
+    return getxsize();
+}

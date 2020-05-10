@@ -17,6 +17,8 @@ public:
     int getUnflippedTracker();
     void decrementUnflippedTracker();
 
+    virtual int getSize()=0;
+    virtual Tile* GetTileAtPoint(int x,int y)=0;
     virtual void printBoard()=0;
     virtual void FillBoardWithTiles()=0;//fillboard will be the same for all types of boards
     //make a pure virtual to make sure all derived classes implement it.

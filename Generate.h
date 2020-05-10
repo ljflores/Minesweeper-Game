@@ -4,10 +4,10 @@
 #include "SquareBoard.h"
 // This interface defines what all Generations must do (Can be a Random generation, Planned generation, etc.)
 class Generate {
-    SquareBoard* gameBoard;
+    Board* gameBoard;
 public:
-    void setBoard(SquareBoard* b);
-    SquareBoard* getBoard();
+    void setBoard(Board* b);
+    Board* getBoard();
     virtual void setBombs()=0;
 };
 

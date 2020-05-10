@@ -19,21 +19,21 @@ using namespace std;
 class Game {
 private:
     Rules* gameRules;
-    SquareBoard* gameBoard;
+    Board* gameBoard;
     Tile* gameTile;
     Generate* gameGeneration;
 public:
 // Setters and getters //
     void setRules(Rules*);
     void getRules();
-    void setBoard(SquareBoard*);
+    void setBoard(Board*);
     void getBoard();
     void setTile(Tile*);
     void getTile();
     void setGeneration(Generate*);
 
 
-    SquareBoard* rboard();//returns the board
+    Board* rboard();//returns the board
 
     int playGame(); // handles user input to make changes to the game
 };

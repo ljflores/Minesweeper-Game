@@ -8,7 +8,7 @@
 class SquareRules : public Rules {
     int row;
     int col;
-    int flipTileNoInput(SquareTile* t); // accessed inside flipTile()
+    int flipTileNoInput(Tile* t); // accessed inside flipTile()
 
 public:
 

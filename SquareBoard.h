@@ -21,7 +21,7 @@ public:
 
     SquareTile*** get2dArray();
     void set2dArray(int size);
-
+    int getSize();
     bool WithenBounds(int p);
     void printBoard();
     SquareTile* GetTileAtPoint(int x,int y);

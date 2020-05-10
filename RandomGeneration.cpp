@@ -22,10 +22,10 @@ int * RandomGeneration::shuffle(int upperBound) {
 }
 
 void RandomGeneration::setBombs() {
-    int *shuffledRows = this->shuffle(this->getBoard()->getysize());
-    int *shuffledCols = this->shuffle(this->getBoard()->getxsize());
+    int *shuffledRows = this->shuffle(this->getBoard()->getSize());
+    int *shuffledCols = this->shuffle(this->getBoard()->getSize());
     Tile *t;
-    int j = getBoard()->getxsize()-1;
+    int j = getBoard()->getSize()-1;
     for (int i=0; i<this->getBoard()->getnummines(); i++) {
         t = this->getBoard()->GetTileAtPoint(shuffledRows[i]+1,shuffledCols[j]+1);
         t->setMine();

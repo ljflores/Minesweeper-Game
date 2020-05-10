@@ -23,7 +23,7 @@ private:
     string number; // underlying number (1, 2, 3) or letter (B) that indicates the bombs in the vicinity
     // or a Bomb.
     string display; // what is actually displayed on the tile
-    SquareTile** neighbors = new SquareTile*[8];
+    Tile** neighbors = new Tile*[8];
 
     int rowNeighbors[8];
     int colNeighbors[8];
@@ -48,7 +48,7 @@ public:
     int getXCoord();
     int getYCoord();
 
-    SquareTile** getNeighbors();
+    Tile** getNeighbors();
     void setNeighbors();
 
     int getrowNeighbors(int i);//returns the number at a given index

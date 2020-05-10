@@ -58,7 +58,7 @@ int SquareTile::getYCoord() {
     return this->ycord;
 }
 
-SquareTile **SquareTile::getNeighbors() {
+Tile **SquareTile::getNeighbors() {
     return neighbors;
 }
 
@@ -66,7 +66,7 @@ void SquareTile::setMine() {
     this->isMine = true;
     this->number = "B";
     this->bombTracker = 1;
-    SquareTile* t;
+    Tile* t;
     cout<<"("<<this->getYCoord()<<", "<<this->getXCoord()<<")"<<endl; //UNCOMMENT IF YOU WANT TO SEE THE BOMBS
     for (int i=0; i<8; i++) {
         t = this->getNeighbors()[i];

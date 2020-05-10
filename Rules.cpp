@@ -1,9 +1,9 @@
 #include "Rules.h"
 
-void Rules::setBoard(SquareBoard *b) {
+void Rules::setBoard(Board *b) {
     gameBoard = b;
 }
 
-SquareBoard *Rules::getBoard() {
+Board *Rules::getBoard() {
     return gameBoard;
 }
