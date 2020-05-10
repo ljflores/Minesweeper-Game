@@ -929,19 +929,22 @@ int main() {
 }
 
 int userhandler(){
-    int usera = NULL;
+    //what I did was the user respone would be a string and if the string was 1 2 or 3 then the int version of that string would be returned
+    string usera = "testcode";
     cout << "Welcome to Minesweeper" << endl;
     cout << "select from the following choices" << endl;
-    while(usera < 1 || usera > 3) {
-        if (usera != NULL){
+    while(usera != "1" && usera != "2" && usera != "3") {
+        if (usera != "testcode"){
             cout<<"You entered in an incompatible option please select from these options"<<endl;
         }
         cout << "1: Simple Square Game" << endl;
         cout << "2: Medium Square Game" << endl;
         cout << "3: Advanced Square Game" << endl;
         cin>>usera;
+        
         cout<<endl;
     }
-    return usera;
+    int numusera = stoi(usera);
+    return numusera;
 }
 
