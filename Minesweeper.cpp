@@ -193,12 +193,17 @@ public:
     void printBoard(){
         cout<<"    ";
         for (int k = 1;k<this->getysize()+1;k++){ // printing column numbers
-            cout<<k<<"  ";
+            if (k>=10){
+                cout<<k<<" ";
+            }
+            else{
+                cout<<k<<"  ";
+            }
         }
         cout<<endl;
         for(int i = 0; i < this->getysize() ;i++){ // printing row numbers
             //this if else statement just fixes the SquareBoard
-            if(i+1 >= this->getysize()){
+            if(i+1 >= 10){
                 cout<<i+1<<" ";
             }
             else{
