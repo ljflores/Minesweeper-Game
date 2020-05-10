@@ -5,10 +5,10 @@
 //  Created by James Christensen on 4/28/20.
 //  Copyright © 2020 James Christensen. All rights reserved.
 //
-#include "Rules.h"
+#include "SquareRules.h"
 #ifndef AdvSquareRules_h
 #define AdvSquareRules_h
-class AdvSquareRules : public Rules {
+class AdvSquareRules : public SquareRules {
 public:
     AdvSquareRules();
     

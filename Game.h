@@ -9,22 +9,22 @@
 #ifndef Game_h
 #define Game_h
 #include <iostream>
-#include "Rules.h"
+#include "SquareRules.h"
 #include "SquareBoard.h"
 #include "Tile.h"
 #include "Generate.h"
 using namespace std;
-// The concrete class that is based on the GamePlan interface. Defines getters and setters for classes Rules,
+// The concrete class that is based on the GamePlan interface. Defines getters and setters for classes SquareRules,
 // SquareBoard, Tile, and Generation.
 class Game {
 private:
-    Rules* gameRules;
+    SquareRules* gameRules;
     SquareBoard* gameBoard;
     Tile* gameTile;
     Generate* gameGeneration;
 public:
 // Setters and getters //
-    void setRules(Rules*);
+    void setRules(SquareRules*);
     void getRules();
     void setBoard(SquareBoard*);
     void getBoard();

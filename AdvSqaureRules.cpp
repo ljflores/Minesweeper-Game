@@ -14,7 +14,7 @@ AdvSquareRules::AdvSquareRules(){}
 
 void AdvSquareRules::printRules(){
     cout<<"Valid commands for a Advanced Square game include: "<<endl;
-    Rules::printRules();
+    SquareRules::printRules();
     cout<<"\n";
 }
 

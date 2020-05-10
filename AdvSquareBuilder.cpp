@@ -23,7 +23,7 @@ public:
     }
 
     void buildRules() {
-        Rules* advsqrules = new AdvSquareRules();
+        SquareRules* advsqrules = new AdvSquareRules();
         game->setRules(advsqrules);
     }
     
