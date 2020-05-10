@@ -5,12 +5,12 @@
 //  Created by James Christensen on 4/28/20.
 //  Copyright © 2020 James Christensen. All rights reserved.
 //
-#include "SquareRules.h"
+#include "Rules.h"
 
 
 #ifndef SimpleSquareRules_h
 #define SimpleSquareRules_h
-class SimpleSquareRules : public SquareRules {
+class SimpleSquareRules : public Rules {
 public:
     SimpleSquareRules();
     

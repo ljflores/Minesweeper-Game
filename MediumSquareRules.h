@@ -5,10 +5,10 @@
 //  Created by James Christensen on 4/28/20.
 //  Copyright © 2020 James Christensen. All rights reserved.
 //
-#include "SquareRules.h"
+#include "Rules.h"
 #ifndef MediumSquareRules_h
 #define MediumSquareRules_h
-class MediumSquareRules : public SquareRules {
+class MediumSquareRules : public Rules {
 public:
     MediumSquareRules();
     void printRules();

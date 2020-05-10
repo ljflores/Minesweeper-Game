@@ -14,7 +14,7 @@ MediumSquareRules::MediumSquareRules(){}
 
 void MediumSquareRules::printRules(){
     cout<<"Valid commands for a Medium Square game include: "<<endl;
-    SquareRules::printRules();
+    Rules::printRules();
     cout<<"\n";
 }
 

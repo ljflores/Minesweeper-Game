@@ -2,7 +2,7 @@
 //using namespace std;
 
 
-void Game::setRules(SquareRules *rules) {
+void Game::setRules(Rules *rules) {
     gameRules = rules;
 }
 
@@ -46,7 +46,7 @@ int Game::playGame() {
     gameGeneration->setBombs();
     cout<<"--------------------------------------------------------------------------------"<<endl;
     gameRules->setBoard(gameGeneration->getBoard());
-    gameRules->playGame(); // see SquareRules.cpp for implementation
+    gameRules->playGame(); // see Rules.cpp for implementation
     return 0;
 }
 
