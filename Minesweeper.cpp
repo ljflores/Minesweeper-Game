@@ -12,47 +12,47 @@ public:
 
     virtual void printTile()=0; // print out the tile on the terminal
     virtual void changeDisplay(string s)=0; // changes what the tile displays
-    virtual void setMine()=0; // Make a tile a mine
+    virtual void setMine()=0; // Make a tile a mine by setting IsMine to "true" and setting the bombTracker to 1
     virtual bool IsMine()=0; // checks to see if a tile is a mine
 
-    virtual int getBombTracker()=0;
-    virtual void setBombTracker(int b)=0;
-    virtual void setNumber(string n)=0;
-    virtual string getNumber()=0;
-    virtual void setStatus(string s)=0;
-    virtual string getStatus()=0;
-    virtual Tile** getNeighbors()=0;
+    virtual int getBombTracker()=0; // returns bombTracker, an instance variable to help with the recursive part in flip
+    virtual void setBombTracker(int b)=0; // sets the bombTracker to whatever you want
+    virtual void setNumber(string n)=0; // Updates the character (1-8, or 'B') that will eventually displayed in the terminal
+    virtual string getNumber()=0; // gets the number that will eventually be displayed in the terminal
+    virtual void setStatus(string s)=0; // sets the status to a string to indicate whether the tile is "flipped", "unflipped", etc.
+    virtual string getStatus()=0; // returns a string, the status of a tile
+    virtual Tile** getNeighbors()=0; // stores the neighbors of a Tile
     virtual void setNeighbors()=0; // set the neighbors of a tile
 };
 
 class SquareTile : public Tile {
 private:
-    string shape;
-    string status;
-    int xcord;
-    int ycord;
-    bool isMine;//tells if tile is a mine
+    string shape; // Stores the shape of a tile. For SquareTile, that's two brackets [ ]
+    string status; // Tells whether the tile is flipped, unflipped, etc.
+    int xcord; // For square tiles, they are marked by an x coordinate and a y coordinate.
+    int ycord; // see above
+    bool isMine;// Tells if tile is a mine
     string number; // underlying number (1, 2, 3) or letter (B) that indicates the bombs in the vicinity
     // or a Bomb.
-    string display; // what is actually displayed on the tile
-    Tile** neighbors = new Tile*[8];
+    string display; // What is actually displayed on the tile. After initialization, the display is marked by a space to indicate an unflipped tile.
+    Tile** neighbors = new Tile*[8]; //2-D array that holds a square tile's 8 neighbors.
 
-    int rowNeighbors[8];
-    int colNeighbors[8];
+    int rowNeighbors[8]; // Holds integers indicating the row of a neighbor. Used to input tiles into the neighbors 2-D array.
+    int colNeighbors[8]; // Same as above, but for columns.
 
-    int bombTracker;
+    int bombTracker; // Indicates whether or not a tile needs to enter recursion when flipped. It does if the bombTracker is 0.
 public:
     SquareTile() {
-        status = "unflipped"; // when the board is initialized, all the tiles are unflipped.
-        isMine = false; // at first, all the mines are safe.
-        number = "0"; // all tiles are marked with a 0 since all of the tiles are currently safe.
-        display = " "; // since the tiles are all initially unflipped, there should be no number or letter displayed on the tile.
-        bombTracker = 0;
-        shape = "[ ]";
+        status = "unflipped"; // When the board is initialized, all the tiles are unflipped.
+        isMine = false; // At first, all the mines are safe.
+        number = "0"; // All tiles are marked with a 0 since all of the tiles are currently safe.
+        display = " "; // Since the tiles are all initially unflipped, there should be no number or letter displayed on the tile.
+        bombTracker = 0; // The bombTracker is initalized to 0 since there are no bombs/mines set at this point.
+        shape = "[ ]"; // The brackets will show up in the terminal to indicate an unflipped tile.
     }
 
     ~SquareTile(){
-        for(int i=0; i<9; i++) { // delete the array of tile pointers
+        for(int i=0; i<9; i++) { // Deletes the neighbors 2-D array
             delete neighbors[i];
         }
         delete []neighbors;
@@ -128,29 +128,30 @@ public:
 //--------------Board Classes-----------------------//
 class Board {
 private:
-    int mines;
-    int unflippedTracker; // Checks to see how many tiles are currently unflipped; will be referenced to know if the user won the game
+    int mines; // Every Board has a certain number of mines in it.
+    int unflippedTracker; // Every Board needs a tracker to tell how many Tiles are still unflipped. This will help with telling the player
+                          // when they've won the game.
 public:
-    Board(int mines){this->mines = mines;}
+    Board(int mines){this->mines = mines;} // The constructor of a Board initializes the number of mines.
     virtual ~Board(){}
 
     int getnummines(){return mines;}
 
     void setUnflippedTracker(int u){unflippedTracker = u;}
     int getUnflippedTracker(){return unflippedTracker;}
-    void decrementUnflippedTracker(){unflippedTracker--;}
+    void decrementUnflippedTracker(){unflippedTracker--;} // This is accessed when a tile is flipped.
 
-    virtual int getSize()=0;
-    virtual Tile* GetTileAtPoint(int x,int y)=0;
-    virtual void printBoard()=0;
-    virtual void FillBoardWithTiles()=0;
-    virtual void displayalltiles()=0;
-    virtual void GenerateAllNeighbors()=0;
+    virtual int getSize()=0; //Returns the size of a Board, however the size is implemented.
+    virtual Tile* GetTileAtPoint(int x,int y)=0; // Every board needs to access a specific tile.
+    virtual void printBoard()=0; // Prints the Board, however it needs to be printed.
+    virtual void FillBoardWithTiles()=0; // Every board needs to be filled with some kind of Tile.
+    virtual void displayalltiles()=0; // The tiles eventually need to be displayed in the terminal.
+    virtual void GenerateAllNeighbors()=0; // The neighbors of all the tiles need to be generated.
 };
 
 class SquareBoard : public Board {
 private:
-    int xsize;
+    int xsize;// Square boards have an x and a y size
     int ysize;
     SquareTile ***c; //pointer to our 2D array
 
@@ -159,7 +160,9 @@ public:
             : Board(mines){
         this->xsize = xsize;
         this->ysize = ysize;
-        this->setUnflippedTracker(((xsize * ysize) - mines));
+        this->setUnflippedTracker(((xsize * ysize) - mines)); // The unflipped tracker is set to the number of tiles minus the number of mines.
+                                                              // This way, the game knows when all of the safe tiles have been flipped, and it knows
+                                                              // to end the game.
     }
 
     ~SquareBoard() {
@@ -179,7 +182,7 @@ public:
 
     int getSize(){return getxsize();}
 
-    bool WithenBounds(int p){
+    bool WithenBounds(int p){ // Checks to see if a number, a coordinate perhaps, is within the bounds of the board.
         if (p >= 1 && p<=this->getysize()){
             return true;
         }
@@ -208,28 +211,29 @@ public:
                 cout << i + 1 << "  ";
             }
             for (int j = 0;j<this->getysize();j++){
-                get2dArray()[i][j]->printTile(); // printing the tile shape, which is, for now, 2 brackets.
+                get2dArray()[i][j]->printTile(); // printing the tile shape, which is 2 brackets.
             }
             cout<<endl;
         }
     }
 
-    SquareTile* GetTileAtPoint(int x,int y){return get2dArray()[y-1][x-1];}
-    void FillBoardWithTiles(){
+    SquareTile* GetTileAtPoint(int x,int y){return get2dArray()[y-1][x-1];} //Gets a tile at a specific point
+
+    void FillBoardWithTiles(){ // This implementation fills the board with Square tiles.
         set2dArray(getxsize());
 
         for (int i = 0;i<getxsize();i++){
             get2dArray()[i] = new SquareTile*[getysize()];//creating space for rows
 
             for (int j = 0; j<getysize();j++){
-                get2dArray()[i][j] = new SquareTile();//filling up the 2d array with square tiles;
+                get2dArray()[i][j] = new SquareTile();//filling up the 2d array with square tiles
                 get2dArray()[i][j]->setCoord(j+1,i+1);//just helping us remember the cords
                 get2dArray()[i][j]->setNeighbors();
             }
         }
     }
 
-    void displayalltiles(){
+    void displayalltiles(){ // Called when the user stops the game.
         SquareTile* t;
         for (int i = 0;i<getxsize();i++){
             for (int j = 0; j<getysize();j++){
@@ -260,7 +264,8 @@ public:
 
 //----------Game_Generate classes-----------------//
 class Generate {
-    Board* gameBoard;
+    Board* gameBoard; // All game generations need to access the finished board to appropriately set the mines. A pointer to the board is sent here by
+                    // calling the setBoard(Board*b) method in the Game class after the board is created in GameEngineer with all safe tiles.
 public:
     Generate() {}
     virtual ~Generate() {
@@ -269,16 +274,18 @@ public:
 
     void setBoard(Board* b) {gameBoard = b;};
     Board* getBoard() {return gameBoard;};
-    virtual void setBombs()=0;
+    virtual void setBombs()=0; // Every game generation needs to set bombs in the game board.
 };
 
-class RandomGeneration : public Generate {
+class RandomSquareGeneration : public Generate { // This class is called "RandomSquareGeneration" because it only applies to Square Boards.
+                                                 // If the user wants to randomly generate a triangular board, they might write a class that
+                                                 // inherits Generate called "RandomTriangleGeneration".
 public:
-    RandomGeneration()
+    RandomSquareGeneration()
             :Generate(){}
-    ~RandomGeneration(){}
+    ~RandomSquareGeneration(){}
 
-    int * shuffle(int upperBound) {
+    int * shuffle(int upperBound) { // Used to shuffle the coordinates of the rows and columns. Only for use in RandomGeneration.
         srand(time(0));
 
         //declare an array with a number of elements, elements, 0 to upperBound-1
@@ -290,9 +297,9 @@ public:
         return a;
     }
 
-    void setBombs() {
-        int *shuffledRows = this->shuffle(this->getBoard()->getSize());
-        int *shuffledCols = this->shuffle(this->getBoard()->getSize());
+    void setBombs() { // Sets the appropriate tiles to bombs by changing their status, number, etc.
+        int *shuffledRows = this->shuffle(this->getBoard()->getSize()); // shuffle the rows
+        int *shuffledCols = this->shuffle(this->getBoard()->getSize()); // shuffle the columns
         Tile *t;
         int j = getBoard()->getSize()-1;
         for (int i=0; i<this->getBoard()->getnummines(); i++) {
@@ -303,13 +310,15 @@ public:
     }
 };
 
-class PlannedGeneration : public Generate {
+class PlannedSquareGeneration : public Generate { // This class is called "PlannedSquareGeneration" because it only applies to Square Boards.
+                                                 // If the user wants to generate a planned triangular board, they might write a class that
+                                                 // inherits Generate called "PlannedTrangleGeneration".
 public:
-    PlannedGeneration()
+    PlannedSquareGeneration()
             : Generate(){}
-    ~PlannedGeneration(){}
+    ~PlannedSquareGeneration(){}
 
-    void setBombs() {
+    void setBombs() { // There are three cases when it comes to Square boards. 5, 9, and 12, which corresponds to the number of bombs each game has.
         int PNumMines = this ->getBoard()->getnummines();
         switch (PNumMines){
             case 5:
@@ -356,7 +365,7 @@ public:
 
 //------------Rules classes----------------------//
 class Rules {
-    Board* gameBoard;
+    Board* gameBoard; // Every Rules class is sent a pointer to the created Board to access and edit.
 public:
     Rules() {}
     virtual ~Rules() {
@@ -371,7 +380,7 @@ public:
 };
 
 class SquareRules : public Rules {
-    int row;
+    int row; // SquareRules ackowledge that a SquareBoard has rows and columns.
     int col;
 
     int flipTileNoInput(Tile *t) {
@@ -410,7 +419,7 @@ public:
     int getCol(){return col;}
     void setCol(int c) {col = c;}
 
-    void rows_and_columns() {
+    void rows_and_columns() { // Handles user input for rows and columns. Called for every command.
         int gameRow = 0;
         int gameCol = 0;
 
@@ -466,14 +475,14 @@ public:
         }
     }
 
-    void printRules() {
+    void printRules() { // All Square games must have these three commands:
         cout << "-  flip -- Type the word 'flip' to flip a tile of your choosing." << endl;
         cout << "-  rules -- Type the word 'rules' to re-print the rules." << endl;
         cout << "-  stop -- Type the word 'stop' to stop the game" << endl;
     }
 };
 
-class SimpleSquareRules : public SquareRules {
+class SimpleSquareRules : public SquareRules { // SimpleSquareRules has the option to flag and unflag a tile.
 public:
     SimpleSquareRules()
             :SquareRules(){}
@@ -551,7 +560,7 @@ public:
     }
 };
 
-class MediumSquareRules : public SquareRules {
+class MediumSquareRules : public SquareRules { // MediumSquareRules has the option to flag and unflag a tile.
 public:
     MediumSquareRules()
     :SquareRules(){}
@@ -629,7 +638,8 @@ public:
     }
 };
 
-class AdvSquareRules : public SquareRules {
+class AdvSquareRules : public SquareRules { // AdvancedSquareRules does *not* have the option to flag and unflag a tile. This increases the
+                                            // difficulty and demonstrates the flexibility of the Rules class implementation.
 public:
     AdvSquareRules()
     :SquareRules(){}
@@ -695,28 +705,26 @@ public:
     void getRules(){return gameRules->printRules();}
 
     void setBoard(Board* board){gameBoard = board;}
-    void getBoard(){gameBoard->printBoard();}
+    void getBoard(){gameBoard->printBoard();} // prints the board
 
     void setTile(Tile* tile){gameTile = tile;}
-    void getTile(){}
 
     void setGeneration(Generate* generation) {gameGeneration = generation;}
 
-    Board* rboard(){return this->gameBoard;}
+    Board* rboard(){return this->gameBoard;} // Actually returns a pointer to the board.
 
     int playGame(){
         cout<<endl<<endl;
         cout<<"Game built."<<endl;
 
-        this->getRules();
-        this->getBoard();
-        this->getTile();
+        this->getRules(); // prints the rules
+        this->getBoard(); // prints the board
 
-        gameGeneration->setBoard(this->rboard());
-        gameGeneration->setBombs();
+        gameGeneration->setBoard(this->rboard()); // Sends a pointer to the board (at this point, with all safe tiles) to generation to set the bombs.
+        gameGeneration->setBombs(); //Sets the bombs with the appropriate generation.
         cout<<"--------------------------------------------------------------------------------"<<endl;
-        gameRules->setBoard(gameGeneration->getBoard());
-        gameRules->playGame(); // see SquareRules.cpp for implementation
+        gameRules->setBoard(gameGeneration->getBoard()); // Sends a pointer to the board, after it's been generated, to the Rules class.
+        gameRules->playGame(); // The Rules class handles user input and handles things like flip, flag, and unflag.
         return 0;
     }
 };
@@ -752,7 +760,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* simpleBoard = new SquareBoard(7,7,5); //TODO: Simple Square Board
+        SquareBoard* simpleBoard = new SquareBoard(7,7,5); //Initializes a SquareBoard with Simple parameters
         simpleBoard->FillBoardWithTiles();//fills board with square tiles
         simpleBoard->GenerateAllNeighbors();//generates the neighbors for each tile
         game->setBoard(simpleBoard);
@@ -776,7 +784,7 @@ public:
         int useri = 0;
         degree >> useri;
         if(useri == 1) {
-            Generate *randomGeneration = new RandomGeneration();
+            Generate *randomGeneration = new RandomSquareGeneration();
             game->setGeneration(randomGeneration);
         }
         if(useri == 2){
@@ -787,7 +795,7 @@ public:
             cout<<"(3,3)"<<endl;
             cout<<"(3,2)"<<endl;
             cout<<"(5,5)"<<endl;
-            Generate *plannedGeneration = new PlannedGeneration();
+            Generate *plannedGeneration = new PlannedSquareGeneration();
             game->setGeneration(plannedGeneration);
         }
     }
@@ -813,7 +821,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* mediumB = new SquareBoard(10,10,9);
+        SquareBoard* mediumB = new SquareBoard(10,10,9); //Initializes a SquareBoard with Medium parameters
         mediumB->FillBoardWithTiles();//builds the board with square tiles
         mediumB->GenerateAllNeighbors();
         game->setBoard(mediumB);
@@ -837,7 +845,7 @@ public:
         int useri = 0;
         degree >> useri;
         if(useri == 1) {
-            Generate *randomGeneration = new RandomGeneration();
+            Generate *randomGeneration = new RandomSquareGeneration();
             game->setGeneration(randomGeneration);
         }
         if(useri == 2){
@@ -852,7 +860,7 @@ public:
             cout<<"(5,3)"<<endl;
             cout<<"(1,4)"<<endl;
             cout<<"(1,6)"<<endl;
-            Generate *plannedGeneration = new PlannedGeneration();
+            Generate *plannedGeneration = new PlannedSquareGeneration();
             game->setGeneration(plannedGeneration);
         }
     }
@@ -882,7 +890,7 @@ public:
         game->setTile(squareTile);
     }
     void buildBoard() {
-        SquareBoard* advBoard = new SquareBoard(13,13,12);
+        SquareBoard* advBoard = new SquareBoard(13,13,12); //Initializes a SquareBoard with Advanced parameters
         advBoard->FillBoardWithTiles();//fills board with square tiles
         advBoard->GenerateAllNeighbors();//generates neighbors for each tile
         game->setBoard(advBoard);
@@ -901,7 +909,7 @@ public:
         int useri = 0;
         degree >> useri;
         if(useri == 1) {
-            Generate *randomGeneration = new RandomGeneration();
+            Generate *randomGeneration = new RandomSquareGeneration();
             game->setGeneration(randomGeneration);
         }
         if(useri == 2){
@@ -919,7 +927,7 @@ public:
             cout<<"(13,13)"<<endl;
             cout<<"(1,12)"<<endl;
             cout<<"(10,2)"<<endl;
-            Generate *plannedGeneration = new PlannedGeneration();
+            Generate *plannedGeneration = new PlannedSquareGeneration();
             game->setGeneration(plannedGeneration);
         }
     }
@@ -931,9 +939,9 @@ public:
 
 //----------------GameEngineer class------------------------//
 class GameEngineer {
-    GameBuilder* gameBuilder;
+    GameBuilder* gameBuilder; // Has a GameBuilder pointer to actually call the GameBuilder methods on it.
 public:
-    // SimpleSquareBuilder specification is sent to the engineer
+    // Builder specification is sent to the engineer
     GameEngineer(GameBuilder *gameBuilder) {
         this->gameBuilder = gameBuilder;
     }
@@ -941,13 +949,12 @@ public:
         delete gameBuilder;
     }
 
-    // Return the Game made from the SimpleSquareBuilder spec
+    // Return the Game made from the builder spec
     Game* getGame() {
         return this->gameBuilder->getGame();
     }
 
-    // Execute the methods specific to the GameBuilder that implements
-    // GameBuilder (SimpleSquareBuilder)
+    // Execute the methods specific to the builder that inherits GameBuilder
     void makeGame() {
         this->gameBuilder->buildRules();
         this->gameBuilder->buildBoard();
@@ -956,32 +963,16 @@ public:
     }
 };
 
-int userhandler();
+int userhandler(); // handles user input in initGame()
+Game* initGame(); // The user can call this to initialize a game.
 
 int main() {
-    // Get a GameBuilder of type SimpleSquareBuilder
-    int usera = userhandler();
-    GameBuilder* SquareGame;
-    if (usera == 1){
-        SquareGame = new SimpleSquareBuilder;
-    }
-    else if(usera ==2){
-        SquareGame = new MediumSquareBuilder;
-    }
-    else{
-        SquareGame = new AdvSquareBuilder;
-    }
-    // Pass the SimpleSquareBuilder specification to the engineer
-    GameEngineer* gameEngineer = new GameEngineer(SquareGame);
-
-    // Tell the engineer to make the Game using the specifications of the
-    // SimpleSquareBuilder class
-    gameEngineer->makeGame();
-
-    // The engineer returns the right game based off of the spec sent to it.
-    Game* firstGame = gameEngineer->getGame();
+    Game* firstGame;
+    firstGame = initGame();
     firstGame->playGame();
 }
+
+//------------------------------------------------------------------------------------------------------------------------//
 
 int userhandler(){
     string usera = "testcode";
@@ -1002,5 +993,30 @@ int userhandler(){
     int numusera = 0;
     degree >> numusera;
     return numusera;
+}
+
+Game* initGame() {
+    int usera = userhandler();
+    GameBuilder* SquareGame;
+    if (usera == 1){
+        SquareGame = new SimpleSquareBuilder;
+    }
+    else if(usera ==2){
+        SquareGame = new MediumSquareBuilder;
+    }
+    else{
+        SquareGame = new AdvSquareBuilder;
+    }
+    // Pass the SimpleSquareBuilder specification to the engineer
+    GameEngineer* gameEngineer = new GameEngineer(SquareGame);
+
+    // Tell the engineer to make the Game using the specifications of the
+    // SimpleSquareBuilder class
+    gameEngineer->makeGame();
+
+    // The engineer returns the right game based off of the spec sent to it.
+    Game* firstGame = gameEngineer->getGame();
+
+    return firstGame;
 }
 
