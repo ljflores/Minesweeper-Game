@@ -791,7 +791,7 @@ public:
     }
 
     void buildBoard() {
-        SquareBoard* mediumB = new SquareBoard(10,10,7);
+        SquareBoard* mediumB = new SquareBoard(10,10,9);
         mediumB->FillBoardWithTiles();//builds the board with square tiles
         mediumB->GenerateAllNeighbors();
         game->setBoard(mediumB);
