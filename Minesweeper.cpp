@@ -493,11 +493,11 @@ public:
     }
 
     void printRules() {
-        cout << "(1) flip -- flips a tile of your choosing" << endl;
-        cout << "(2) flag -- flags a tile of your choosing" << endl;
-        cout << "(3) unflag -- unflags a tile of your choosing" << endl;
-        cout << "(4) rules -- prints the rules" << endl;
-        cout << "(5) stop -- stops the game" << endl;
+        cout << "-  flip -- Type the word 'flip' to flip a tile of your choosing." << endl;
+        cout << "-  flag -- Type the word 'flag' to flag a tile of your choosing." << endl;
+        cout << "-  unflag -- Type the word 'unflag' to unflag a tile of your choosing." << endl;
+        cout << "-  rules -- Type the word 'rules' to re-print the rules." << endl;
+        cout << "-  stop -- Type the word 'stop' to stop the game" << endl;
     }
 };
 
@@ -970,7 +970,7 @@ int userhandler(){
             cout<<"You entered in an incompatible option please select from these options"<<endl;
         }
         cout << "1: Simple Square Game (7 x 7 board with 5 mines)" << endl;
-        cout << "2: Medium Square Game (10 x 10 board with 7 mines)" << endl;
+        cout << "2: Medium Square Game (10 x 10 board with 9 mines)" << endl;
         cout << "3: Advanced Square Game (13 x 13 board with 12 mines)" << endl;
         cin>>usera;
 
