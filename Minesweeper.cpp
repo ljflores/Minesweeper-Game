@@ -758,6 +758,13 @@ public:
             game->setGeneration(randomGeneration);
         }
         if(useri == 2){
+            cout<<endl<<endl;
+            cout<<"The mines are located in:"<<endl;
+            cout<<"(1,1)"<<endl;
+            cout<<"(7,7)"<<endl;
+            cout<<"(3,3)"<<endl;
+            cout<<"(3,2)"<<endl;
+            cout<<"(5,5)"<<endl;
             Generate *plannedGeneration = new PlannedGeneration();
             game->setGeneration(plannedGeneration);
         }
@@ -812,6 +819,17 @@ public:
             game->setGeneration(randomGeneration);
         }
         if(useri == 2){
+            cout<<endl<<endl;
+            cout<<"The mines are located in:"<<endl;
+            cout<<"(1,1)"<<endl;
+            cout<<"(10,10)"<<endl;
+            cout<<"(1,2)"<<endl;
+            cout<<"(5,5)"<<endl;
+            cout<<"(3,3)"<<endl;
+            cout<<"(4,9)"<<endl;
+            cout<<"(5,3)"<<endl;
+            cout<<"(1,4)"<<endl;
+            cout<<"(1,6)"<<endl;
             Generate *plannedGeneration = new PlannedGeneration();
             game->setGeneration(plannedGeneration);
         }
@@ -865,6 +883,20 @@ public:
             game->setGeneration(randomGeneration);
         }
         if(useri == 2){
+            cout<<endl<<endl;
+            cout<<"The mines are located in:"<<endl;
+            cout<<"(1,1)"<<endl;
+            cout<<"(10,10)"<<endl;
+            cout<<"(1,2)"<<endl;
+            cout<<"(5,5)"<<endl;
+            cout<<"(3,3)"<<endl;
+            cout<<"(4,9)"<<endl;
+            cout<<"(5,3)"<<endl;
+            cout<<"(1,4)"<<endl;
+            cout<<"(1,6)"<<endl;
+            cout<<"(13,13)"<<endl;
+            cout<<"(1,12)"<<endl;
+            cout<<"(10,2)"<<endl;
             Generate *plannedGeneration = new PlannedGeneration();
             game->setGeneration(plannedGeneration);
         }
