@@ -366,8 +366,6 @@ public:
     Board* getBoard(){return gameBoard;}
 
     virtual void flipTile()=0;
-    virtual void flagTile()=0;
-    virtual void unflagTile()=0;
     virtual void printRules()=0;
     virtual int playGame()=0;
 };
@@ -403,7 +401,7 @@ class SquareRules : public Rules {
 
 public:
     SquareRules()
-            : Rules() {}
+    : Rules() {}
     ~SquareRules(){}
 
     void setRow(int r) { row = r; }
@@ -468,6 +466,19 @@ public:
         }
     }
 
+    void printRules() {
+        cout << "-  flip -- Type the word 'flip' to flip a tile of your choosing." << endl;
+        cout << "-  rules -- Type the word 'rules' to re-print the rules." << endl;
+        cout << "-  stop -- Type the word 'stop' to stop the game" << endl;
+    }
+};
+
+class SimpleSquareRules : public SquareRules {
+public:
+    SimpleSquareRules()
+            :SquareRules(){}
+    ~SimpleSquareRules(){}
+
     void flagTile() {
         this->rows_and_columns();
         Tile *t = this->getBoard()->GetTileAtPoint(this->getCol(), this->getRow());
@@ -492,24 +503,11 @@ public:
         }
     }
 
-    void printRules() {
-        cout << "-  flip -- Type the word 'flip' to flip a tile of your choosing." << endl;
-        cout << "-  flag -- Type the word 'flag' to flag a tile of your choosing." << endl;
-        cout << "-  unflag -- Type the word 'unflag' to unflag a tile of your choosing." << endl;
-        cout << "-  rules -- Type the word 'rules' to re-print the rules." << endl;
-        cout << "-  stop -- Type the word 'stop' to stop the game" << endl;
-    }
-};
-
-class SimpleSquareRules : public SquareRules {
-public:
-    SimpleSquareRules()
-            :SquareRules(){}
-    ~SimpleSquareRules(){}
-
     void printRules(){
         cout<<"Valid commands for a Simple Square game include: "<<endl;
         SquareRules::printRules();
+        cout << "-  flag -- Type the word 'flag' to flag a tile of your choosing." << endl;
+        cout << "-  unflag -- Type the word 'unflag' to unflag a tile of your choosing." << endl;
         cout<<"\n";
     }
 
@@ -556,12 +554,38 @@ public:
 class MediumSquareRules : public SquareRules {
 public:
     MediumSquareRules()
-            :SquareRules(){}
+    :SquareRules(){}
     ~MediumSquareRules(){}
+
+    void flagTile() {
+        this->rows_and_columns();
+        Tile *t = this->getBoard()->GetTileAtPoint(this->getCol(), this->getRow());
+        if (t->getStatus() == "unflipped") {
+            t->changeDisplay("f"); // change the tile display to indicate that it's flagged
+            t->setStatus("flagged"); // update the status
+            this->getBoard()->printBoard();
+        } else {
+            cout << "Tile cannot be flagged." << endl;
+        }
+    }
+
+    void unflagTile() {
+        this->rows_and_columns();
+        Tile *t = this->getBoard()->GetTileAtPoint(this->getCol(), this->getRow());
+        if (t->getStatus() == "flagged") {
+            t->changeDisplay(" "); // changes the display back to a blank tile
+            t->setStatus("unflipped"); // updates the status back to unflipped
+            this->getBoard()->printBoard();
+        } else {
+            cout << "Tile cannot be unflagged." << endl;
+        }
+    }
 
     void printRules(){
         cout<<"Valid commands for a Medium Square game include: "<<endl;
         SquareRules::printRules();
+        cout << "-  flag -- Type the word 'flag' to flag a tile of your choosing." << endl;
+        cout << "-  unflag -- Type the word 'unflag' to unflag a tile of your choosing." << endl;
         cout<<"\n";
     }
 
@@ -608,7 +632,7 @@ public:
 class AdvSquareRules : public SquareRules {
 public:
     AdvSquareRules()
-            :SquareRules(){}
+    :SquareRules(){}
     ~AdvSquareRules(){}
 
     void printRules(){
@@ -632,10 +656,6 @@ public:
             cin >> command;
             if (command == "flip") {
                 this->flipTile();
-            } else if (command == "flag") {
-                this->flagTile();
-            } else if (command == "unflag") {
-                this->unflagTile();
             } else if (command == "rules") {
                 this->printRules();
             } else if (command == "stop") {
