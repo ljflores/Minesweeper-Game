@@ -639,6 +639,8 @@ public:
         cout<<"Valid commands for a Advanced Square game include: "<<endl;
         SquareRules::printRules();
         cout<<"\n";
+        cout<<("****NOTE**** 'flag' and 'unflag' are not valid commands for Advanced Square Games.")<<endl;
+        cout<<"\n";
     }
 
     int playGame() {
